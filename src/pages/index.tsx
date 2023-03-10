@@ -5,6 +5,7 @@ import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
 import { products, contents } from "@/pages/api/dummy"
 import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
+import FooterSection from "@/components/containers/FooterSection"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className="bg-gray-700 pt-24 pb-24">
-        <div className="mb=36">
+        <div className="">
           <BannerCardSlider contents={contents} />
         </div>
         <div className="mb-36">
@@ -40,7 +41,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-orange-800 h-24">Footer</div>
+      <FooterSection />
     </>
   )
 }
