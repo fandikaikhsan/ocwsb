@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css"
 import SolidButton from "@/components/common/SolidButton"
 import GradientBorderButton from "@/components/common/GradientBorderButton"
 import TransparentButton from "@/components/common/TransparentButton"
+import ServiceCard from "@/components/layouts/ServiceCard"
 import ProductCard from "@/components/layouts/ProductCard"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -28,10 +29,14 @@ export default function Home() {
           text={"Career"}
         />
         <div className="">
-          <ProductCard
+          <ServiceCard
             title="ASSEMBLY"
             description="Assemble components or materials or materials in a product to become a single unit of a production result"
             image="https://www.refactoringui.com/?ref=sidebar"
+          />
+          <ProductCard
+            title="AFIAL"
+            description="The most advanced forward illuminator aiming laser module"
           />
         </div>
       </div>
