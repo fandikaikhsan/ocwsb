@@ -12,7 +12,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
   return (
     <>
       <div
-        className={`flex flex-co pt-60 w-72 rounded-lg ${
+        className={`flex flex-col pt-60 w-72 rounded-lg ${
           image ? `bg-purple-500` : "bg-purple-500"
         }`}
       >

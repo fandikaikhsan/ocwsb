@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { useState } from "react"
 
 interface SliderBannerProps {
   images: string[]
@@ -6,7 +6,7 @@ interface SliderBannerProps {
   description: string
 }
 
-const SliderBanner: FC<SliderBannerProps> = ({ images }) => {
+const SliderBanner = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const handleNextSlide = () => {
@@ -19,7 +19,7 @@ const SliderBanner: FC<SliderBannerProps> = ({ images }) => {
     setCurrentSlide(prevSlide)
   }
 
-  const handleDotClick = (index: any) => {
+  const handleDotClick = (index) => {
     setCurrentSlide(index)
   }
 
