@@ -5,13 +5,14 @@ import styles from "@/styles/Home.module.css"
 import SolidButton from "@/components/common/SolidButton"
 import GradientBorderButton from "@/components/common/GradientBorderButton"
 import TransparentButton from "@/components/common/TransparentButton"
+import ProductCard from "@/components/layouts/ProductCard"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
   return (
     <>
-      <div className=" bg-gray-800 flex gap-2">
+      <div className=" bg-gray-800 flex flex-col gap-2">
         <h1 className="text-blue-500">Hello world</h1>
         <SolidButton
           onClick={() => console.log("clicked")}
@@ -26,6 +27,13 @@ export default function Home() {
           onClick={() => console.log("clicked")}
           text={"Career"}
         />
+        <div className="">
+          <ProductCard
+            title="ASSEMBLY"
+            description="Assemble components or materials or materials in a product to become a single unit of a production result"
+            image="https://www.refactoringui.com/?ref=sidebar"
+          />
+        </div>
       </div>
     </>
   )
