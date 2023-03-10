@@ -12,8 +12,8 @@ const SolidButton: FC<SolidButtonProps> = (props) => {
     <button
       className={
         isMobile
-          ? " bg-orange-400 py-1 px-8 rounded-md text-white text-sm"
-          : "bg-red-500"
+          ? " bg-orange-400 py-1 px-8 rounded-md text-white text-lg"
+          : "bg-orange-500 text-2xl text-white py-2 px-16 rounded-lg"
       }
       onClick={() => onClick()}
     >
