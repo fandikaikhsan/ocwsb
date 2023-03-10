@@ -13,7 +13,11 @@ export default function Home() {
     <>
       <div className=" bg-gray-800 flex gap-2">
         <h1 className="text-blue-500">Hello world</h1>
-        <SolidButton onClick={() => console.log("clicked")} isMobile={true} />
+        <SolidButton
+          onClick={() => console.log("clicked")}
+          isMobile={true}
+          text={"Read more"}
+        />
         <GradientBorderButton
           onClick={() => console.log("clicked")}
           text={"Read more"}

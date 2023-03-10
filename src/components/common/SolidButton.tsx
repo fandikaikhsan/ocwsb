@@ -3,10 +3,11 @@ import React, { FC } from "react"
 interface SolidButtonProps {
   isMobile?: boolean
   onClick?: () => void
+  text: string
 }
 
 const SolidButton: FC<SolidButtonProps> = (props) => {
-  const { isMobile = false, onClick = () => {} } = props
+  const { isMobile = false, onClick = () => {}, text = "" } = props
   return (
     <button
       className={
@@ -16,7 +17,7 @@ const SolidButton: FC<SolidButtonProps> = (props) => {
       }
       onClick={() => onClick()}
     >
-      Read More
+      {text}
     </button>
   )
 }
