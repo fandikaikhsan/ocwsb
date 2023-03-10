@@ -19,7 +19,7 @@ const SliderBanner: FC<SliderBannerProps> = ({ images }) => {
     setCurrentSlide(prevSlide)
   }
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: any) => {
     setCurrentSlide(index)
   }
 
