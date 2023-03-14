@@ -6,6 +6,7 @@ import { products, contents } from "@/pages/api/dummy"
 import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
+import InqueryForm from "@/components/layouts/InqueryForm"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -40,6 +41,9 @@ export default function Home() {
             <ProductSlider products={products} />
           </div>
         </div>
+      </div>
+      <div className=" p-10 mx-auto items-center object-center max-w-4xl">
+        <InqueryForm />
       </div>
       <FooterSection />
     </>
