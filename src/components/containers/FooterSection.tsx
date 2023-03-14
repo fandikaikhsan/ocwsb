@@ -2,40 +2,46 @@ import React, { FC } from "react"
 
 const FooterSection = () => {
   return (
-    <>
-      <div className="flex flex-row p-10 text-white bg-orange-700">
-        <div className="flex flex-row w-36">
-          <div>Office</div>
-          <div>
-            Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
-            Kembangan Selatan Kec. Kembangan, Kota Adm. Jakarta Barat, Provinsi
-            DKI Jakarta (11610)
-          </div>
-        </div>
-        <div>
-          <div>Workshop</div>
-          <div>
-            Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
-            Kembangan Selatan Kec. Kembangan, Kota Adm. Jakarta Barat, Provinsi
-            DKI Jakarta (11610)
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>Phone</div>
-            <div>021-2900-0000</div>
-          </div>
-          <div>
-            <div>Email</div>
+    <footer className="bg-gray-800 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="md:flex md:items-center md:justify-between">
+          <div className="flex justify-start md:w-1/3">
             <div>
-              <a href="mailto:fandika.ikhsan@gmail.com">
-                fandika.ikhsan@gmail.com
-              </a>
+              <h3 className="text-lg font-medium text-white">Office</h3>
+              <p className="mt-2 text-base text-gray-300">
+                Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
+                Kembangan Selatan Kec. Kembangan,
+                <br />
+                Kota Adm. Jakarta Barat, Provinsi DKI Jakarta (11610)
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center md:w-1/3 mt-4 md:mt-0">
+            <div>
+              <h3 className="text-lg font-medium text-white">Workshop</h3>
+              <p className="mt-2 text-base text-gray-300">
+                Jalan Selayar VI Blok K21 Kawasan Industri MM2100 Desa Telajung
+                Kecamatan Cikarang Barat
+                <br />
+                Kabupaten Bekasi, Jawa Barat (17530)
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 md:w-1/3">
+            <div className="w-1/2 pr-4">
+              <h3 className="text-lg font-medium text-white">Phone</h3>
+              <p className="mt-2 text-base text-gray-300">(021) – 58303738</p>
+            </div>
+            <div className="w-1/2">
+              <h3 className="text-lg font-medium text-white">Email</h3>
+              <p className="mt-2 text-base text-gray-300">
+                ocwsb.pratama.indonesia@gmail.com
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </footer>
   )
 }
 
