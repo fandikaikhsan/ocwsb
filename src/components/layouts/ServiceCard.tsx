@@ -19,7 +19,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
         }`}
       >
         <div className="flex flex-col justify-center px-6 border-white ">
-          <div className="flex flex-col gap-2  text-white pb-10">
+          <div className="flex flex-col gap-2  text-white pb-14">
             <div className="text-xl">{title}</div>
             <div className="text-lg">{description}</div>
           </div>
