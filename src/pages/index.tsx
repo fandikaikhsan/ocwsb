@@ -27,13 +27,13 @@ export default function Home() {
           <BannerCardSlider contents={contents} />
         </div>
         <div className="mb-36">
-          <div className="text-5xl mb-10 text-white text-center">
+          <div className=" font-maqin text-6xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
           <ServiceCardSlider services={dummy} />
         </div>
         <div className="">
-          <div className="text-5xl mb-10 text-white text-center">
+          <div className="font-maqin text-6xl mb-10 text-white text-center">
             OUR PRODUCTS
           </div>
           <div className="">
