@@ -30,7 +30,7 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
       onSlideChange={() => console.log("slide change")}
     >
       {products.map((product: any) => (
-        <SwiperSlide>
+        <SwiperSlide key={product.id}>
           <ProductCard
             title={product.title}
             description={product.description}

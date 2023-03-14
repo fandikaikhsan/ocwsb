@@ -9,6 +9,7 @@ import "swiper/css/scrollbar"
 
 interface BannerCardSliderProps {
   contents: {
+    id: number
     title: string
     description: string
     image?: string
@@ -31,7 +32,7 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
       onSlideChange={() => console.log("slide change")}
     >
       {contents.map((product: any) => (
-        <SwiperSlide>
+        <SwiperSlide key={product.id}>
           <BannerCard title={product.title} description={product.description} />
         </SwiperSlide>
       ))}

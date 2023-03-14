@@ -52,7 +52,7 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ products }) => {
       }}
     >
       {products.map((product: any) => (
-        <SwiperSlide>
+        <SwiperSlide key={product.id}>
           <ServiceCard
             title={product.title}
             description={product.description}

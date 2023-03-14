@@ -4,7 +4,7 @@ const FooterSection = () => {
   return (
     <>
       <div className="flex flex-row p-10 text-white bg-orange-700">
-        <div>
+        <div className="flex flex-row w-36">
           <div>Office</div>
           <div>
             Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
