@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import Navbar from "@/components/layouts/Nav"
 import ProductSlider from "@/components/containers/ProductCardSlider"
 import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
-import { products, contents } from "@/pages/api/dummy"
+import { products, contents, dummy } from "@/pages/api/dummy"
 import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="text-5xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
-          <ServiceCardSlider products={products} />
+          <ServiceCardSlider services={dummy} />
         </div>
         <div className="">
           <div className="text-5xl mb-10 text-white text-center">

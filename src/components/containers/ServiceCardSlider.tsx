@@ -8,15 +8,16 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 
 interface ServiceCardSliderProps {
-  products: {
-    id: number
+  services: {
+    id?: number
     title: string
     description: string
-    path: string
+    image?: string
+    path?: string
   }[]
 }
 
-const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ products }) => {
+const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
   return (
     <Swiper
       // install Swiper modules
@@ -51,9 +52,10 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ products }) => {
         },
       }}
     >
-      {products.map((product: any) => (
+      {services.map((product: any) => (
         <SwiperSlide key={product.id}>
           <ServiceCard
+            id={product.id}
             title={product.title}
             description={product.description}
           />
