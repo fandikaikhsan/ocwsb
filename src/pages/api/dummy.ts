@@ -11,6 +11,18 @@ const dummy = [
       "Assemble components or materials or materials in a product to become a single unit of a production result",
     image: "https://source.unsplash.com/1600x900/?nature,forest",
   },
+  {
+    title: "REPAIR",
+    description:
+      "Perform Repair If there is damage or malfunction in a machine",
+    image: "https://source.unsplash.com/1600x900/?nature,water",
+  },
+  {
+    title: "OVERHAUL",
+    description:
+      "Maintain system mechanisms and components in usable condition to achieve maximum productivity",
+    image: "https://source.unsplash.com/1600x900/?nature,tree",
+  },
 ]
 const products = [
   {

@@ -2,10 +2,14 @@ import React, { FC } from "react"
 
 const FooterSection = () => {
   return (
-    <footer className="bg-gray-800 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-orange-700 py-8">
+      <div className="mx-auto lg:px-12 text-white">
+        <div>Logo</div>
+        <div>Certicicate</div>
+      </div>
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="md:flex md:items-center md:justify-between">
-          <div className="flex justify-start md:w-1/3">
+          <div className="flex justify-start md:w-2/3">
             <div>
               <h3 className="text-lg font-medium text-white">Office</h3>
               <p className="mt-2 text-base text-gray-300">
