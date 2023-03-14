@@ -4,8 +4,11 @@ const FooterSection = () => {
   return (
     <footer className="bg-orange-700 py-8">
       <div className="mx-auto lg:px-12 text-white">
-        <div>Logo</div>
-        <div>Certicicate</div>
+        <div className="flex items-center flex-shrink-0 text-white mr-6">
+          <a href="#">
+            <img src="ocwsb-logo.png" alt="OCWSB" className="h-8 md:h-16" />
+          </a>
+        </div>
       </div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="md:flex md:items-center md:justify-between">

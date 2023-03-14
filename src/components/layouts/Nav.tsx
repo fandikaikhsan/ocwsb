@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <a href="#">
-          <img src="ocwsb-logo.png" alt="OCWSB" className="h-8 md:h-10" />
+          <img src="ocwsb-logo.png" alt="OCWSB" className="h-8 md:h-16" />
         </a>
       </div>
       <div className="block md:hidden">
@@ -38,7 +38,7 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         }`}
       >
-        <div className="text-sm md:flex-grow md:justify-end">
+        <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
           <a
             href="#"
             className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"

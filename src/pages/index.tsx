@@ -6,6 +6,7 @@ import { products, contents, dummy } from "@/pages/api/dummy"
 import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
+import ServiceModal from "@/components/containers/ServiceModal"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -16,6 +17,15 @@ const dummyBanner = {
   image: "https://source.unsplash.com/user/wsanter",
   cta: "Contact Us",
   url: "/contact",
+}
+
+const dummyModal = {
+  title: "Maintenance",
+  imageSrc: "https://source.unsplash.com/user/wsanter",
+  description:
+    "The technical meaning of maintenance involves functional checks, servicing, repairing or replacing of necessary devices, equipment, machinery, building infrastructure, and supporting utilities in industrial, business, and residential installations This type of maintenance, also referred to as preventive maintenance, is implemented on a fixed schedule and typically includes activities such as inspecting, cleaning, washing, replacing, and checking. It is typically performed in the downtime between shifts or on weekends to avoid affecting productivity goals.",
+  isOpen: true,
+  onclose: () => {},
 }
 
 export default function Home() {
@@ -41,6 +51,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ServiceModal props={dummyModal} />
       <FooterSection />
     </>
   )
