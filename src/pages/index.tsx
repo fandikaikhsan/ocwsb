@@ -7,7 +7,7 @@ import { products, contents, dummy } from "@/pages/api/dummy"
 import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
-import ServiceModal from "@/components/containers/ServiceModal"
+import ProductAccordion from "@/components/layouts/ProductAccordion"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -53,6 +53,7 @@ export default function Home() {
         </div>
       </div>
       <FooterSection />
+      <ProductAccordion />
     </>
   )
 }
