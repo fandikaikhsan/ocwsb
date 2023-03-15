@@ -42,9 +42,9 @@ const FormSection = () => {
 
   return (
     <>
-      <div className=" p-10 bg-gradient-to-b from-gray-700 to-orange-800">
+      <div className=" p-10 bg-gradient-to-b from-gray-900 to-orange-800">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-8">
+          <div className="mb-5">
             <label
               htmlFor="name"
               className={`block text-2xl font-maqin mb-2 ${
@@ -62,7 +62,7 @@ const FormSection = () => {
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.name
                   ? "text-red-300 border-red-400"
-                  : "text-gray-200 border-gray-400"
+                  : "text-black border-gray-400"
               }`}
               // ref={register}
             />
@@ -73,7 +73,7 @@ const FormSection = () => {
             )}
           </div>
 
-          <div className="mb-8">
+          <div className="mb-5">
             <label
               htmlFor="company"
               className={`block text-2xl font-maqin mb-2 ${
@@ -91,7 +91,7 @@ const FormSection = () => {
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.company
                   ? "text-red-300 border-red-400"
-                  : "text-gray-200 border-gray-400"
+                  : "text-black border-gray-400"
               }`}
               // ref={register}
             />
@@ -102,7 +102,7 @@ const FormSection = () => {
             )}
           </div>
 
-          <div className="mb-8">
+          <div className="mb-5">
             <label
               htmlFor="email"
               className={`block text-2xl font-maqin mb-2 ${
@@ -120,7 +120,7 @@ const FormSection = () => {
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.email
                   ? "text-red-300 border-red-400"
-                  : "text-gray-200 border-gray-400"
+                  : "text-black border-gray-400"
               }`}
               // ref={register}
             />
@@ -131,7 +131,7 @@ const FormSection = () => {
             )}
           </div>
 
-          <div className="mb-8">
+          <div className="mb-5">
             <label
               htmlFor="phone"
               className={`block text-2xl font-maqin mb-2 ${
@@ -149,7 +149,7 @@ const FormSection = () => {
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.phone
                   ? "text-red-300 border-red-400"
-                  : "text-gray-200 border-gray-400"
+                  : "text-black border-gray-400"
               }`}
               // ref={register}
             />
@@ -176,7 +176,7 @@ const FormSection = () => {
               id="inquiry"
               placeholder="Please enter your inquiry"
               className={`block w-full resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
-                errors.inquiry ? "border-red-400" : "text-gray-400"
+                errors.inquiry ? "border-red-400" : "text-black"
               }`}
               // ref={register()}
             />
@@ -186,7 +186,7 @@ const FormSection = () => {
               </p>
             )}
           </div>
-          <button className="bg-transparent border-white border-2 text-white rounded shadow py-2 px-5 text-sm">
+          <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
             Submit
           </button>
         </form>

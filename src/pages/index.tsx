@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-700 pt-24 md:pb-24">
+      <div className="bg-gray-900 pt-24 md:pb-24">
         <div className=" mb-12">
           <BannerCardSlider contents={contents} />
         </div>
@@ -57,6 +57,9 @@ export default function Home() {
             <ProductAccordion />
             <ProductAccordion />
             <ProductAccordion />
+          </div>
+          <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white text-center">
+            LETS TALK
           </div>
           <div className="">
             <FormSection />

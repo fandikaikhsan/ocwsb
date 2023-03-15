@@ -20,7 +20,7 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Scrollbar, A11y]}
       spaceBetween={10}
       slidesPerView={2}
       navigation
