@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import ProductCard from "../layouts/ProductCard"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -17,6 +17,12 @@ interface ProductCardSliderProps {
 }
 
 const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 800
+  }, [])
+
   return (
     <Swiper
       // install Swiper modules

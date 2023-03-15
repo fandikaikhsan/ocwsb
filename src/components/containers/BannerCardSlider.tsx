@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import BannerCard from "../layouts/BannerCard"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -19,13 +19,20 @@ interface BannerCardSliderProps {
 }
 
 const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 800)
+    console.log(isMobile)
+  }, [])
+
   return (
     <Swiper
       // install Swiper modules
       modules={[Navigation, A11y]}
       spaceBetween={10}
       slidesPerView={1}
-      navigation
+      navigation={isMobile ? false : true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

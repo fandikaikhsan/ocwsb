@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react"
+import React, { useState, FC, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import ServiceCard from "../layouts/ServiceCard"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -21,19 +21,26 @@ interface ServiceCardSliderProps {
 const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [serviceData, setServiceData] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 800)
+    console.log(isMobile)
+  }, [])
 
   const handleServiceClick = (product: any) => {
     setServiceData(product)
     setIsOpen(true)
   }
+  console.log(isMobile)
 
   return (
     <Swiper
       // install Swiper modules
       modules={[Navigation, A11y]}
+      navigation={isMobile ? false : true}
       spaceBetween={10}
       slidesPerView={1}
-      navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
