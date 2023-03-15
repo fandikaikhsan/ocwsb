@@ -8,6 +8,7 @@ import BannerCard from "@/components/layouts/BannerCard"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import ProductAccordion from "@/components/layouts/ProductAccordion"
+import FormSection from "@/components/containers/FormSection"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -45,7 +46,7 @@ export default function Home() {
             <ServiceCardSlider services={dummy} />
           </div>
         </div>
-        <div className="mb-20">
+        <div className="">
           <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             OUR PRODUCTS
           </div>
@@ -56,6 +57,9 @@ export default function Home() {
             <ProductAccordion />
             <ProductAccordion />
             <ProductAccordion />
+          </div>
+          <div className="">
+            <FormSection />
           </div>
         </div>
         <FooterSection />
