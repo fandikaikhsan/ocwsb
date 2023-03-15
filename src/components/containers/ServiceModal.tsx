@@ -8,9 +8,10 @@ interface ModalProps {
     isOpen?: boolean
     onClose?: () => void
   }
+  setIsOpen: (isOpen: boolean) => void
 }
 
-const ServiceModal: React.FC<ModalProps> = ({ props }) => {
+const ServiceModal: React.FC<ModalProps> = ({ props, setIsOpen }) => {
   const {
     title = "",
     imageSrc = "",
@@ -46,7 +47,7 @@ const ServiceModal: React.FC<ModalProps> = ({ props }) => {
           </div>
           <button
             className="absolute top-2 right-2 text-black hover:text-orange-700"
-            onClick={onClose}
+            onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">Close</span>
             <svg

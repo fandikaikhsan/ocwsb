@@ -7,10 +7,18 @@ interface ServiceCardProps {
   description: string
   image?: string
   path?: string
+  onClick?: () => void
 }
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
-  const { id = 0, title = "", description = "", image = "" } = props
+  const {
+    id = 0,
+    title = "",
+    description = "",
+    image = "",
+    onClick = () => {},
+  } = props
+
   return (
     <>
       <div
@@ -25,7 +33,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
           </div>
         </div>
         <div className=" mt-auto mb-4 justify-center">
-          <GradientBorderButton text="Read more" />
+          <GradientBorderButton onClick={onClick} text="Read more" />
         </div>
       </div>
     </>

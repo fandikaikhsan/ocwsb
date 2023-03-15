@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google"
+import React, { useState } from "react"
 import Navbar from "@/components/layouts/Nav"
 import ProductSlider from "@/components/containers/ProductCardSlider"
 import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
@@ -29,6 +30,9 @@ const dummyModal = {
 }
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [serviceIndex, setServiceIndex] = useState(0)
+
   return (
     <>
       <Navbar />
@@ -40,7 +44,11 @@ export default function Home() {
           <div className=" font-maqin text-6xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
-          <ServiceCardSlider services={dummy} />
+          <ServiceCardSlider
+            // setServiceIndex={setServiceIndex}
+            setIsOpen={setIsOpen}
+            services={dummy}
+          />
         </div>
         <div className="">
           <div className="font-maqin text-6xl mb-10 text-white text-center">
@@ -51,7 +59,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ServiceModal props={dummyModal} />
+      {isOpen && (
+        <ServiceModal props={dummy[serviceIndex]} setIsOpen={setIsOpen} />
+      )}
       <FooterSection />
     </>
   )

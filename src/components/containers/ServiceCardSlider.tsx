@@ -15,9 +15,15 @@ interface ServiceCardSliderProps {
     image?: string
     path?: string
   }[]
+  setIsOpen: (isOpen: boolean) => void
+  // setServiceIndex: (serviceIndex: number) => void
 }
 
-const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
+const ServiceCardSlider: FC<ServiceCardSliderProps> = ({
+  // setServiceIndex,
+  setIsOpen,
+  services,
+}) => {
   return (
     <Swiper
       // install Swiper modules
@@ -58,6 +64,10 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
             id={product.id}
             title={product.title}
             description={product.description}
+            onClick={() => {
+              // setServiceIndex(product.id)
+              setIsOpen(true)
+            }}
           />
         </SwiperSlide>
       ))}
