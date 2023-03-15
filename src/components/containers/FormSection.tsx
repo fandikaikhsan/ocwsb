@@ -4,14 +4,22 @@ import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
 type UserSubmitForm = {
+  name: string
+  company: string
   email: string
+  phone: string
   password: string
+  inquiry: string
 }
 
 const FormSection = () => {
   const schema = yup.object().shape({
+    name: yup.string().required().min(3),
+    company: yup.string(),
     email: yup.string().email().required(),
+    phone: yup.string(),
     password: yup.string().required().min(6),
+    inquiry: yup.string(),
   })
 
   const {
@@ -36,6 +44,64 @@ const FormSection = () => {
     <>
       <div className=" p-10 bg-gradient-to-b from-gray-700 to-orange-800">
         <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-8">
+            <label
+              htmlFor="name"
+              className={`block text-2xl font-maqin mb-2 ${
+                errors.name ? "text-red-400" : "text-white"
+              }`}
+            >
+              Name:
+            </label>
+            <input
+              {...register("name")}
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Please enter your name"
+              className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.name
+                  ? "text-red-300 border-red-400"
+                  : "text-gray-200 border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid name is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-8">
+            <label
+              htmlFor="company"
+              className={`block text-2xl font-maqin mb-2 ${
+                errors.company ? "text-red-400" : "text-white"
+              }`}
+            >
+              Company:
+            </label>
+            <input
+              {...register("company")}
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Please enter your company"
+              className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.company
+                  ? "text-red-300 border-red-400"
+                  : "text-gray-200 border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.company && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid company is required.
+              </p>
+            )}
+          </div>
+
           <div className="mb-8">
             <label
               htmlFor="email"
@@ -67,21 +133,50 @@ const FormSection = () => {
 
           <div className="mb-8">
             <label
-              htmlFor="password"
+              htmlFor="phone"
               className={`block text-2xl font-maqin mb-2 ${
-                errors.password ? "text-red-400" : "text-white"
+                errors.email ? "text-red-400" : "text-white"
               }`}
             >
-              Password:
+              Phone:
             </label>
             <input
-              {...register("password")}
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Please enter your password"
-              className={`block w-full bg-white rounded-lg border-2 py-2 px-4 text-black placeholder-gray-400 ${
-                errors.password ? "border-red-400" : "text-gray-400"
+              {...register("phone")}
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Please enter your phone"
+              className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.phone
+                  ? "text-red-300 border-red-400"
+                  : "text-gray-200 border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid phone is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-8">
+            <label
+              htmlFor="inquiry"
+              className={`block text-2xl font-maqin mb-2 ${
+                errors.inquiry ? "text-red-400" : "text-white"
+              }`}
+            >
+              Inquiry:
+            </label>
+            <input
+              {...register("inquiry")}
+              type="text"
+              name="inquiry"
+              id="inquiry"
+              placeholder="Please enter your inquiry"
+              className={`block w-full resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
+                errors.inquiry ? "border-red-400" : "text-gray-400"
               }`}
               // ref={register()}
             />
@@ -91,7 +186,6 @@ const FormSection = () => {
               </p>
             )}
           </div>
-
           <button className="bg-transparent border-white border-2 text-white rounded shadow py-2 px-5 text-sm">
             Submit
           </button>
