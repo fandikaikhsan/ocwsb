@@ -11,7 +11,7 @@ interface ModalProps {
   setIsOpen: (isOpen: boolean) => void
 }
 
-const ServiceModal: React.FC<ModalProps> = ({ props, setIsOpen }) => {
+const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
   const {
     title = "",
     imageSrc = "",
