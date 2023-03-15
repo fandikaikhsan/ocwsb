@@ -31,28 +31,12 @@ const dummyModal = {
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <div className="bg-gray-700 pt-24 pb-24">
-        <div className="">
-          <BannerCardSlider contents={contents} />
-        </div>
-        <div className="mb-36">
-          <div className=" font-maqin text-6xl mb-10 text-white text-center">
-            OUR SERVICES
-          </div>
-          <ServiceCardSlider services={dummy} />
-        </div>
-        <div className="">
-          <div className="font-maqin text-6xl mb-10 text-white text-center">
-            OUR PRODUCTS
-          </div>
-          <div className="">
-            <ProductSlider products={products} />
-          </div>
+      <div className="text-white mt-24 bg-gray-600 font-maqin text-center m-auto">
+        <div className="text-4xl">HBD MANG</div>
+        <div className="text-2xl">
+          Sing soleh sing digampilkeun rejekina, punten telat
         </div>
       </div>
-      <ServiceModal props={dummyModal} />
-      <FooterSection />
     </>
   )
 }
