@@ -30,9 +30,6 @@ const dummyModal = {
 }
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [serviceIndex, setServiceIndex] = useState(0)
-
   return (
     <>
       <Navbar />
@@ -44,11 +41,7 @@ export default function Home() {
           <div className=" font-maqin text-6xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
-          <ServiceCardSlider
-            // setServiceIndex={setServiceIndex}
-            setIsOpen={setIsOpen}
-            services={dummy}
-          />
+          <ServiceCardSlider services={dummy} />
         </div>
         <div className="">
           <div className="font-maqin text-6xl mb-10 text-white text-center">
@@ -59,9 +52,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <ServiceModal props={dummy[serviceIndex]} setIsOpen={setIsOpen} />
-      )}
       <FooterSection />
     </>
   )
