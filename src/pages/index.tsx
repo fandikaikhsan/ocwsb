@@ -33,27 +33,33 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-700 pt-24 pb-24">
-        <div className="">
+      <div className="bg-gray-700 pt-24 md:pb-24">
+        <div className=" mb-12">
           <BannerCardSlider contents={contents} />
         </div>
-        <div className="mb-36">
-          <div className=" font-maqin text-6xl mb-10 text-white text-center">
+        <div className="mb-20 md:mb-32">
+          <div className=" font-maqin text-4xl md:text-6xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
-          <ServiceCardSlider services={dummy} />
+          <div className="ml-6">
+            <ServiceCardSlider services={dummy} />
+          </div>
         </div>
-        <div className="">
-          <div className="font-maqin text-6xl mb-10 text-white text-center">
+        <div className="mb-20">
+          <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             OUR PRODUCTS
           </div>
-          <div className="">
+          <div className="hidden md:block">
             <ProductSlider products={products} />
           </div>
+          <div className="md:hidden m-4 flex flex-col gap-4">
+            <ProductAccordion />
+            <ProductAccordion />
+            <ProductAccordion />
+          </div>
         </div>
+        <FooterSection />
       </div>
-      <FooterSection />
-      <ProductAccordion />
     </>
   )
 }

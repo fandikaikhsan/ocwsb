@@ -10,10 +10,10 @@ const ProductAccordion = () => {
           onClick={() => {
             isAccordionOpen ? setAccordionOpen(false) : setAccordionOpen(true)
           }}
-          className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-          data-accordion-target="#accordion-collapse-body-1"
-          aria-expanded="true"
-          aria-controls="accordion-collapse-body-1"
+          className="flex items-center justify-between w-full p-5 bg-green-900 text-xl text-left text-white font-maqin border ring-gray-800 border-0 "
+          //   data-accordion-target="#accordion-collapse-body-1"
+          //   aria-expanded="true"
+          //   aria-controls="accordion-collapse-body-1"
         >
           <span>What is Flowbite?</span>
           <svg
@@ -38,7 +38,7 @@ const ProductAccordion = () => {
         className={isAccordionOpen ? "block" : "hidden"}
         aria-labelledby="accordion-collapse-heading-1"
       >
-        <div className="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <div className="p-5 font-light border dark:border-gray-700 dark:bg-gray-900">
           <p className="mb-2 text-gray-500 dark:text-gray-400">
             Flowbite is an open-source library of interactive components built
             on top of Tailwind CSS including buttons, dropdowns, modals,

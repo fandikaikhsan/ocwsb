@@ -10,18 +10,18 @@ const Navbar = () => {
   return (
     <nav
       className={`flex items-center justify-between flex-wrap py-4 md:py-6 px-4 md:px-12 fixed top-0 w-full z-10 ${
-        isOpen ? "bg-gray-700" : "bg-transparent"
+        isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-30 bg-black"
       }`}
     >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <a href="#">
-          <img src="ocwsb-logo.png" alt="OCWSB" className="h-8 md:h-16" />
+          <img src="ocwsb-logo.png" alt="OCWSB" className="h-14 md:h-16" />
         </a>
       </div>
       <div className="block md:hidden">
         <button
           onClick={toggleMobileMenu}
-          className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-800 hover:border-gray-800"
+          className="flex items-center px-4 py-3 border rounded text-white border-white hover:text-white hover:border-white"
         >
           <svg
             className="fill-current h-3 w-3"

@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         maqin: ["maqin-italic"],
       },
+      backgroundImage: {
+        "footer-pattern": "url('/ocwsb-pattern.png')",
+      },
     },
   },
   plugins: [],

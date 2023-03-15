@@ -30,20 +30,32 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, A11y]}
       spaceBetween={10}
-      slidesPerView={5}
+      slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
       breakpoints={{
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
         803: {
           slidesPerView: 2,
           spaceBetween: 80,
         },
         1211: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+        1600: {
           slidesPerView: 4,
           spaceBetween: 100,
         },
@@ -52,7 +64,7 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           spaceBetween: 40,
         },
         1860: {
-          slidesPerView: 4,
+          slidesPerView: 5,
           spaceBetween: 20,
         },
         2190: {

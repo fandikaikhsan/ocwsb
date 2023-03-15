@@ -22,7 +22,7 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, A11y]}
       spaceBetween={10}
       slidesPerView={1}
       navigation
