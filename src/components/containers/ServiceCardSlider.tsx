@@ -28,56 +28,53 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
   }
 
   return (
-    <>
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={10}
-        slidesPerView={5}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        breakpoints={{
-          803: {
-            slidesPerView: 2,
-            spaceBetween: 80,
-          },
-          1211: {
-            slidesPerView: 4,
-            spaceBetween: 100,
-          },
-          1680: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1860: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          2190: {
-            slidesPerView: 5,
-            spaceBetween: 40,
-          },
-        }}
-      >
-        {services.map((product: any) => (
-          <SwiperSlide key={product.id}>
-            <ServiceCard
-              id={product.id}
-              title={product.title}
-              description={product.short_desc}
-              onClick={() => {
-                // setServiceIndex(product.id)
-                handleServiceClick(product)
-              }}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={10}
+      slidesPerView={5}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
+      breakpoints={{
+        803: {
+          slidesPerView: 2,
+          spaceBetween: 80,
+        },
+        1211: {
+          slidesPerView: 4,
+          spaceBetween: 100,
+        },
+        1680: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1860: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        2190: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+      }}
+    >
+      {services.map((product: any) => (
+        <SwiperSlide key={product.id}>
+          <ServiceCard
+            id={product.id}
+            title={product.title}
+            description={product.short_desc}
+            onClick={() => {
+              handleServiceClick(product)
+            }}
+          />
+        </SwiperSlide>
+      ))}
       {isOpen && <ServiceModal props={serviceData} setIsOpen={setIsOpen} />}
-    </>
+    </Swiper>
   )
 }
 

@@ -33,7 +33,6 @@ const ServiceModal: React.FC<ModalProps> = ({ props, setIsOpen }) => {
           <div className="relative">
             <img
               src={imageSrc}
-              alt={title}
               className="w-full h-48 object-cover opacity-70 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
