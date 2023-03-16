@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import LanguageDropdown from "../common/LanguageDropdown"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -75,6 +76,7 @@ const Navbar = () => {
           >
             Contact Us
           </a>
+          <LanguageDropdown />
         </div>
       </div>
     </nav>
