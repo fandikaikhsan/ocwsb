@@ -9,6 +9,7 @@ import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import ProductAccordion from "@/components/layouts/ProductAccordion"
 import FormSection from "@/components/containers/FormSection"
+import DesktopFormSection from "@/components/containers/DesktopFormSection"
 
 // const inter = Inter({ subsets: ["latin"] })
 
@@ -34,7 +35,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900 pt-24 md:pb-24">
+      <div className="bg-gray-900 pt-24">
         <div className=" mb-12">
           <BannerCardSlider contents={contents} />
         </div>
@@ -42,7 +43,7 @@ export default function Home() {
           <div className=" font-maqin text-4xl md:text-6xl mb-10 text-white text-center">
             OUR SERVICES
           </div>
-          <div className="ml-6">
+          <div className="ml-6 md:ml-10">
             <ServiceCardSlider services={dummy} />
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function Home() {
           <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             OUR PRODUCTS
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:block mx-10">
             <ProductSlider products={products} />
           </div>
           <div className="md:hidden m-4 flex flex-col gap-4">
@@ -61,12 +62,15 @@ export default function Home() {
           <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white text-center">
             LETS TALK
           </div>
-          <div className="">
+          <div className="md:hidden">
             <FormSection />
           </div>
+          <div className="sm:hidden md:block">
+            <DesktopFormSection />
+          </div>
         </div>
-        <FooterSection />
       </div>
+      <FooterSection />
     </>
   )
 }

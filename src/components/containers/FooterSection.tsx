@@ -4,7 +4,7 @@ const FooterSection = () => {
   return (
     <footer className=" bg-footer-pattern py-8">
       <div className="hidden md:block mx-auto lg:px-12 text-white">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <div className="flex items-center flex-shrink-0 text-white mr-6 md:mr-0">
           <a href="#">
             <img
               src="ocwsb-logo.png"
