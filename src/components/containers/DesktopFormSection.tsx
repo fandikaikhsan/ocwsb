@@ -43,7 +43,7 @@ const DesktopFormSection = () => {
   return (
     <>
       <div className=" p-8 bg-gradient-to-b from-gray-900 to-orange-800">
-        <div className="w-2/3 mx-auto">
+        <div className="md:w-5/6 lg:w-4/5 mx-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-5 flex flex-row justify-between content-between">
               <label
