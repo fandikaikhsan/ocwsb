@@ -18,7 +18,7 @@ const LanguageDropdown = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0].code) // default language is the first language in the array
   const [dropdownOpen, setDropdownOpen] = useState(false) // state for toggling the language dropdown
 
-  const handleChangeLanguage = (languageCode) => {
+  const handleChangeLanguage = (languageCode: any) => {
     setSelectedLanguage(languageCode)
     setDropdownOpen(false)
     // TODO: update the language of the app here
@@ -34,7 +34,7 @@ const LanguageDropdown = () => {
       >
         {/* Language flag icon */}
         <img
-          src={languages.find((lang) => lang.code === selectedLanguage).flag}
+          src={languages?.find((lang) => lang?.code === selectedLanguage)?.flag}
           alt={`${selectedLanguage} flag`}
           className="w-4 h-4 rounded-full border"
         />
@@ -42,7 +42,7 @@ const LanguageDropdown = () => {
         {/* Language label */}
         <div className="text-white ml-2">
           <span>
-            {languages.find((lang) => lang.code === selectedLanguage).name}
+            {languages?.find((lang) => lang?.code === selectedLanguage)?.name}
           </span>
         </div>
 
