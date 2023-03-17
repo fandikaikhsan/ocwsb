@@ -22,17 +22,13 @@ interface ProductCardSliderProps {
 }
 
 const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
-  useEffect(() => {
-    const isMobile = window.innerWidth < 800
-  }, [])
-
   return (
     <>
       <Swiper
         modules={[Navigation, A11y]}
         spaceBetween={16}
         navigation
-        slidesPerView="auto"
+        // slidesPerView="auto"
         centeredSlides
         loop
       >
