@@ -1,21 +1,36 @@
 import React, { FC, useState } from "react"
 
-const ProductAccordion = () => {
+interface ProductAccordionProps {
+  title: string
+  desc: string
+  image: string
+}
+
+const ProductAccordion: FC<ProductAccordionProps> = (props) => {
   const [isAccordionOpen, setAccordionOpen] = useState(false)
+  const { title, desc, image } = props
   return (
-    <div id="accordion-collapse" data-accordion="collapse">
+    <div
+      className="relative rounded-md shadow-md overflow-hidden"
+      id="accordion-collapse"
+      data-accordion="collapse"
+      style={
+        {
+          // backgroundImage: `linear-gradient(rgba(10, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`,
+          // backgroundSize: "cover",
+        }
+      }
+      onClick={() => setAccordionOpen(!isAccordionOpen)}
+    >
       <h2 id="accordion-collapse-heading-1">
         <button
           type="button"
           onClick={() => {
             isAccordionOpen ? setAccordionOpen(false) : setAccordionOpen(true)
           }}
-          className="flex items-center justify-between w-full p-5 bg-green-900 text-xl text-left text-white font-maqin border ring-gray-800 border-0 "
-          //   data-accordion-target="#accordion-collapse-body-1"
-          //   aria-expanded="true"
-          //   aria-controls="accordion-collapse-body-1"
+          className="flex items-center justify-between w-full p-5 text-xl text-left text-white font-maqin border rounded-md "
         >
-          <span>What is Flowbite?</span>
+          <span>{title}</span>
           <svg
             data-accordion-icon
             className={`w-6 h-6 shrink-0 ${
@@ -38,23 +53,15 @@ const ProductAccordion = () => {
         className={isAccordionOpen ? "block" : "hidden"}
         aria-labelledby="accordion-collapse-heading-1"
       >
-        <div className="p-5 font-light border dark:border-gray-700 dark:bg-gray-900">
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built
-            on top of Tailwind CSS including buttons, dropdowns, modals,
-            navbars, and more.
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to{" "}
-            <a
-              href="/docs/getting-started/introduction/"
-              className="text-blue-600 dark:text-blue-500 hover:underline"
-            >
-              get started
-            </a>{" "}
-            and start developing websites even faster with components on top of
-            Tailwind CSS.
-          </p>
+        <div
+          className="p-5 font-light border"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <p className="mb-2 text-white font-bold">{desc}</p>
         </div>
       </div>
     </div>

@@ -186,9 +186,11 @@ const FormSection = () => {
               </p>
             )}
           </div>
-          <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
-            Submit
-          </button>
+          <div className="">
+            <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </>

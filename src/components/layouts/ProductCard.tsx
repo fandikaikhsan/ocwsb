@@ -1,9 +1,9 @@
 import React, { FC } from "react"
 
 interface ProductCardProps {
-  image?: string
   title: string
   description: string
+  image?: string
   path?: string
 }
 
@@ -11,15 +11,22 @@ const ProductCard: FC<ProductCardProps> = (props) => {
   const { image = "", title = "", description = "", path = "" } = props
   return (
     <>
-      <div className="flex flex-col justify-center p-6 rounded-lg w-full bg-green-500 ">
-        <div className="pl-10 pt-52">
-          <div className="flex flex-col gap-2 text-lg text-white pb-8">
-            <div className="font-maqin text-4xl">{title}</div>
-            <div>{description}</div>
+      <div className="relative w-full h-[22rem] rounded-md shadow-md overflow-hidden">
+        <img
+          src={image}
+          alt="Card background"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 p-12 lg:p-24 flex flex-col justify-between">
+          <div>
+            <h3 className="text-white font-maqin font-semibold text-4xl mb-2">
+              {title}
+            </h3>
+            <p className="text-white font-maqin text-2xl mb-4">{description}</p>
           </div>
-          <div className="text-white underline cursor-pointer">
-            <div>Read more</div>{" "}
-          </div>
+          <a href={path} className="text-white text-xl underline">
+            Read more
+          </a>
         </div>
       </div>
     </>

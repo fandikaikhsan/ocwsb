@@ -4,7 +4,7 @@ interface ModalProps {
   props: {
     title: string
     imageSrc?: string
-    description?: string
+    desc?: string
     isOpen?: boolean
     onClose?: () => void
   }
@@ -15,7 +15,7 @@ const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
   const {
     title = "",
     imageSrc = "",
-    description = "",
+    desc = "",
     isOpen = true,
     onClose = () => {},
   } = props
@@ -42,7 +42,7 @@ const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
             </div>
           </div>
           <div className="p-4">
-            <p className="font-maqin text-xl text-gray-700">{description}</p>
+            <p className="font-maqin text-xl text-gray-700">{desc}</p>
           </div>
           <button
             className="absolute top-2 right-2 text-black hover:text-orange-700"

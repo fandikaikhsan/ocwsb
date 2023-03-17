@@ -11,39 +11,42 @@ interface ProductCardSliderProps {
   products: {
     id: number
     title: string
-    description: string
-    path: string
+    desc?: string
+    image?: string
+    desc_short: string
+    cta: {
+      text: string
+      url?: string
+    }
   }[]
 }
 
 const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
-  const [isMobile, setIsMobile] = useState(false)
-
   useEffect(() => {
     const isMobile = window.innerWidth < 800
   }, [])
 
   return (
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, A11y]}
-      spaceBetween={10}
-      slidesPerView={2}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {products.map((product: any) => (
-        <SwiperSlide key={product.id}>
-          <ProductCard
-            title={product.title}
-            description={product.description}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <Swiper
+        modules={[Navigation, A11y]}
+        spaceBetween={16}
+        navigation
+        slidesPerView="auto"
+        centeredSlides
+        loop
+      >
+        {products.map((product, index) => (
+          <SwiperSlide key={index} style={{ width: "calc(2/3 * 100vw)" }}>
+            <ProductCard
+              title={product.title}
+              description={product.desc_short}
+              image={product.image}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   )
 }
 

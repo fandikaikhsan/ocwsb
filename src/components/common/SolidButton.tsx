@@ -1,13 +1,12 @@
 import React, { FC } from "react"
 
 interface SolidButtonProps {
-  isMobile?: boolean
-  onClick?: () => void
   text: string
+  onClick?: () => void
 }
 
 const SolidButton: FC<SolidButtonProps> = (props) => {
-  const { isMobile = false, onClick = () => {}, text = "" } = props
+  const { text = "", onClick = () => {} } = props
   return (
     <button
       className={

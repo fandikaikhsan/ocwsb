@@ -10,11 +10,15 @@ import ServiceModal from "./ServiceModal"
 
 interface ServiceCardSliderProps {
   services: {
-    id?: number
+    id: number
     title: string
-    description: string
+    desc?: string
+    desc_short: string
     image?: string
-    path?: string
+    cta?: {
+      text: string
+      url?: string
+    }
   }[]
 }
 
@@ -28,13 +32,24 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
     console.log(isMobile)
   }, [])
 
-  const handleServiceClick = (product: any) => {
-    setServiceData(product)
+  const handleServiceClick = (service: any) => {
+    setServiceData(service)
     setIsOpen(true)
   }
   console.log(isMobile)
 
   return (
+    // <Swiper spaceBetween={16} slidesPerView="auto" centeredSlides>
+    //   {services.map((service, index) => (
+    //     <SwiperSlide key={index}>
+    //       <ServiceCard
+    //         id={service.id}
+    //         title={service.title}
+    //         desc={service.desc_short}
+    //       />
+    //     </SwiperSlide>
+    //   ))}
+    // </Swiper>
     <Swiper
       // install Swiper modules
       modules={[Navigation, A11y]}
@@ -45,16 +60,61 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
+      loop
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 0,
           spaceBetween: 10,
         },
         320: {
           slidesPerView: 1,
-          spaceBetween: 20,
+          spaceBetween: 30,
+        },
+        375: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        425: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+        440: {
+          slidesPerView: 1.4,
+          spaceBetween: 10,
+        },
+        487: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        530: {
+          slidesPerView: 1.65,
+          spaceBetween: 10,
+        },
+        580: {
+          slidesPerView: 1.9,
+          spaceBetween: 10,
+        },
+        610: {
+          slidesPerView: 1.9,
+          spaceBetween: 10,
+        },
+        630: {
+          slidesPerView: 1.9,
+          spaceBetween: 10,
+        },
+        621: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        650: {
+          slidesPerView: 1.7,
+          spaceBetween: 10,
         },
         803: {
+          slidesPerView: 1.9,
+          spaceBetween: 80,
+        },
+        960: {
           slidesPerView: 2,
           spaceBetween: 80,
         },
@@ -62,32 +122,42 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 3,
           spaceBetween: 100,
         },
+        1400: {
+          slidesPerView: 3.2,
+          spaceBetween: 100,
+        },
         1600: {
-          slidesPerView: 4,
+          slidesPerView: 3.3,
           spaceBetween: 100,
         },
         1680: {
-          slidesPerView: 4,
+          slidesPerView: 3.5,
           spaceBetween: 40,
         },
         1860: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 20,
         },
+        1920: {
+          slidesPerView: 4.2,
+          spaceBetween: 40,
+        },
         2190: {
-          slidesPerView: 5,
+          slidesPerView: 4.5,
           spaceBetween: 40,
         },
       }}
     >
-      {services.map((product: any) => (
-        <SwiperSlide key={product.id}>
+      {services.map((service: any) => (
+        <SwiperSlide key={service.id}>
           <ServiceCard
-            id={product.id}
-            title={product.title}
-            description={product.short_desc}
+            id={service.id}
+            title={service.title}
+            desc={service.desc_short}
+            image={service.image}
+            cta={service.cta}
             onClick={() => {
-              handleServiceClick(product)
+              handleServiceClick(service)
             }}
           />
         </SwiperSlide>

@@ -8,17 +8,19 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 
 interface BannerCardSliderProps {
-  contents: {
+  banners: {
     id: number
     title: string
-    description: string
+    subtitle: string
     image?: string
-    cta?: string
-    url?: string
+    cta?: {
+      text: string
+      url?: string
+    }
   }[]
 }
 
-const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
+const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -38,9 +40,13 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      {contents.map((product: any) => (
-        <SwiperSlide key={product.id}>
-          <BannerCard title={product.title} description={product.description} />
+      {banners.map((banner: any) => (
+        <SwiperSlide key={banner.id}>
+          <BannerCard
+            title={banner.title}
+            description={banner.subtitle}
+            image={banner.image}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
