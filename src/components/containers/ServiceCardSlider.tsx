@@ -33,23 +33,14 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
   }, [])
 
   const handleServiceClick = (service: any) => {
+    console.log("clicked")
+
     setServiceData(service)
     setIsOpen(true)
   }
   console.log(isMobile)
 
   return (
-    // <Swiper spaceBetween={16} slidesPerView="auto" centeredSlides>
-    //   {services.map((service, index) => (
-    //     <SwiperSlide key={index}>
-    //       <ServiceCard
-    //         id={service.id}
-    //         title={service.title}
-    //         desc={service.desc_short}
-    //       />
-    //     </SwiperSlide>
-    //   ))}
-    // </Swiper>
     <Swiper
       // install Swiper modules
       modules={[Navigation, A11y]}

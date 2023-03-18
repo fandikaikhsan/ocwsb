@@ -30,10 +30,15 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
         navigation
         // slidesPerView="auto"
         centeredSlides
+        style={{ zIndex: 0 }}
         loop
       >
         {products.map((product, index) => (
-          <SwiperSlide key={index} style={{ width: "calc(2/3 * 100vw)" }}>
+          <SwiperSlide
+            key={index}
+            // className="z-0"
+            style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
+          >
             <ProductCard
               title={product.title}
               description={product.desc_short}

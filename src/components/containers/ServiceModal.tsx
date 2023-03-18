@@ -3,7 +3,7 @@ import React from "react"
 interface ModalProps {
   props: {
     title: string
-    imageSrc?: string
+    image?: string
     desc?: string
     isOpen?: boolean
     onClose?: () => void
@@ -14,7 +14,7 @@ interface ModalProps {
 const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
   const {
     title = "",
-    imageSrc = "",
+    image = "",
     desc = "",
     isOpen = true,
     onClose = () => {},
@@ -24,28 +24,28 @@ const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
 
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
-      <div className="flex items-center justify-center min-h-screen p-6">
+      <div className="flex z-50 items-center justify-center min-h-screen p-6">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
         </div>
 
-        <div className="relative bg-white rounded-lg max-w-md w-full mx-auto">
+        <div className="relative bg-gray-900 rounded-lg max-w-md w-full mx-auto">
           <div className="relative">
             <img
-              src={imageSrc}
-              className="w-full h-48 object-cover opacity-70 rounded-t-lg"
+              src={image}
+              className="w-full h-48 object-cover opacity-40 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-5xl font-maqin font-bold text-black">
+              <h2 className="text-5xl font-maqin font-bold text-white">
                 {title}
               </h2>
             </div>
           </div>
           <div className="p-4">
-            <p className="font-maqin text-xl text-gray-700">{desc}</p>
+            <p className="font-maqin text-xl text-white">{desc}</p>
           </div>
           <button
-            className="absolute top-2 right-2 text-black hover:text-orange-700"
+            className="absolute top-2 right-2 text-white hover:text-orange-700"
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">Close</span>

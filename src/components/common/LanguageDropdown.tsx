@@ -6,11 +6,11 @@ const languages = [
     name: "English",
     flag: "/flags/en.png",
   },
-  {
-    code: "id",
-    name: "Indonesia",
-    flag: "/flags/id.png",
-  },
+  // {
+  //   code: "id",
+  //   name: "Indonesia",
+  //   flag: "/flags/id.png",
+  // },
   // Add more countries here
 ]
 
