@@ -3,12 +3,19 @@ import React, { FC } from "react"
 const FooterSection = () => {
   return (
     <footer className=" bg-footer-pattern bg-cover py-8">
-      <div className="hidden md:block mx-auto mr-6 md:mb-4 lg:px-12 text-white">
-        <div className="flex items-center flex-shrink-0 text-white md:mr-2">
+      <div className="hidden md:block mx-auto mr-8 md:mb-4 px-12 text-white">
+        <div className="flex flex-row gap-6 items-center flex-shrink-0 text-white md:mr-2">
           <a href="#">
             <img
               src="ocwsb-logo.png"
               alt="OCWSB"
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="iso-9001.png"
+              alt="ISO"
               className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
             />
           </a>

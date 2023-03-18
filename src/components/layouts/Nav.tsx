@@ -16,7 +16,7 @@ const Navbar = () => {
     >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <a href="#">
-          <img src="ocwsb-logo.png" alt="OCWSB" className="h-14 md:h-16" />
+          <img src="ocwsb-logo-2.png" alt="OCWSB" className="h-14 md:h-16" />
         </a>
       </div>
       <div className="block md:hidden">
