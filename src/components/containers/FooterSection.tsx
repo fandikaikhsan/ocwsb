@@ -21,9 +21,23 @@ const FooterSection = () => {
           </a>
         </div>
       </div>
+
       <div>
-        <div className="md:hidden text-4xl ml-5 md:ml-0 mb-4 font-maqin text-white">
-          OCWSB
+        <div className="flex md:hidden flex-row gap-3 items-center flex-shrink-0 text-white md:mr-2">
+          <a href="#">
+            <img
+              src="ocwsb-logo.png"
+              alt="OCWSB"
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="iso-9001.png"
+              alt="ISO"
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            />
+          </a>
         </div>
       </div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
