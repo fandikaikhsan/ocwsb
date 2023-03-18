@@ -14,7 +14,7 @@ const BannerCard: FC<BannerCardProps> = (props) => {
   const backgroundImage = "https://via.placeholder.com/1920x1080"
   return (
     <>
-      <div className="relative w-full h-[52rem] overflow-hidden">
+      <div className="relative w-full h-[40rem] md:h-[52rem] overflow-hidden">
         <img
           src={image}
           alt="Banner"
