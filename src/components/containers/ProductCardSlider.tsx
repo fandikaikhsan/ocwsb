@@ -6,6 +6,7 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
+import ProductModal from "./ProductModal"
 
 interface ProductCardSliderProps {
   products: {
@@ -22,6 +23,15 @@ interface ProductCardSliderProps {
 }
 
 const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [serviceData, setServiceData] = useState(0)
+
+  const handleServiceClick = (service: any) => {
+    console.log("clicked")
+
+    setServiceData(service)
+    setIsOpen(true)
+  }
   return (
     <>
       <Swiper
@@ -43,9 +53,11 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
               title={product.title}
               description={product.desc_short}
               image={product.image}
+              onClick={() => handleServiceClick(product)}
             />
           </SwiperSlide>
         ))}
+        {isOpen && <ProductModal props={serviceData} setIsOpen={setIsOpen} />}
       </Swiper>
     </>
   )

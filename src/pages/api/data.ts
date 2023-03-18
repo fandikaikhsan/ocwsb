@@ -3,6 +3,7 @@ const products = [
     id: 1,
     position: 1,
     title: "AFIAL - Advanced Forward Illuminator Aiming Laser Module",
+    desc_title: "AFIAL",
     desc_short:
       "An outstanding equipment to boost your tasks efficiency. Functional, tactical, and powerful.",
     desc: "Delivered with two laser markers (e.g. one visible / one invisible) and - on request - with infrared LED for vicinity illumination. Compact in design and a full aluminum housing with less than 26 mm above the accesory rail. The adjustment is easy due to the aligned laser block.",
@@ -17,6 +18,7 @@ const products = [
     id: 2,
     position: 2,
     title: "Skyshield 35mm",
+    desc_title: "Skyshield 35mm",
     desc_short: "A powerful weapon to protect the nation's air resistance. ",
     desc: "Fully automated and extremely effective. It's an ideal air defence system for protecting forward operating bases and other high-value assets from modern asymmetric threats.",
     image: "/products/product-2.jpg",
@@ -30,6 +32,7 @@ const products = [
     id: 3,
     position: 1,
     title: "AFIAL - Advanced Forward Illuminator Aiming Laser Module",
+    desc_title: "AFIAL",
     desc_short:
       "An outstanding equipment to boost your tasks efficiency. Functional, tactical, and powerful.",
     desc: "Delivered with two laser markers (e.g. one visible / one invisible) and - on request - with infrared LED for vicinity illumination. Compact in design and a full aluminum housing with less than 26 mm above the accesory rail. The adjustment is easy due to the aligned laser block.",
@@ -44,6 +47,7 @@ const products = [
     id: 4,
     position: 2,
     title: "Skyshield 35mm",
+    desc_title: "Skyshield 35mm",
     desc_short: "A powerful weapon to protect the nation's air resistance. ",
     desc: "Fully automated and extremely effective. It's an ideal air defence system for protecting forward operating bases and other high-value assets from modern asymmetric threats.",
     image: "/products/product-2.jpg",

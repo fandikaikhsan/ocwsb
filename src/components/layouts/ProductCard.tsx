@@ -5,10 +5,17 @@ interface ProductCardProps {
   description: string
   image?: string
   path?: string
+  onClick?: () => void
 }
 
 const ProductCard: FC<ProductCardProps> = (props) => {
-  const { image = "", title = "", description = "", path = "" } = props
+  const {
+    image = "",
+    title = "",
+    description = "",
+    path = "",
+    onClick = () => {},
+  } = props
   return (
     <>
       <div className="relative w-full h-[22rem] rounded-md shadow-md overflow-hidden">
@@ -24,7 +31,10 @@ const ProductCard: FC<ProductCardProps> = (props) => {
             </h3>
             <p className="text-white font-maqin text-2xl mb-4">{description}</p>
           </div>
-          <a href={path} className="text-white text-xl underline">
+          <a
+            onClick={onClick}
+            className=" hover:cursor-pointer text-white text-xl underline"
+          >
             Read more
           </a>
         </div>
