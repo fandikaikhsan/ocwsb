@@ -2,9 +2,9 @@ import React, { FC } from "react"
 
 const FooterSection = () => {
   return (
-    <footer className=" bg-footer-pattern py-8">
-      <div className="hidden md:block mx-auto lg:px-12 text-white">
-        <div className="flex items-center flex-shrink-0 text-white mr-6 md:mr-0">
+    <footer className=" bg-footer-pattern bg-cover py-8">
+      <div className="hidden md:block mx-auto mr-6 md:mb-4 lg:px-12 text-white">
+        <div className="flex items-center flex-shrink-0 text-white md:mr-2">
           <a href="#">
             <img
               src="ocwsb-logo.png"
@@ -20,8 +20,8 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="md:flex md:items-center md:justify-between">
-          <div className="flex justify-start md:w-2/3">
+        <div className="md:flex gap-4">
+          <div className="flex justify-start md:w-2/4">
             <div>
               <h3 className="text-lg font-medium text-white">Office</h3>
               <p className="md:mt-2 text-sm md:text-base text-gray-300">
@@ -32,7 +32,7 @@ const FooterSection = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center md:w-1/3 mt-4 md:mt-0">
+          <div className="flex justify-start items-start md:w-1/4 mt-4 md:mt-0">
             <div>
               <h3 className="text-lg font-medium text-white">Workshop</h3>
               <p className="md:mt-2 text-sm md:text-base text-gray-300">
@@ -43,8 +43,8 @@ const FooterSection = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-2 mt-4 md:mt-0 md:w-1/3">
-            <div className="w-1/2 pr-4">
+          <div className="flex flex-col justify-start gap-2 mt-4 md:mt-0 md:w-1/4">
+            <div className="w-1/2 pr-4 md:pr-0">
               <h3 className="text-lg font-medium text-white">Phone</h3>
               <p className="md:mt-2 text-sm md:text-base text-gray-300">
                 (021) – 58303738

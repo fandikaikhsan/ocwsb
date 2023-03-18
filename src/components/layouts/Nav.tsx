@@ -40,7 +40,7 @@ const Navbar = () => {
         }`}
       >
         <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
-          {/* <a
+          <a
             href="#"
             className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
           >
@@ -75,8 +75,10 @@ const Navbar = () => {
             className="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-800"
           >
             Contact Us
-          </a> */}
-          <LanguageDropdown />
+          </a>
+          <div className="mt-6 md:mt-0">
+            <LanguageDropdown />
+          </div>
         </div>
       </div>
     </nav>

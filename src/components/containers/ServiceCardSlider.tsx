@@ -66,12 +66,16 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 0,
           spaceBetween: 10,
         },
+        120: {
+          slidesPerView: 0.5,
+          spaceBetween: 10,
+        },
         320: {
-          slidesPerView: 1,
+          slidesPerView: 0.9,
           spaceBetween: 30,
         },
         375: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
           spaceBetween: 10,
         },
         425: {
@@ -90,6 +94,10 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 1.65,
           spaceBetween: 10,
         },
+        550: {
+          slidesPerView: 1.75,
+          spaceBetween: 10,
+        },
         580: {
           slidesPerView: 1.9,
           spaceBetween: 10,
@@ -98,12 +106,12 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 1.9,
           spaceBetween: 10,
         },
-        630: {
-          slidesPerView: 1.9,
-          spaceBetween: 10,
-        },
         621: {
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        630: {
+          slidesPerView: 1.9,
           spaceBetween: 10,
         },
         650: {
@@ -114,8 +122,24 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 1.9,
           spaceBetween: 80,
         },
+        850: {
+          slidesPerView: 2.1,
+          spaceBetween: 80,
+        },
+        900: {
+          slidesPerView: 2.2,
+          spaceBetween: 80,
+        },
         960: {
-          slidesPerView: 2,
+          slidesPerView: 2.3,
+          spaceBetween: 80,
+        },
+        1000: {
+          slidesPerView: 2.5,
+          spaceBetween: 80,
+        },
+        1100: {
+          slidesPerView: 2.7,
           spaceBetween: 80,
         },
         1211: {
@@ -134,16 +158,32 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
           slidesPerView: 3.5,
           spaceBetween: 40,
         },
+        1720: {
+          slidesPerView: 3.7,
+          spaceBetween: 40,
+        },
         1860: {
           slidesPerView: 4,
           spaceBetween: 20,
         },
         1920: {
-          slidesPerView: 4.2,
+          slidesPerView: 4.4,
           spaceBetween: 40,
         },
         2190: {
-          slidesPerView: 4.5,
+          slidesPerView: 4.7,
+          spaceBetween: 40,
+        },
+        2300: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+        2400: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+        2500: {
+          slidesPerView: 5.5,
           spaceBetween: 40,
         },
       }}
