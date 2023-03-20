@@ -9,7 +9,7 @@ const GradientBorderButton: FC<GradientBorderButtonProps> = (props) => {
   const { onClick = () => {}, text = "" } = props
   return (
     <button
-      className="bg-transparent hover:bg-orange-500 hover:border-orange-500 border-2 border-y-black rounded-lg text-white text-sm py-2 px-16"
+      className=" bg-black bg-opacity-30 hover:bg-orange-500 hover:border-orange-500 border-2 md:border-4 border-y-gray-700 rounded-xl text-white text-md px-16 py-2 md:py-4 md:px-32"
       onClick={() => onClick()}
     >
       {text}

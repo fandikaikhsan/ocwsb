@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import BannerCard from "../layouts/BannerCard"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -8,32 +8,45 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 
 interface BannerCardSliderProps {
-  contents: {
+  banners: {
     id: number
     title: string
-    description: string
+    subtitle: string
     image?: string
-    cta?: string
-    url?: string
+    cta?: {
+      text: string
+      url?: string
+    }
   }[]
 }
 
-const BannerCardSlider: FC<BannerCardSliderProps> = ({ contents }) => {
+const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 800)
+    console.log(isMobile)
+  }, [])
+
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, A11y]}
       spaceBetween={10}
       slidesPerView={1}
-      navigation
+      navigation={isMobile ? false : true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      {contents.map((product: any) => (
-        <SwiperSlide key={product.id}>
-          <BannerCard title={product.title} description={product.description} />
+      {banners.map((banner: any) => (
+        <SwiperSlide key={banner.id}>
+          <BannerCard
+            title={banner.title}
+            description={banner.subtitle}
+            image={banner.image}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

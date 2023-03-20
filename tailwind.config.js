@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        maqin: ["maqin-italic"],
+      },
+      backgroundImage: {
+        "footer-pattern": "url('/ocwsb-pattern.png')",
+      },
+    },
   },
   plugins: [],
 }

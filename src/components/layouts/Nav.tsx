@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import LanguageDropdown from "../common/LanguageDropdown"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,19 +10,29 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between flex-wrap py-4 md:py-6 px-4 md:px-12 fixed top-0 w-full z-10 ${
-        isOpen ? "bg-gray-700" : "bg-transparent"
+      className={`flex items-center justify-between flex-wrap fixed top-0 w-full z-10 ${
+        isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-30 bg-black"
       }`}
     >
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <header className="bg-gray-800 px-2 md:p-3 w-full">
+        <div className="flex flex-row justify-between container  mx-auto">
+          <p className="text-white text-sm my-auto">
+            Check out our latest job opportunities!
+          </p>
+          <button className="text-white p-2 md:p-2 text-sm border-white md:no-underline underline md:border-2 rounded-md ">
+            Career Info
+          </button>
+        </div>
+      </header>
+      <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
         <a href="#">
-          <img src="ocwsb-logo.png" alt="OCWSB" className="h-8 md:h-10" />
+          <img src="ocwsb-logo-2.png" alt="OCWSB" className="h-12 md:h-16" />
         </a>
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden px-6">
         <button
           onClick={toggleMobileMenu}
-          className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-800 hover:border-gray-800"
+          className="flex items-center px-4 py-3 border rounded text-white border-white hover:text-white hover:border-white"
         >
           <svg
             className="fill-current h-3 w-3"
@@ -34,47 +45,50 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`w-full flex-grow md:flex md:items-center md:w-auto ${
+        className={`w-full flex-grow md:flex px-8 py-4 md:items-center md:w-auto ${
           isOpen ? "block" : "hidden"
         }`}
       >
-        <div className="text-sm md:flex-grow md:justify-end">
+        <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
           >
             About Us
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
           >
             Product
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
           >
             Services
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
           >
             News
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
           >
-            Our Parners
+            Our Partners
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-800"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-800"
           >
             Contact Us
           </a>
+          <div className="mt-6 md:mt-0">
+            <LanguageDropdown />
+          </div>
         </div>
       </div>
     </nav>

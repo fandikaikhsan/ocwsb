@@ -1,0 +1,83 @@
+{
+  "banners": [
+    {
+      "id": 1,
+      "position": 1,
+      "title": "Welcome to Los Angles",
+      "subtitle": "Disini tempatnya main seru!",
+      "image": "./banner-1.png",
+      "image_mobile": "./banner-mobile-1.png",
+      "cta": {
+        "text": "Read More",
+        "url": ""
+      }
+    },
+    {
+      "id": 2,
+      "position": 2,
+      "title": "Welcome to Depok",
+      "subtitle": "Seru seru di depok",
+      "image": "./banner-2.png",
+      "image_mobile": "./banner-mobile-2.png",
+      "cta": {
+        "text": "",
+        "url": ""
+      }
+    },
+    {
+      "id": 1,
+      "position": 1,
+      "title": "",
+      "subtitle": "",
+      "image": "",
+      "image_mobile": "",
+      "cta": {
+        "text": "",
+        "url": ""
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "position": 1,
+      "title": "SKYLIGHT",
+      "desc_short": "Shkylight ya begitulah",
+      "desc": "lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet",
+      "image": "",
+      "image_mobile": "",
+      "cta": {
+        "text": "",
+        "url": ""
+      }
+    },
+    {
+      "id": 2,
+      "position": 2,
+      "title": "",
+      "desc_short": "",
+      "desc": "",
+      "image": "",
+      "image_mobile": "",
+      "cta": {
+        "text": "",
+        "url": ""
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "position": 1,
+      "title": "",
+      "desc_short": "",
+      "desc": "",
+      "image": "",
+      "image_mobile": "",
+      "cta": {
+        "text": "",
+        "url": ""
+      }
+    }
+  ]
+}

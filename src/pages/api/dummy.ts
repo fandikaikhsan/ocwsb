@@ -2,14 +2,32 @@ const dummy = [
   {
     title: "ASSEMBLY",
     description:
+      "Assemble components or materials or materials in a product to become a single unit of a production result Assemble components or materials or materials in a product to become a single unit of a production result Assemble components or materials or materials in a product to become a single unit of a production result",
+    short_desc:
       "Assemble components or materials or materials in a product to become a single unit of a production result",
     image: "https://www.refactoringui.com/?ref=sidebar",
   },
   {
     title: "MANUFACTURE",
     description:
+      "Assemble components or materials or materials in a product to become a single unit of a production result Assemble components or materials or materials in a product to become a single unit of a production result Assemble components or materials or materials in a product to become a single unit of a production result",
+    short_desc:
       "Assemble components or materials or materials in a product to become a single unit of a production result",
     image: "https://source.unsplash.com/1600x900/?nature,forest",
+  },
+  {
+    title: "REPAIR",
+    description:
+      "Assemble components or materials or materials in a product to become a single unit of a production result Perform Repair If there is damage or malfunction in a machine Assemble components or materials or materials in a product to become a single unit of a production result",
+    short_desc: "Perform Repair If there is damage or malfunction in a machine",
+    image: "https://source.unsplash.com/1600x900/?nature,water",
+  },
+  {
+    title: "OVERHAUL",
+    description:
+      "Assemble components or materials or materials in a product to become a single unit of a production result Maintain system mechanisms and components in usable condition to achieve maximum productivity Assemble components or materials or materials in a product to become a single unit of a production result",
+    short_desc: "Maintain system mechanisms and components in usable condition",
+    image: "https://source.unsplash.com/1600x900/?nature,tree",
   },
 ]
 const products = [
