@@ -1,0 +1,32 @@
+name: Deploy main to production enviroment
+run-name: ${{ github.actor }} is deploying to production
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to production"
+      - uses: actions/checkout@v2
+
+      - name: Deploy to production
+        if: github.event.pull_request.merged == true
+        run: |
+          echo "Deploying to production"
+
+      - name: Build
+        run: npm run Build
+
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+
+      - name: deploying
+        run: |
+          rsync -avz --delete --exclude-from '.gitignore' --exclude 'node_modules' ./ ${{ secrets.DEPLOY_SERVER_USER }}@{{ secrets.DEPLOY_SERVER_IP }}:{{ secrets.DEPLOY_SERVER_PATH }}
