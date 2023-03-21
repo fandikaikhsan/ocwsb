@@ -19,14 +19,19 @@ jobs:
         run: |
           echo "Deploying to production"
 
-      - name: Build
-        run: yarn build
-
-      - name: Install SSH key
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: Deploy to sandbox server
+        uses: fifsky/ssh-action@master
         with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
-
-      - name: deploying
-        run: |
-          rsync -avz --delete --exclude-from '.gitignore' --exclude 'node_modules' ./ ${{ secrets.DEPLOY_SERVER_USER }}@{{ secrets.DEPLOY_SERVER_IP }}:{{ secrets.DEPLOY_SERVER_PATH }}
+          host: ${{ secrets.DEPLOY_SERVER_IP }}
+          user: ${{ secrets.DEPLOY_SERVER_USER }}
+          key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.DEPLOY_SERVER_PORT }}
+          command: |
+            cd ocwsb/
+            git checkout main
+            rm yarn.lock
+            git pull
+            yarn install
+            yarn build
+            pm2 reload all
+            npx prisma generate
