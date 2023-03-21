@@ -20,7 +20,7 @@ jobs:
           echo "Deploying to production"
 
       - name: Build
-        run: npm run Build
+        run: yarn build
 
       - name: Install SSH key
         uses: webfactory/ssh-agent@v0.5.3
