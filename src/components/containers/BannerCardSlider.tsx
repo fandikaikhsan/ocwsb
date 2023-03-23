@@ -13,6 +13,7 @@ interface BannerCardSliderProps {
     title: string
     subtitle: string
     image?: string
+    image_mobile?: string
     cta?: {
       text: string
       url?: string
@@ -45,6 +46,7 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
             title={banner.title}
             description={banner.subtitle}
             image={banner.image}
+            image_mobile={banner.image_mobile}
           />
         </SwiperSlide>
       ))}
