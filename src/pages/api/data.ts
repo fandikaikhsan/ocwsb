@@ -28,35 +28,35 @@ const products = [
       url: "",
     },
   },
-  {
-    id: 3,
-    position: 1,
-    title: "AFIAL - Advanced Forward Illuminator Aiming Laser Module",
-    desc_title: "AFIAL",
-    desc_short:
-      "An outstanding equipment to boost your tasks efficiency. Functional, tactical, and powerful.",
-    desc: "Delivered with two laser markers (e.g. one visible / one invisible) and - on request - with infrared LED for vicinity illumination. Compact in design and a full aluminum housing with less than 26 mm above the accesory rail. The adjustment is easy due to the aligned laser block.",
-    image: "/products/product-1.jpg",
-    image_mobile: "Product-1",
-    cta: {
-      text: "Find Out More",
-      url: "",
-    },
-  },
-  {
-    id: 4,
-    position: 2,
-    title: "Skyshield 35mm",
-    desc_title: "Skyshield 35mm",
-    desc_short: "A powerful weapon to protect the nation's air resistance. ",
-    desc: "Fully automated and extremely effective. It's an ideal air defence system for protecting forward operating bases and other high-value assets from modern asymmetric threats.",
-    image: "/products/product-2.jpg",
-    image_mobile: "Product 2",
-    cta: {
-      text: "Find Out More",
-      url: "",
-    },
-  },
+  // {
+  //   id: 3,
+  //   position: 1,
+  //   title: "AFIAL - Advanced Forward Illuminator Aiming Laser Module",
+  //   desc_title: "AFIAL",
+  //   desc_short:
+  //     "An outstanding equipment to boost your tasks efficiency. Functional, tactical, and powerful.",
+  //   desc: "Delivered with two laser markers (e.g. one visible / one invisible) and - on request - with infrared LED for vicinity illumination. Compact in design and a full aluminum housing with less than 26 mm above the accesory rail. The adjustment is easy due to the aligned laser block.",
+  //   image: "/products/product-1.jpg",
+  //   image_mobile: "Product-1",
+  //   cta: {
+  //     text: "Find Out More",
+  //     url: "",
+  //   },
+  // },
+  // {
+  //   id: 4,
+  //   position: 2,
+  //   title: "Skyshield 35mm",
+  //   desc_title: "Skyshield 35mm",
+  //   desc_short: "A powerful weapon to protect the nation's air resistance. ",
+  //   desc: "Fully automated and extremely effective. It's an ideal air defence system for protecting forward operating bases and other high-value assets from modern asymmetric threats.",
+  //   image: "/products/product-2.jpg",
+  //   image_mobile: "Product 2",
+  //   cta: {
+  //     text: "Find Out More",
+  //     url: "",
+  //   },
+  // },
 ]
 
 const services = [
@@ -65,7 +65,7 @@ const services = [
     position: 1,
     title: "Assembly",
     desc_short: "We assemble components and materials.",
-    desc: "Performing a precise and highly reliable unit-assembly process. We bring our knowledge to assist clients' requirement to assemble the unit they needed.",
+    desc: "Assemble components or materials or materials in a product to become a single unit of a production result.",
     image: "/services/service-1.jpg",
     image_mobile: "",
     cta: {
@@ -116,8 +116,8 @@ const services = [
     id: 5,
     position: 5,
     title: "Spare Parts",
-    desc_short: "Store spare parts for machineries.",
-    desc: "We provide a high-quality spare parts for clients' machineries in order to reach its maximum capabilities.",
+    desc_short: "Store spare parts for machinery.",
+    desc: "Store and provide all goods or spare parts or spare parts for production machines before the spare parts are used.",
     image: "/services/service-5.jpg",
     image_mobile: "",
     cta: {
@@ -130,7 +130,7 @@ const services = [
     position: 6,
     title: "Training Services",
     desc_short: "Managing training services.",
-    desc: "We conduct training services to clients' regarding the knowledge, abilities, and skills for our relating products.",
+    desc: "Conduct training to have the knowledge, abilities, and skills in accordance with the work they do.",
     image: "/services/service-2.jpg",
     image_mobile: "Traning Services",
     cta: {
