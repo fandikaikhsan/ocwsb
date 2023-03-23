@@ -27,8 +27,6 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
   const [serviceData, setServiceData] = useState(0)
 
   const handleServiceClick = (service: any) => {
-    console.log("clicked")
-
     setServiceData(service)
     setIsOpen(true)
   }
