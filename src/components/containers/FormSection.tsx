@@ -2,6 +2,7 @@ import React, { FC } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import axios from "axios"
 
 type UserSubmitForm = {
   name: string
@@ -9,7 +10,7 @@ type UserSubmitForm = {
   email: string
   phone: string
   password: string
-  inquiry: string
+  message: string
 }
 
 const FormSection = () => {
@@ -19,7 +20,7 @@ const FormSection = () => {
     email: yup.string().email().required(),
     phone: yup.string(),
     password: yup.string().required().min(6),
-    inquiry: yup.string(),
+    message: yup.string(),
   })
 
   const {
@@ -32,8 +33,16 @@ const FormSection = () => {
     // resolver: yupResolver(schema),
   })
 
-  const onSubmit: SubmitHandler<UserSubmitForm> = (data: any) =>
-    console.log(data)
+  const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
+    try {
+      console.log("data: ", data)
+
+      await axios.post(`${process.env.API_URL}/v1/inquiry`, data)
+      alert("Inquiry submitted successfully")
+    } catch (error) {
+      alert("Error submitting inquiry")
+    }
+  }
 
   const handleSubmitData = (data: any) => {
     // handle submitting the form
@@ -164,25 +173,25 @@ const FormSection = () => {
             <label
               htmlFor="inquiry"
               className={`block text-2xl font-maqin mb-2 ${
-                errors.inquiry ? "text-red-400" : "text-white"
+                errors.message ? "text-red-400" : "text-white"
               }`}
             >
               Inquiry:
             </label>
             <input
-              {...register("inquiry")}
+              {...register("message")}
               type="text"
-              name="inquiry"
-              id="inquiry"
+              name="message"
+              id="message"
               placeholder="Please enter your inquiry"
               className={`block w-full resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
-                errors.inquiry ? "border-red-400" : "text-black"
+                errors.message ? "border-red-400" : "text-black"
               }`}
               // ref={register()}
             />
-            {errors.password && (
+            {errors.message && (
               <p className="text-red-500 text-sm mt-2">
-                Your password is required.
+                Your message is required.
               </p>
             )}
           </div>
