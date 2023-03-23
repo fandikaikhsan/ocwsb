@@ -33,11 +33,12 @@ const FormSection = () => {
     // resolver: yupResolver(schema),
   })
 
+  // @TODO: Change URL to env
+
   const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
     try {
       console.log("data: ", data)
-
-      await axios.post(`${process.env.API_URL}/v1/inquiry`, data)
+      await axios.post("https://api.fandika.live/v1/inquiry", data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")
