@@ -29,12 +29,14 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 800)
+    console.log(isMobile)
   }, [])
 
   const handleServiceClick = (service: any) => {
     setServiceData(service)
     setIsOpen(true)
   }
+  console.log(isMobile)
 
   return (
     <Swiper
