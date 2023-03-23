@@ -25,7 +25,6 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 800)
-    console.log(isMobile)
   }, [])
 
   return (

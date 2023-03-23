@@ -66,7 +66,7 @@ const services = [
     title: "Assembly",
     desc_short: "We assemble components and materials.",
     desc: "Performing a precise and highly reliable unit-assembly process. We bring our knowledge to assist clients' requirement to assemble the unit they needed.",
-    image: "/services/service-3.jpg",
+    image: "/services/service-1.jpg",
     image_mobile: "",
     cta: {
       text: "Find Out More",
@@ -118,7 +118,7 @@ const services = [
     title: "Spare Parts",
     desc_short: "Store spare parts for machineries.",
     desc: "We provide a high-quality spare parts for clients' machineries in order to reach its maximum capabilities.",
-    image: "/services/service-3.jpg",
+    image: "/services/service-5.jpg",
     image_mobile: "",
     cta: {
       text: "Find Out More",
