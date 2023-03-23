@@ -131,7 +131,7 @@ const services = [
     title: "Training Services",
     desc_short: "Managing training services.",
     desc: "Conduct training to have the knowledge, abilities, and skills in accordance with the work they do.",
-    image: "/services/service-2.jpg",
+    image: "/services/service-6.jpg",
     image_mobile: "Traning Services",
     cta: {
       text: "Find Out More",

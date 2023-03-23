@@ -35,7 +35,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
             onClick={onClick}
             className=" hover:cursor-pointer text-white text-xl underline"
           >
-            Read more
+            Find Out More
           </a>
         </div>
       </div>

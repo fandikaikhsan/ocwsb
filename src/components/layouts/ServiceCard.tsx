@@ -43,7 +43,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
             </div>
           </div>
           <div className="px-4 py-2 hover:cursor-pointer md mt-auto rounded-md self-end">
-            <GradientBorderButton onClick={onClick} text="Read more" />
+            <GradientBorderButton onClick={onClick} text="Find Out More" />
           </div>
           {/* <button className="bg-transparent border-2 border-white text-white px-4 py-2 rounded-md self-end">
             Click me

@@ -10,7 +10,7 @@ const SolidButton: FC<SolidButtonProps> = (props) => {
   return (
     <button
       className={
-        "bg-orange-500 text-md md:text-2xl text-white py-2 px-12 md:px-16 rounded-lg"
+        "bg-orange-500 text-md md:text-xl text-white py-2 px-12 md:px-16 rounded-lg"
       }
       onClick={() => onClick()}
     >
