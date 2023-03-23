@@ -148,7 +148,7 @@ const banners = [
     subtitle:
       "We offers various products and services to enhance people's security.",
     image: "/banners/banner-1.jpg",
-    image_mobile: "Banner Mobile 1",
+    image_mobile: "/banners/banner-1-mobile.jpg",
     cta: {
       text: "Read More",
       url: "",
@@ -161,7 +161,7 @@ const banners = [
     subtitle:
       "Explores the best possible technology to ensure the better future.",
     image: "/banners/banner-2.jpg",
-    image_mobile: "Banner Mobile 2",
+    image_mobile: "/banners/banner-2-mobile.jpg",
     cta: {
       text: "Read More",
       url: "",
@@ -174,7 +174,7 @@ const banners = [
       "Protecting Land, Sea, & Air Through Strategic Systems and Machineries",
     subtitle: "We deliver sustainable and integrated security.",
     image: "/banners/banner-3.jpg",
-    image_mobile: "Banner Mobile 3",
+    image_mobile: "/banners/banner-3-mobile.jpg",
     cta: {
       text: "Read More",
       url: "",

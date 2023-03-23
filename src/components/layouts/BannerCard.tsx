@@ -5,12 +5,20 @@ interface BannerCardProps {
   title: string
   description: string
   image?: string
+  image_mobile?: string
   cta?: string
   url?: string
 }
 
 const BannerCard: FC<BannerCardProps> = (props) => {
-  const { title = "", description = "", image = "", url = "", cta = "" } = props
+  const {
+    title = "",
+    description = "",
+    image = "",
+    image_mobile = "",
+    url = "",
+    cta = "",
+  } = props
   const backgroundImage = "https://via.placeholder.com/1920x1080"
   return (
     <>
@@ -18,7 +26,12 @@ const BannerCard: FC<BannerCardProps> = (props) => {
         <img
           src={image}
           alt="Banner"
-          className="absolute top-1/2 left-1/2 opacity-50 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
+          className="hidden md:block absolute top-1/2 left-1/2 opacity-50 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
+        />
+        <img
+          src={image_mobile}
+          alt="Banner"
+          className="absolute md:hidden top-1/2 left-1/2 opacity-50 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
         />
         <div className="absolute inset-0 md:top-1/2 md:left-1/2 flex flex-col text-center md:text-right items-center md:items-end justify-center px-4 md:pr-16">
           <h1 className=" text-white font-maqin font-semibold mb-3 text-2xl sm:text-3xl md:text-5xl">
