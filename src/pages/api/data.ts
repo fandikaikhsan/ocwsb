@@ -28,35 +28,20 @@ const products = [
       url: "",
     },
   },
-  // {
-  //   id: 3,
-  //   position: 1,
-  //   title: "AFIAL - Advanced Forward Illuminator Aiming Laser Module",
-  //   desc_title: "AFIAL",
-  //   desc_short:
-  //     "An outstanding equipment to boost your tasks efficiency. Functional, tactical, and powerful.",
-  //   desc: "Delivered with two laser markers (e.g. one visible / one invisible) and - on request - with infrared LED for vicinity illumination. Compact in design and a full aluminum housing with less than 26 mm above the accesory rail. The adjustment is easy due to the aligned laser block.",
-  //   image: "/products/product-1.jpg",
-  //   image_mobile: "Product-1",
-  //   cta: {
-  //     text: "Find Out More",
-  //     url: "",
-  //   },
-  // },
-  // {
-  //   id: 4,
-  //   position: 2,
-  //   title: "Skyshield 35mm",
-  //   desc_title: "Skyshield 35mm",
-  //   desc_short: "A powerful weapon to protect the nation's air resistance. ",
-  //   desc: "Fully automated and extremely effective. It's an ideal air defence system for protecting forward operating bases and other high-value assets from modern asymmetric threats.",
-  //   image: "/products/product-2.jpg",
-  //   image_mobile: "Product 2",
-  //   cta: {
-  //     text: "Find Out More",
-  //     url: "",
-  //   },
-  // },
+  {
+    id: 3,
+    position: 3,
+    title: "LIG Nex1 CHIRON",
+    desc_title: "LIG Nex1 CHIRON",
+    desc_short: "A handy and effective weapon to combat at low altitudes.",
+    desc: "Chiron is a portable surface-to-air missile, effective against hostile aerial targets operating at low altitudes. It pursues its target with passive heat tracing method and has an excellent IRCCM (Infrared Counter-Counter Measure) capability.",
+    image: "/products/product-3.jpg",
+    image_mobile: "Product 3",
+    cta: {
+      text: "Find Out More",
+      url: "",
+    },
+  },
 ]
 
 const services = [
