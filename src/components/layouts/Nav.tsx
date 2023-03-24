@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav
       className={`flex items-center justify-between flex-wrap fixed top-0 w-full z-10 ${
-        isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-30 bg-black"
+        isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
       }`}
     >
       <header className="bg-gray-800 px-2 md:p-3 w-full">
