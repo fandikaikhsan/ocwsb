@@ -200,7 +200,7 @@ const FormSection = () => {
           {/* Add the reCAPTCHA component */}
           <div className="flex justify-center mt-4 mb-4">
             <ReCAPTCHA
-              sitekey="6LcfcjElAAAAAO3_eEKQaO90uB55GlUiMmzfNU-W"
+              sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
               onChange={onCaptchaChange}
             />
           </div>

@@ -42,7 +42,7 @@ const DesktopFormSection = () => {
   const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
     try {
       console.log("data: ", data)
-      await axios.post("https://api.fandika.live/v1/inquiry", data)
+      await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")
@@ -199,7 +199,7 @@ const DesktopFormSection = () => {
             {/* Add the reCAPTCHA component */}
             <div className="flex justify-end mt-4 mb-4">
               <ReCAPTCHA
-                sitekey="6LcfcjElAAAAAO3_eEKQaO90uB55GlUiMmzfNU-W"
+                sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
                 onChange={onCaptchaChange}
               />
             </div>
