@@ -211,8 +211,11 @@ const FormSection = () => {
           </div>
           <div className="flex flex-col w-full">
             <button
-              className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm"
-              disabled={!captchaValue}
+              className={`bg-transparent ${
+                captchaValue
+                  ? "disabled hover:bg-gray-600"
+                  : "hover:bg-orange-700"
+              }  border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm`}
             >
               Submit
             </button>
