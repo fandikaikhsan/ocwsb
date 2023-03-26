@@ -44,16 +44,11 @@ const FormSection = () => {
   const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
     try {
       console.log("data: ", data)
-      await axios.post("https://api.fandika.live/v1/inquiry", data)
+      await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")
     }
-  }
-
-  const handleSubmitData = (data: any) => {
-    // handle submitting the form
-    console.log(data)
   }
 
   return (
