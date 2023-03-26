@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import axios from "axios"
+import ReCAPTCHA from "react-google-recaptcha"
 
 type UserSubmitForm = {
   name: string
@@ -35,19 +36,19 @@ const FormSection = () => {
 
   // @TODO: Change URL to env
 
+  const onCaptchaChange = (value: string | null) => {
+    // You can use the value for server-side validation later.
+    console.log("Captcha value:", value)
+  }
+
   const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
     try {
       console.log("data: ", data)
-      await axios.post("https://api.fandika.live/v1/inquiry", data)
+      await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")
     }
-  }
-
-  const handleSubmitData = (data: any) => {
-    // handle submitting the form
-    console.log(data)
   }
 
   return (
@@ -195,6 +196,13 @@ const FormSection = () => {
                 Your message is required.
               </p>
             )}
+          </div>
+          {/* Add the reCAPTCHA component */}
+          <div className="flex justify-center mt-4 mb-4">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
+              onChange={onCaptchaChange}
+            />
           </div>
           <div className="flex flex-col w-full">
             <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm">
