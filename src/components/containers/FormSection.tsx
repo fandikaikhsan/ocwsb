@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
@@ -34,14 +34,19 @@ const FormSection = () => {
     // resolver: yupResolver(schema),
   })
 
-  // @TODO: Change URL to env
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null)
 
   const onCaptchaChange = (value: string | null) => {
     // You can use the value for server-side validation later.
-    console.log("Captcha value:", value)
+    setCaptchaValue(value)
   }
 
   const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
+    if (!captchaValue) {
+      // Display an error message if the reCAPTCHA is not valid
+      alert("Please complete the reCAPTCHA before submitting the form.")
+      return
+    }
     try {
       console.log("data: ", data)
       await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
@@ -205,7 +210,10 @@ const FormSection = () => {
             />
           </div>
           <div className="flex flex-col w-full">
-            <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm">
+            <button
+              className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm"
+              disabled={!captchaValue}
+            >
               Submit
             </button>
           </div>
