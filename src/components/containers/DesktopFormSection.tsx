@@ -197,15 +197,17 @@ const DesktopFormSection = () => {
               )}
             </div>
             {/* Add the reCAPTCHA component */}
-            <div className="flex justify-center mt-4 mb-4">
+            <div className="flex justify-end mt-4 mb-4">
               <ReCAPTCHA
                 sitekey="6LcfcjElAAAAAO3_eEKQaO90uB55GlUiMmzfNU-W"
                 onChange={onCaptchaChange}
               />
             </div>
-            <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
-              Submit
-            </button>
+            <div className="flex justify-end mt-4 mb-4">
+              <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
