@@ -2,6 +2,8 @@ import React, { FC } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import axios from "axios"
+import ReCAPTCHA from "react-google-recaptcha"
 
 type UserSubmitForm = {
   name: string
@@ -9,7 +11,7 @@ type UserSubmitForm = {
   email: string
   phone: string
   password: string
-  inquiry: string
+  message: string
 }
 
 const DesktopFormSection = () => {
@@ -19,7 +21,7 @@ const DesktopFormSection = () => {
     email: yup.string().email().required(),
     phone: yup.string(),
     password: yup.string().required().min(6),
-    inquiry: yup.string(),
+    message: yup.string(),
   })
 
   const {
@@ -32,12 +34,19 @@ const DesktopFormSection = () => {
     // resolver: yupResolver(schema),
   })
 
-  const onSubmit: SubmitHandler<UserSubmitForm> = (data: any) =>
-    console.log(data)
+  const onCaptchaChange = (value: string | null) => {
+    // You can use the value for server-side validation later.
+    console.log("Captcha value:", value)
+  }
 
-  const handleSubmitData = (data: any) => {
-    // handle submitting the form
-    console.log(data)
+  const onSubmit: SubmitHandler<UserSubmitForm> = async (data: any) => {
+    try {
+      console.log("data: ", data)
+      await axios.post("https://api.fandika.live/v1/inquiry", data)
+      alert("Inquiry submitted successfully")
+    } catch (error) {
+      alert("Error submitting inquiry")
+    }
   }
 
   return (
@@ -163,29 +172,36 @@ const DesktopFormSection = () => {
 
             <div className="mb-8 flex flex-row justify-between content-between">
               <label
-                htmlFor="inquiry"
+                htmlFor="message"
                 className={`block text-2xl font-maqin mb-2 ${
-                  errors.inquiry ? "text-red-400" : "text-white"
+                  errors.message ? "text-red-400" : "text-white"
                 }`}
               >
                 Inquiry:
               </label>
               <input
-                {...register("inquiry")}
+                {...register("message")}
                 type="text"
-                name="inquiry"
-                id="inquiry"
+                name="message"
+                id="message"
                 placeholder="Please enter your inquiry"
                 className={`block w-2/3 resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
-                  errors.inquiry ? "border-red-400" : "text-black"
+                  errors.message ? "border-red-400" : "text-black"
                 }`}
                 // ref={register()}
               />
-              {errors.password && (
+              {errors.message && (
                 <p className="text-red-500 text-sm mt-2">
-                  Your password is required.
+                  Your message is required.
                 </p>
               )}
+            </div>
+            {/* Add the reCAPTCHA component */}
+            <div className="flex justify-center mt-4 mb-4">
+              <ReCAPTCHA
+                sitekey="6LcfcjElAAAAAO3_eEKQaO90uB55GlUiMmzfNU-W"
+                onChange={onCaptchaChange}
+              />
             </div>
             <button className="bg-transparent hover:bg-orange-700 border-white border-2 text-white rounded-lg shadow py-2 px-10 text-sm">
               Submit
