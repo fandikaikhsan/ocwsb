@@ -42,6 +42,35 @@ const products = [
       url: "",
     },
   },
+  {
+    id: 4,
+    position: 4,
+    title: "Oerlikon Millenium Gun",
+    desc_title: "Oerlikon",
+    desc_short:
+      "Quick and powerful effector. Specially adapted for layered naval air defence task.",
+    desc: "The Oerlikon Millennium Gun uses a 35mm revolver cannon and is a multi-mission weapon system designed for a wide operational spectrum covering anti-air, surface warfare and fire support, offering multi-role capabilities in one gun mount. Comprehensive and Rapid Protection. Less Integration Effort. Outstanding Performance Data.",
+    image: "/products/product-4.jpg",
+    image_mobile: "Product 4",
+    cta: {
+      text: "Find Out More",
+      url: "",
+    },
+  },
+  {
+    id: 5,
+    position: 5,
+    title: "Skyranger 30mm",
+    desc_title: "Skyranger",
+    desc_short: "Integrated, ultimate firepower, and precision.",
+    desc: "This highly mobile air defence system with integrated active and passive search and tracking sensors is a powerful,autonomous shooter with guns and missiles. It is capable of engaging modern battlefield threats with a special focus on small unmanned aerial targets.",
+    image: "/products/product-5.jpg",
+    image_mobile: "Product 5",
+    cta: {
+      text: "Find Out More",
+      url: "",
+    },
+  },
 ]
 
 const services = [
