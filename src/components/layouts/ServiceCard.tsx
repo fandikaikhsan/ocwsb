@@ -31,10 +31,10 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
         <img
           src={image}
           alt="Card background"
-          className="absolute top-1/2 opacity-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover rounded-[1rem]"
+          className="absolute top-1/2 opacity-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover rounded-[1rem]"
         />
         <div className="absolute inset-0 flex flex-col justify-between items-start p-4 space-y-4">
-          <div className="flex flex-col items-start justify-center flex-grow">
+          <div className="flex flex-col items-start md:pb-8 justify-end flex-grow">
             <div className="text-3xl font-maqin text-white md:text-4xl">
               {title}
             </div>

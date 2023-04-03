@@ -63,7 +63,7 @@ const FormSection = () => {
           <div className="mb-5">
             <label
               htmlFor="name"
-              className={`block text-2xl font-maqin mb-2 ${
+              className={`block text-lg font-maqin mb-2 ${
                 errors.name ? "text-red-400" : "text-white"
               }`}
             >

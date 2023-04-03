@@ -59,7 +59,7 @@ const DesktopFormSection = () => {
   return (
     <>
       <div className=" p-8 bg-gradient-to-b from-gray-900 to-orange-800">
-        <div className="md:w-5/6 lg:w-4/5 mx-auto">
+        <div className="md:w-4/6 lg:w-[40rem] mx-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-5 flex flex-row justify-between content-between">
               <label
@@ -68,7 +68,7 @@ const DesktopFormSection = () => {
                   errors.name ? "text-red-400" : "text-white"
                 }`}
               >
-                Name:
+                Name
               </label>
               <input
                 {...register("name")}
@@ -76,7 +76,7 @@ const DesktopFormSection = () => {
                 name="name"
                 id="name"
                 placeholder="Please enter your name"
-                className={` w-2/3  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                className={` w-2/3  bg-white rounded-lg border-2 py-2 px-5  placeholder-gray-400  ${
                   errors.name
                     ? "text-red-300 border-red-400"
                     : "text-black border-gray-400"
@@ -97,7 +97,7 @@ const DesktopFormSection = () => {
                   errors.company ? "text-red-400" : "text-white"
                 }`}
               >
-                Company:
+                Company
               </label>
               <input
                 {...register("company")}
@@ -126,7 +126,7 @@ const DesktopFormSection = () => {
                   errors.email ? "text-red-400" : "text-white"
                 }`}
               >
-                Email:
+                Email
               </label>
               <input
                 {...register("email")}
@@ -155,7 +155,7 @@ const DesktopFormSection = () => {
                   errors.email ? "text-red-400" : "text-white"
                 }`}
               >
-                Phone:
+                Phone
               </label>
               <input
                 {...register("phone")}
@@ -184,7 +184,7 @@ const DesktopFormSection = () => {
                   errors.message ? "text-red-400" : "text-white"
                 }`}
               >
-                Inquiry:
+                Inquiry
               </label>
               <input
                 {...register("message")}
@@ -192,7 +192,7 @@ const DesktopFormSection = () => {
                 name="message"
                 id="message"
                 placeholder="Please enter your inquiry"
-                className={`block w-2/3 resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
+                className={`block w-2/3 resize-y bg-white rounded-lg border-2 py-2 h-36 px-4 text-black placeholder-gray-400 ${
                   errors.message ? "border-red-400" : "text-black"
                 }`}
                 // ref={register()}

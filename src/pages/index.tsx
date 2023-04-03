@@ -38,7 +38,7 @@ export default function Home() {
             <ProductAccordionSection products={products} />
           </div>
           <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white text-center">
-            LETS TALK
+            LETS TALK!
           </div>
           <div className="sm:block md:hidden">
             <FormSection />
