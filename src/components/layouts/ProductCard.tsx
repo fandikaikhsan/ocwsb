@@ -24,7 +24,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
           alt="Card background"
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 p-12 lg:p-24 flex flex-col justify-between">
+        <div className="absolute inset-0 bg-black bg-opacity-40 p-12 lg:p-28 flex flex-col justify-end">
           <div>
             <h3 className=" text-white font-maqin font-semibold text-4xl mb-2">
               {title}

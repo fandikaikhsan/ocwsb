@@ -6,3 +6,7 @@
   font-family: maqin-italic;
   src: url("./fonts/maqin-italic.ttf");
 }
+
+.swiper-button-next {
+  color: red;
+}
