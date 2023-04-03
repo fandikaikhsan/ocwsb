@@ -18,7 +18,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
   } = props
   return (
     <>
-      <div className="relative w-full h-[22rem] rounded-md shadow-md overflow-hidden">
+      <div className="relative w-full h-[30rem] rounded-md shadow-md overflow-hidden">
         <img
           src={image}
           alt="Card background"
