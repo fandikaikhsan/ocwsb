@@ -48,6 +48,7 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
       loop
+      className="swiper-custom-navigation"
       breakpoints={{
         0: {
           slidesPerView: 0,

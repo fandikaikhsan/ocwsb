@@ -39,6 +39,7 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
+      className="swiper-custom-navigation"
     >
       {banners.map((banner: any) => (
         <SwiperSlide key={banner.id}>
