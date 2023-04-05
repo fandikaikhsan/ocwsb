@@ -40,6 +40,7 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
         centeredSlides
         style={{ zIndex: 0 }}
         loop
+        className="swiper-custom-navigation"
       >
         {products.map((product, index) => (
           <SwiperSlide
