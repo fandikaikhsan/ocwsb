@@ -10,3 +10,10 @@
 .swiper-button-next {
   color: red;
 }
+
+/* swiper-custom-navigation.css */
+.swiper-custom-navigation .swiper-button-next,
+.swiper-custom-navigation .swiper-button-prev {
+  @apply text-orange-700;
+  /* Add any other customizations you want */
+}
