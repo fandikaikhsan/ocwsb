@@ -30,12 +30,12 @@ const AnimatedComponent = ({
 }: AnimatedComponentProps) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    threshold: 0.1,
+    threshold: 0.5,
     triggerOnce,
   })
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 80 },
     visible: { opacity: 1, y: 0 },
   }
 
