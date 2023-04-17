@@ -52,37 +52,37 @@ const Navbar = () => {
         <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             About Us
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Product
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Services
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             News
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Our Partners
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-red-800"
           >
             Contact Us
           </a>
