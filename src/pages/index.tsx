@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900">
+      <div className=" bg-black">
         <div className=" mb-12">
           <AnimatedComponent>
             <BannerCardSlider banners={banners} />

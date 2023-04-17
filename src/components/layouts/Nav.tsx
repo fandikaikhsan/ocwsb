@@ -14,7 +14,7 @@ const Navbar = () => {
         isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
       }`}
     >
-      <header className="bg-gray-800 px-2 md:p-3 w-full">
+      {/* <header className="bg-gray-800 px-2 md:p-3 w-full">
         <div className="flex flex-row justify-between container  mx-auto">
           <p className="text-white text-sm my-auto">
             Check out our latest job opportunities!
@@ -23,7 +23,7 @@ const Navbar = () => {
             Career Info
           </button>
         </div>
-      </header>
+      </header> */}
       <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
         <a href="#">
           <img src="ocwsb-logo-2.png" alt="OCWSB" className="h-12 md:h-16" />
@@ -52,37 +52,37 @@ const Navbar = () => {
         <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             About Us
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Product
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Services
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             News
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
           >
             Our Partners
           </a>
           <a
             href="#"
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-800"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-red-800"
           >
             Contact Us
           </a>

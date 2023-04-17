@@ -58,7 +58,7 @@ const FormSection = () => {
 
   return (
     <>
-      <div className=" p-8 bg-gradient-to-b from-gray-900 to-orange-800">
+      <div className=" p-8 bg-gradient-to-b from-black to-red-800">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-5">
             <label
