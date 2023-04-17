@@ -14,7 +14,7 @@ const Navbar = () => {
         isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
       }`}
     >
-      <header className="bg-gray-800 px-2 md:p-3 w-full">
+      {/* <header className="bg-gray-800 px-2 md:p-3 w-full">
         <div className="flex flex-row justify-between container  mx-auto">
           <p className="text-white text-sm my-auto">
             Check out our latest job opportunities!
@@ -23,7 +23,7 @@ const Navbar = () => {
             Career Info
           </button>
         </div>
-      </header>
+      </header> */}
       <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
         <a href="#">
           <img src="ocwsb-logo-2.png" alt="OCWSB" className="h-12 md:h-16" />
