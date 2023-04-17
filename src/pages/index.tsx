@@ -54,7 +54,7 @@ export default function Home() {
               <FormSection />
             </AnimatedComponent>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden justify-end md:block">
             <AnimatedComponent>
               <DesktopFormSection />
             </AnimatedComponent>
