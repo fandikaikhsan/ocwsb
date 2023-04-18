@@ -46,7 +46,7 @@ export default function Home() {
               <ProductAccordionSection products={products} />
             </AnimatedComponent>
           </div>
-          <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white text-center">
+          <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
             <AnimatedComponent>LETS TALK!</AnimatedComponent>
           </div>
           <div className="sm:block md:hidden">
