@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className=" bg-black">
-        <div className=" mb-12">
+        <div className=" mb-24">
           <AnimatedComponent>
             <BannerCardSlider banners={banners} />
           </AnimatedComponent>
