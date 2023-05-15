@@ -26,7 +26,11 @@ const Navbar = () => {
       </header> */}
       <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
         <a href="#">
-          <img src="ocwsb-logo-2.png" alt="OCWSB" className="h-12 md:h-16" />
+          <img
+            src="ocwsb-logo-4-nobg.png"
+            alt="OCWSB"
+            className="h-14 md:h-16"
+          />
         </a>
       </div>
       <div className="block md:hidden px-6">
