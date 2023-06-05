@@ -115,19 +115,6 @@ const services = [
   },
   {
     id: 4,
-    position: 4,
-    title: "Overhaul",
-    desc_short: "Perform machineries inspection and overhaul.",
-    desc: "Maintain system mechanisms and components in usable condition to achieve maximum productivity.",
-    image: "/services/service-4.jpg",
-    image_mobile: "Repair",
-    cta: {
-      text: "Find Out More",
-      url: "",
-    },
-  },
-  {
-    id: 5,
     position: 5,
     title: "Spare Parts",
     desc_short: "Store spare parts for machinery.",
@@ -140,7 +127,7 @@ const services = [
     },
   },
   {
-    id: 6,
+    id: 5,
     position: 6,
     title: "Training Services",
     desc_short: "Managing training services.",
