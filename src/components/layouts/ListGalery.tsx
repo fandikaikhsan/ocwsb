@@ -4,6 +4,11 @@ import ProductImage1 from "/public/products/product-1.jpg"
 import ProductImage2 from "/public/products/product-2.jpg"
 import ProductImage3 from "/public/products/product-3.jpg"
 
+// @TODO:
+// - add props for data
+// - add dynamics layout based on data available
+// - add dynamics layout for odd and even
+
 const ListGalery: FC = () => {
   return (
     <>
