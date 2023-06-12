@@ -4,6 +4,7 @@ import ArticleCardList from "@/components/layouts/ArticleCardList"
 import CertificationCardSlider from "@/components/containers/CertificationCardSlider"
 import ArticleCardHeadline from "@/components/layouts/ArticleCardHeadline"
 import PortfolioCard from "@/components/layouts/PortfolioCard"
+import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
 
 export default function Components() {
   return (
@@ -23,6 +24,9 @@ export default function Components() {
         </div>
         <div className="w-full">
           <PortfolioCard />
+        </div>
+        <div className="w-[80%]">
+          <ContactUsBodySection />
         </div>
       </div>
     </>
