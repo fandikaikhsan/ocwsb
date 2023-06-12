@@ -2,6 +2,8 @@ import React from "react"
 import ListGalery from "@/components/layouts/ListGalery"
 import ArticleCardList from "@/components/layouts/ArticleCardList"
 import CertificationCardSlider from "@/components/containers/CertificationCardSlider"
+import ArticleCardHeadline from "@/components/layouts/ArticleCardHeadline"
+import PortfolioCard from "@/components/layouts/PortfolioCard"
 
 export default function Components() {
   return (
@@ -10,11 +12,17 @@ export default function Components() {
         <div className="">
           <ListGalery />
         </div>
+        <div className="flex justify-center w-full">
+          <ArticleCardHeadline />
+        </div>
         <div className="flex justify-center w-full lg:w-[70%]">
           <ArticleCardList />
         </div>
-        <div className="w-[80%]">
+        <div className="w-full">
           <CertificationCardSlider />
+        </div>
+        <div className="w-full">
+          <PortfolioCard />
         </div>
       </div>
     </>
