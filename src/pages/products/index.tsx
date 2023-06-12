@@ -1,6 +1,7 @@
 import React from "react"
 import ListGalery from "@/components/layouts/ListGalery"
 import ArticleCardList from "@/components/layouts/ArticleCardList"
+import CertificationCardSlider from "@/components/containers/CertificationCardSlider"
 
 export default function Products() {
   return (
@@ -11,6 +12,9 @@ export default function Products() {
         </div>
         <div className="flex justify-center w-full lg:w-[70%]">
           <ArticleCardList />
+        </div>
+        <div className="w-[80%]">
+          <CertificationCardSlider />
         </div>
       </div>
     </>
