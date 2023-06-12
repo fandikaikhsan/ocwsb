@@ -3,7 +3,7 @@ import ListGalery from "@/components/layouts/ListGalery"
 import ArticleCardList from "@/components/layouts/ArticleCardList"
 import CertificationCardSlider from "@/components/containers/CertificationCardSlider"
 
-export default function Products() {
+export default function Components() {
   return (
     <>
       <div className="flex flex-col gap-10 justify-center items-center bg-black p-5">
