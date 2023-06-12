@@ -4,6 +4,11 @@ import ProductImage2 from "/public/products/product-2.jpg"
 import ProductImage3 from "/public/products/product-3.jpg"
 import Image from "next/image"
 
+// @TODO:
+// - add props for data
+// - image not aspect ratio 1/1
+// - text-clamp not works (look to overflow-hidden)
+
 const ArticleCardList = () => {
   return (
     <>
