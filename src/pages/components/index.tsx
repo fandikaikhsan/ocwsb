@@ -5,10 +5,17 @@ import CertificationCardSlider from "@/components/containers/CertificationCardSl
 import ArticleCardHeadline from "@/components/layouts/ArticleCardHeadline"
 import PortfolioCard from "@/components/layouts/PortfolioCard"
 import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
+import PageHeader from "@/components/containers/PageHeader"
 
 export default function Components() {
   return (
     <>
+      <div className="w-full">
+        <PageHeader
+          title="OUR CERTIFICATION"
+          description="We engaged in assembly, integration, tests, maintenance, training, and other services in the defence industry."
+        />
+      </div>
       <div className="flex flex-col gap-10 justify-center items-center bg-black p-5">
         <div className="">
           <ListGalery />
