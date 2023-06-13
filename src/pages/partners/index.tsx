@@ -15,7 +15,7 @@ export default function Services() {
     <>
       <div className="flex flex-col justify-center items-center gap-10 bg-black">
         <PageHeader title={data.title} description={data.description} />
-        <div className="flex flex-col gap-4 justify-center items-center py-5">
+        <div className="flex flex-col gap-4 justify-center items-center py-2">
           <div className="text-[2rem] font-maqin text-white">PARTNER LIST</div>
           <div className="text-sm text-white text-center w-[90%] md:w-[60%]">
             In cooperation with Rheinmetall Air Defence, Switzerland as the main
