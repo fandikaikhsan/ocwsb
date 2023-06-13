@@ -29,20 +29,6 @@ const products = [
     },
   },
   {
-    id: 3,
-    position: 3,
-    title: "LIG Nex1 CHIRON",
-    desc_title: "LIG Nex1 CHIRON",
-    desc_short: "A handy and effective weapon to combat at low altitudes.",
-    desc: "Chiron is a portable surface-to-air missile, effective against hostile aerial targets operating at low altitudes. It pursues its target with passive heat tracing method and has an excellent IRCCM (Infrared Counter-Counter Measure) capability.",
-    image: "/products/product-3.jpg",
-    image_mobile: "Product 3",
-    cta: {
-      text: "Find Out More",
-      url: "",
-    },
-  },
-  {
     id: 4,
     position: 4,
     title: "Oerlikon Millenium Gun",
@@ -95,19 +81,6 @@ const services = [
     desc: "We provide reliable services to maintain clients' product durability. Our professional technicians is more than capable to take care of the machineries and its components.",
     image: "/services/service-2.jpg",
     image_mobile: "Maintenance",
-    cta: {
-      text: "Find Out More",
-      url: "",
-    },
-  },
-  {
-    id: 3,
-    position: 3,
-    title: "Repair",
-    desc_short: "We repair damages and malfunctions.",
-    desc: "OCWSB provides services and solutions to clients for its damaged and malfunctioning machines. We maximized our products survivability through this repair process.",
-    image: "/services/service-3.jpg",
-    image_mobile: "Repair",
     cta: {
       text: "Find Out More",
       url: "",
