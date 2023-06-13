@@ -10,6 +10,7 @@ import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 import BannerImageCard from "@/components/layouts/BannerImageCard"
 import VideoComponent from "@/components/common/VideoComponent"
 import ImageCardSlider from "@/components/containers/ImageCardSlider"
+import ArticleHeadlineSlider from "@/components/containers/ArticleHeadlineSlider"
 
 const images = [
   {
@@ -23,6 +24,25 @@ const images = [
   {
     id: 3,
     path: "/../public/products/product-3.jpg",
+  },
+]
+
+const headlines = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet.",
+    date: "12/12/2021",
+    short_desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quos natus soluta rerum omnis sequi quia quis eligendi, quasi quam odit sunt tempore! Magnam, quis minima quae voluptatem ipsa repellat!",
+    banner_image: "/public/products/product-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Consectetur adipiscing elit.",
+    date: "12/12/2021",
+    short_desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quos natus soluta rerum omnis sequi quia quis eligendi, quasi quam odit sunt tempore! Magnam, quis minima quae voluptatem ipsa repellat!",
+    banner_image: "/../public/products/product-2.jpg",
   },
 ]
 
@@ -63,6 +83,9 @@ export default function Components() {
         </div>
         <div className="w-full">
           <ImageCardSlider images={images} />
+        </div>
+        <div className="w-full">
+          <ArticleHeadlineSlider headlines={headlines} />
         </div>
       </div>
       <div className="w-full">
