@@ -8,6 +8,7 @@ import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
 import PageHeader from "@/components/containers/PageHeader"
 import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 import BannerImageCard from "@/components/layouts/BannerImageCard"
+import VideoComponent from "@/components/common/VideoComponent"
 
 export default function Components() {
   return (
@@ -40,6 +41,9 @@ export default function Components() {
         </div>
         <div className="w-[95%] md:w-[80%]">
           <BannerImageCard />
+        </div>
+        <div className="w-full">
+          <VideoComponent />
         </div>
       </div>
       <div className="w-full">
