@@ -48,7 +48,6 @@ const DesktopFormSection = () => {
       return
     }
     try {
-      console.log("data: ", data)
       await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
       alert("Inquiry submitted successfully")
     } catch (error) {

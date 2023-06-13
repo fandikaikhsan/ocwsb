@@ -9,6 +9,22 @@ import PageHeader from "@/components/containers/PageHeader"
 import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 import BannerImageCard from "@/components/layouts/BannerImageCard"
 import VideoComponent from "@/components/common/VideoComponent"
+import ImageCardSlider from "@/components/containers/ImageCardSlider"
+
+const images = [
+  {
+    id: 1,
+    path: "/../public/products/product-1.jpg",
+  },
+  {
+    id: 2,
+    path: "/../public/products/product-2.jpg",
+  },
+  {
+    id: 3,
+    path: "/../public/products/product-3.jpg",
+  },
+]
 
 export default function Components() {
   return (
@@ -44,6 +60,9 @@ export default function Components() {
         </div>
         <div className="w-full">
           <VideoComponent />
+        </div>
+        <div className="w-full">
+          <ImageCardSlider images={images} />
         </div>
       </div>
       <div className="w-full">
