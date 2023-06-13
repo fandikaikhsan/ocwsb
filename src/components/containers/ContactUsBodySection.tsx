@@ -4,12 +4,6 @@ const ContactUsBodySection = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-10 md:gap-20 p-5 w-full">
-        <div className="text-sm md:text-lg w-[95%] md:w-[70%] text-center text-white">
-          In cooperation with Rheinmetall Air Defence, Switzerland as the main
-          Principal, work towards localizing production activities for military
-          equipment in the form of Assembly, Maintenance, Repair, Overhaul,
-          Training, and local spare parts sourcing.
-        </div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
           <div className="flex flex-col gap-4 w-[80%] md:w-[50%]">
             <div className="text-[2rem] md:text-[3rem] text-white font-maqin">
