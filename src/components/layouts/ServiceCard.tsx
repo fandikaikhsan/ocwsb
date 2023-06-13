@@ -27,7 +27,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     <>
       <a onClick={onClick} className=" hover:cursor-pointer">
         <div
-          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem]`}
+          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
         >
           <img
             src={image}
