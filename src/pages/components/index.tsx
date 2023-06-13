@@ -7,6 +7,7 @@ import PortfolioCard from "@/components/layouts/PortfolioCard"
 import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
 import PageHeader from "@/components/containers/PageHeader"
 import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
+import BannerImageCard from "@/components/layouts/BannerImageCard"
 
 export default function Components() {
   return (
@@ -36,8 +37,11 @@ export default function Components() {
         <div className="w-[80%]">
           <ContactUsBodySection />
         </div>
+        <div className="w-[80%]">
+          <BannerImageCard />
+        </div>
       </div>
-      <div className="w-full mb-10">
+      <div className="w-full">
         <ContactUsCTABanner />
       </div>
     </>
