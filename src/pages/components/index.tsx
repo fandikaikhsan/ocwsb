@@ -12,6 +12,22 @@ import VideoComponent from "@/components/common/VideoComponent"
 import ImageCardSlider from "@/components/containers/ImageCardSlider"
 import ArticleHeadlineSlider from "@/components/containers/ArticleHeadlineSlider"
 import PortfolioCardSlider from "@/components/containers/PortofolioCardSlider"
+import CareerCardSlider from "@/components/containers/CareerCardSlider"
+
+const careers = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet.",
+    image: "/../public/products/product-1.jpg",
+    cta_button: "About us",
+  },
+  {
+    id: 2,
+    title: "Consectetur adipiscing elit.",
+    image: "/../public/products/product-2.jpg",
+    cta_button: "About us",
+  },
+]
 
 const images = [
   {
@@ -107,6 +123,9 @@ export default function Components() {
         </div>
         <div className="w-full">
           <PortfolioCardSlider portofolios={portofolios} />
+        </div>
+        <div className="w-full">
+          <CareerCardSlider careers={careers} />
         </div>
       </div>
       <div className="w-full">
