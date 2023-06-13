@@ -36,10 +36,10 @@ const ArticleCardHeadline = () => {
         </div>
       </div> */}
 
-      <div className="relative flex flex-col h-[20rem] rounded-[1rem] overflow-hidden">
-        <div className="absolute top-10 z-20 flex flex-col justify-center flex-1 w-full">
+      <div className="relative flex flex-col h-[25rem] md:h-[20rem] rounded-[1rem] overflow-hidden">
+        <div className="absolute top-16 md:top-20 z-20 flex flex-col justify-center flex-1 w-full">
           <div className="flex flex-col gap-2 justify-center items-center text-center">
-            <div className="text-md text-white font-bold w-[60%] ">
+            <div className="text-md text-white font-bold w-[90%] md:w-[60%] ">
               Final Series of Northrop Grumman-Built C-Band Satellites
               Successfully Launch
             </div>
@@ -62,7 +62,7 @@ const ArticleCardHeadline = () => {
 
         <div className="bg-[#74290E] w-full rounded-b-[1rem] p-5">
           <div className="flex flex-col gap-4 justify-center items-center text-center">
-            <div className="text-sm text-white w-[80%] ">
+            <div className="text-sm text-white w-[95%] md:w-[80%] ">
               Leveraging our decades of #definingpossible with advanced unmanned
               aircraft systems, we’ve teamed up with @shieldaitech to prototype
               a. Leveraging our decades of #definingpossible with advanced

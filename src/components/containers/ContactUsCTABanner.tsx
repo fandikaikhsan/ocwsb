@@ -17,7 +17,7 @@ const ContactUsCTABanner: FC = () => {
             }}
           />
         </div>
-        <div className="absolute z-10 top-0 flex flex-col justify-center items-center w-full h-52 gap-4">
+        <div className="absolute z-10 top-0 flex flex-col justify-center items-center w-full h-52 gap-2 md:gap-4">
           <div className="text-white text-lg">Ready to talk to us?</div>
           <div className="bg-[#B47400] w-fit rounded-lg px-10 py-2 text-white text-sm mx-auto">
             Contact Us

@@ -6,7 +6,7 @@ const PortfolioCard = () => {
   return (
     <>
       <div className="relative flex flex-col justify-center items-center w-full h-64 rounded-[1rem] overflow-hidden">
-        <div className="absolute z-20 p-5 flex flex-col justify-center items-center gap-5 w-[70%]">
+        <div className="absolute z-20 p-5 flex flex-col justify-center items-center gap-5 w-[95%] md:w-[70%]">
           <div className="text-center text-md font-bold text-white">
             Final Series of Northrop Grumman-Built C-Band Satellites
             Successfully Launch
@@ -17,7 +17,7 @@ const PortfolioCard = () => {
             a....
           </div>
         </div>
-        <div className="absolute opacity-40 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
+        <div className="absolute opacity-50 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
         <Image
           src={ProductImage3}
           alt="Product 3"

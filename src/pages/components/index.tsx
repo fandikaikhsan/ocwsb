@@ -25,7 +25,8 @@ export default function Components() {
         <div className="flex justify-center w-full">
           <ArticleCardHeadline />
         </div>
-        <div className="flex justify-center w-full lg:w-[70%]">
+        <div className="flex flex-col gap-4 items-center justify-center w-full lg:w-[70%]">
+          <ArticleCardList />
           <ArticleCardList />
         </div>
         <div className="w-full">
@@ -34,10 +35,10 @@ export default function Components() {
         <div className="w-full">
           <PortfolioCard />
         </div>
-        <div className="w-[80%]">
+        <div className="w-full md:w-[80%]">
           <ContactUsBodySection />
         </div>
-        <div className="w-[80%]">
+        <div className="w-[95%] md:w-[80%]">
           <BannerImageCard />
         </div>
       </div>

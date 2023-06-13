@@ -7,8 +7,8 @@ import ProductImage3 from "/public/products/product-3.jpg"
 const CertificationCardSlider = () => {
   return (
     <>
-      <div className="flex gap-8 justify-center overflow-scroll w-full">
-        <div className="relative w-64 h-64">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center overflow-scroll w-full">
+        <div className="relative w-52 h-52">
           <Image
             src={ProductImage1}
             alt="Product 1"
@@ -20,7 +20,7 @@ const CertificationCardSlider = () => {
             }}
           />
         </div>
-        <div className="relative w-64 h-64">
+        <div className="relative w-52 h-52">
           <Image
             src={ProductImage1}
             alt="Product 1"
@@ -32,7 +32,7 @@ const CertificationCardSlider = () => {
             }}
           />
         </div>
-        <div className="relative w-64 h-64">
+        <div className="relative w-52 h-52">
           <Image
             src={ProductImage1}
             alt="Product 1"
@@ -44,7 +44,7 @@ const CertificationCardSlider = () => {
             }}
           />
         </div>
-        <div className="relative w-64 h-64">
+        <div className="relative w-52 h-52">
           <Image
             src={ProductImage1}
             alt="Product 1"
