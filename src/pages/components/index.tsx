@@ -11,6 +11,7 @@ import BannerImageCard from "@/components/layouts/BannerImageCard"
 import VideoComponent from "@/components/common/VideoComponent"
 import ImageCardSlider from "@/components/containers/ImageCardSlider"
 import ArticleHeadlineSlider from "@/components/containers/ArticleHeadlineSlider"
+import PortfolioCardSlider from "@/components/containers/PortofolioCardSlider"
 
 const images = [
   {
@@ -24,6 +25,23 @@ const images = [
   {
     id: 3,
     path: "/../public/products/product-3.jpg",
+  },
+]
+
+const portofolios = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet.",
+    short_desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quos natus soluta rerum omnis sequi quia quis eligendi, quasi quam odit sunt tempore! Magnam, quis minima quae voluptatem ipsa repellat!",
+    banner_image: "/public/products/product-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Consectetur adipiscing elit.",
+    short_desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quos natus soluta rerum omnis sequi quia quis eligendi, quasi quam odit sunt tempore! Magnam, quis minima quae voluptatem ipsa repellat!",
+    banner_image: "/../public/products/product-2.jpg",
   },
 ]
 
@@ -86,6 +104,9 @@ export default function Components() {
         </div>
         <div className="w-full">
           <ArticleHeadlineSlider headlines={headlines} />
+        </div>
+        <div className="w-full">
+          <PortfolioCardSlider portofolios={portofolios} />
         </div>
       </div>
       <div className="w-full">

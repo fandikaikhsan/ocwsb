@@ -1,8 +1,8 @@
-import React from "react"
+import React, { FC } from "react"
 import Image from "next/image"
 import ProductImage3 from "/public/products/product-3.jpg"
 
-const PortfolioCard = () => {
+const PortfolioCard: FC<any> = ({ title, short_desc, image }) => {
   return (
     <>
       <div className="relative flex flex-col justify-center items-center w-full h-64 rounded-[1rem] overflow-hidden">
