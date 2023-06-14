@@ -46,7 +46,7 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
               className="w-full h-48 object-cover opacity-40 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-5xl font-maqin font-bold text-white">
+              <h2 className="text-5xl text-center font-maqin font-bold text-white">
                 {props.desc_title}
               </h2>
             </div>
