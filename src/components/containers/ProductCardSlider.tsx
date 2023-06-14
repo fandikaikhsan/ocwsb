@@ -22,7 +22,7 @@ interface ProductCardSliderProps {
   }[]
 }
 
-const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
+const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [serviceData, setServiceData] = useState(0)
 
@@ -62,4 +62,4 @@ const ServiceCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
   )
 }
 
-export default ServiceCardSlider
+export default ProductCardSlider

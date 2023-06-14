@@ -36,13 +36,13 @@ const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
               className="w-full h-48 object-cover opacity-40 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-5xl font-maqin font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-maqin font-bold text-white">
                 {title}
               </h2>
             </div>
           </div>
           <div className="p-4">
-            <p className="font-maqin text-xl text-white">{desc}</p>
+            <p className="font-maqin text-lg md:text-xl text-white">{desc}</p>
           </div>
           <button
             className="absolute top-2 right-2 text-white hover:text-orange-700"
