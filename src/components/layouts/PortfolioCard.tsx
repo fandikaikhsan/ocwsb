@@ -5,7 +5,7 @@ import ProductImage3 from "/public/products/product-3.jpg"
 const PortfolioCard: FC<any> = ({ title, short_desc, image }) => {
   return (
     <>
-      <div className="relative flex flex-col justify-center items-center w-full h-64 rounded-[1rem] overflow-hidden">
+      <div className="relative flex flex-col justify-center items-center w-full h-72 rounded-[1rem] overflow-hidden">
         <div className="absolute z-20 p-5 flex flex-col justify-center items-center gap-5 w-[95%] md:w-[70%]">
           <div className="text-center text-md font-bold text-white">
             Final Series of Northrop Grumman-Built C-Band Satellites
