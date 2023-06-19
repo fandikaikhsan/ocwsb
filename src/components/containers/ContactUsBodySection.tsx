@@ -1,6 +1,12 @@
-import React from "react"
+import { ContactUsBodySectionType } from "@/types/ContactUsType"
+import React, { FC } from "react"
 
-const ContactUsBodySection = () => {
+const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
+  office_address,
+  workshop_address,
+  phone,
+  email,
+}) => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-10 md:gap-20 p-5 w-full">
@@ -15,9 +21,7 @@ const ContactUsBodySection = () => {
                   Office
                 </div>
                 <p className="text-xs md:text-sm text-white">
-                  Jalan Selayar VI Blok K21 Kawasan Industri MM2100 Desa
-                  Telajung Kecamatan Cikarang Barat Kabupaten Bekasi – Jawa
-                  Barat (17530)
+                  {office_address}
                 </p>
               </div>
               <div>
@@ -25,9 +29,7 @@ const ContactUsBodySection = () => {
                   Workshop
                 </div>
                 <p className="text-xs md:text-sm text-white">
-                  Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
-                  Kembangan Selatan Kec. Kembangan, Kota Adm. Jakarta Barat,
-                  Provinsi DKI Jakarta (11610)
+                  {office_address}
                 </p>
               </div>
             </div>
@@ -41,17 +43,13 @@ const ContactUsBodySection = () => {
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
                   Phone
                 </div>
-                <p className="text-xs md:text-sm text-white">
-                  (021) – 58303738
-                </p>
+                <p className="text-xs md:text-sm text-white">{phone}</p>
               </div>
               <div>
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
                   Email
                 </div>
-                <p className="text-xs md:text-sm text-white">
-                  ocwsb.pratama.indonesia@gmail.com
-                </p>
+                <p className="text-xs md:text-sm text-white">{email}</p>
               </div>
             </div>
           </div>
