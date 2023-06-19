@@ -1,8 +1,14 @@
 import React, { FC } from "react"
 
-const FooterSection = () => {
+const FooterSection: FC<any> = (props) => {
+  const { type = "red" } = props
+
   return (
-    <footer className=" bg-gradient-to-r from-orange-800 to-red-800 bg-footer-pattern bg-cover py-8">
+    <footer
+      className={`${
+        type == "red" ? "bg-footer-pattern bg-cover" : "bg-black"
+      } bg-cover py-8`}
+    >
       <div className="hidden md:block mx-auto mr-8 md:mb-4 px-12 text-white">
         <div className="flex flex-row gap-6 items-center flex-shrink-0 text-white md:mr-2">
           <a href="#">

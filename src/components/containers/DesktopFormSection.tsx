@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
@@ -48,7 +50,6 @@ const DesktopFormSection = () => {
       return
     }
     try {
-      console.log("data: ", data)
       await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
