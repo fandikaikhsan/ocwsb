@@ -16,8 +16,9 @@ import {
 const ArticleHeadlineSlider: FC<ArticleHeadlineSliderType> = ({
   headlines,
 }) => {
-  console.log("headline: ", headlines)
-  headlines.map((headline: any) => console.log("headline: ", headline.title))
+  headlines.map((key: any, headline: any) =>
+    console.log("headline: ", headline.title)
+  )
 
   return (
     <>
