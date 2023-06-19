@@ -2,7 +2,7 @@ import React, { FC } from "react"
 
 interface PageHeaderProps {
   title: string
-  description: string
+  description?: string
   type?: "title" | "detail"
 }
 

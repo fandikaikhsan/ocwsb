@@ -1,13 +1,12 @@
+import { VideoComponentType } from "@/types/CompanyType"
 import React, { FC } from "react"
 
-const VideoComponent: FC = () => {
+const VideoComponent: FC<VideoComponentType> = ({ source }) => {
   return (
     <>
       <div className="flex justify-center items-center w-full ">
         <iframe
-          //   width="560"
-          //   height="315"
-          src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+          src={source}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

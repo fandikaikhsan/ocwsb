@@ -1,13 +1,16 @@
-import React, { FC, useState, useEffect } from "react"
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+"use client"
+
+import React, { FC } from "react"
+import { Navigation, A11y } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import PortfolioCard from "../layouts/PortfolioCard"
+import { PortofolioCardSliderType } from "@/types/CompanyType"
 
-const PortfolioCardSlider: FC<any> = ({ portofolios }) => {
+const PortfolioCardSlider: FC<PortofolioCardSliderType> = ({ portofolios }) => {
   return (
     <>
       <Swiper
@@ -19,15 +22,12 @@ const PortfolioCardSlider: FC<any> = ({ portofolios }) => {
         loop
         className="swiper-custom-navigation"
       >
-        {portofolios.map((index: any, headline: any) => (
-          <SwiperSlide
-            key={index}
-            style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
-          >
+        {portofolios.map((portofolio: any) => (
+          <SwiperSlide style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}>
             <PortfolioCard
-              title={headline.title}
-              short_desc={headline.short_desc}
-              image={headline.banner_image}
+              title={portofolio.title}
+              short_desc={portofolio.short_desc}
+              image={portofolio.image}
             />
           </SwiperSlide>
         ))}
