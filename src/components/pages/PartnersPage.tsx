@@ -1,7 +1,6 @@
 import React from "react"
 import PageHeader from "@/components/containers/PageHeader"
 import ListGalery from "@/components/layouts/ListGalery"
-import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 import FooterSection from "@/components/containers/FooterSection"
 import { PartnersPageType } from "@/types/PartnersType"
 
