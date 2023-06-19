@@ -1,7 +1,7 @@
 import { ListGaleryValueType } from "./CommonType"
 
-export interface OurValuePageType {
+export interface PartnersPageType {
   title: string
   description: string
-  values: ListGaleryValueType[]
+  partners: ListGaleryValueType[]
 }

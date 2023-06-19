@@ -1,10 +1,10 @@
-import OurValuePage from "@/components/pages/OurValuePage"
+import PartnersPage from "@/components/pages/PartnersPage"
 
 const data = {
-  title: "OUR VALUE",
+  title: "Partners",
   description:
     "We engaged in assembly, integration, tests, maintenance, training, and other services in the defence industry.",
-  values: [
+  partners: [
     {
       id: 1,
       title: "Lorem ipsum dolor sit amet.",
@@ -26,13 +26,13 @@ const data = {
   ],
 }
 
-export default function OurValue() {
+export default function Partners() {
   return (
     <>
-      <OurValuePage
+      <PartnersPage
         title={data.title}
         description={data.description}
-        values={data.values}
+        partners={data.partners}
       />
     </>
   )

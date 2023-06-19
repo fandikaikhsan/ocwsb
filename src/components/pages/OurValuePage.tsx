@@ -7,7 +7,7 @@ import { OurValuePageType } from "@/types/OurValueType"
 export default function OurValuePage({
   title,
   description,
-  galery_value,
+  values,
 }: OurValuePageType) {
   return (
     <>
@@ -22,7 +22,7 @@ export default function OurValuePage({
           <div className="text-[2rem] font-maqin text-white uppercase">
             Our Value
           </div>
-          <ListGalery values={galery_value} />
+          <ListGalery values={values} />
         </div>
       </div>
       <FooterSection type={"red"} />
