@@ -11,7 +11,7 @@ import ArticleCardHeadline from "../layouts/ArticleCardHeadline"
 import {
   ArticleCardHeadlineType,
   ArticleHeadlineSliderType,
-} from "@/types/ArticleType"
+} from "@/types/NewsType"
 
 const ArticleHeadlineSlider: FC<ArticleHeadlineSliderType> = ({
   headlines,

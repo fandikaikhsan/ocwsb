@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import ArticleCardList from "@/components/layouts/ArticleCardList"
-import { ArticleCardSliderType } from "@/types/ArticleType"
+import { ArticleCardSliderType } from "@/types/NewsType"
 
 const ArticleCardSlider: FC<ArticleCardSliderType> = ({ articles }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import ProductImage2 from "/public/products/product-2.jpg"
 import Image from "next/image"
-import { ArticleCardHeadlineType } from "@/types/ArticleType"
+import { ArticleCardHeadlineType } from "@/types/NewsType"
 
 const ArticleCardHeadline: FC<ArticleCardHeadlineType> = ({
   title,

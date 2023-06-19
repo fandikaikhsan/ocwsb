@@ -1,3 +1,9 @@
+export interface NewsPageType {
+  title: string
+  headlines: ArticleCardHeadlineType[]
+  recents: ArticleCardListType[]
+}
+
 export interface ArticleCardHeadlineType {
   id?: number
   title: string

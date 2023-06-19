@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArticleCardListType } from "@/types/ArticleType"
+import { ArticleCardListType } from "@/types/NewsType"
 
 const ArticleCardList: FC<ArticleCardListType> = ({
   title,
