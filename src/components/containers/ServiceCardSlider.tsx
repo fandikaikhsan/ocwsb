@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, FC, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import ServiceCard from "../layouts/ServiceCard"

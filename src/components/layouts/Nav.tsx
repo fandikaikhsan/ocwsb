@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react"
 import LanguageDropdown from "../common/LanguageDropdown"
 import Link from "next/link"

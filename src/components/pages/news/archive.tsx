@@ -30,7 +30,7 @@ const headlines = [
 export default function NewsPage() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-10 bg-black">
+      {/* <div className="flex flex-col justify-center items-center gap-10 bg-black">
         <PageHeader title={data.title} description={data.description} />
         <div className="w-[90%] md:w-[80%]">
           <ArticleHeadlineSlider headlines={headlines} />
@@ -40,7 +40,10 @@ export default function NewsPage() {
         </div>
         <div className="w-full h-[30rem] bg-[#74290E]">Description here</div>
       </div>
-      <FooterSection type={"black"} />
+      <FooterSection type={"black"} /> */}
+      <div>
+        <h1>Welcome to my site</h1>
+      </div>
     </>
   )
 }

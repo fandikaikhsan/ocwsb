@@ -1,13 +1,10 @@
-import { Metadata } from "next"
+import React from "react"
+import NewsPage from "@/components/pages/news"
 
-export const metadata: Metadata = {
-  title: "My Page Title",
-}
-
-export default function News() {
+export default function Page() {
   return (
     <>
-      <div>News</div>
+      <NewsPage />
     </>
   )
 }

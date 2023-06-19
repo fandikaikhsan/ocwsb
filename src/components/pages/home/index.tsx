@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Navbar from "@/components/layouts/Nav"
 import ProductSlider from "@/components/containers/ProductCardSlider"
 import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
-import { products, services, banners } from "./api/data"
+import { products, services, banners } from "@/pages/api/data"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import ProductAccordion from "@/components/layouts/ProductAccordion"
@@ -12,7 +12,7 @@ import DesktopFormSection from "@/components/containers/DesktopFormSection"
 import ProductAccordionSection from "@/components/containers/ProductAccordionSection"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Navbar />
