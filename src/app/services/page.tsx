@@ -1,13 +1,13 @@
 import ProductsPage from "@/components/pages/ProductsPage"
 
 const data = {
-  title: "Products",
+  title: "Services",
   short_desc:
     "We engaged in assembly, integration, tests, maintenance, training, and other services in the defence industry.",
   description:
     "In cooperation with Rheinmetall Air Defence, Switzerland as the main Principal, work towards localizing production activities for military equipment in the form of Assembly, Maintenance, Repair, Overhaul, Training, and local spare parts sourcing.",
   video: {
-    title: "Manufacturing Process",
+    title: "Delighted Service",
     url: "https://www.youtube.com/embed/1GSq7Je32iw",
   },
   products: [
@@ -32,7 +32,7 @@ const data = {
   ],
 }
 
-export default function Products() {
+export default function Services() {
   return (
     <>
       <ProductsPage

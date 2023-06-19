@@ -5,7 +5,7 @@ import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductsPageType } from "@/types/ProductsType"
 
-export default function ProductsPage({
+export default function ServicesPage({
   title,
   short_desc,
   description,
