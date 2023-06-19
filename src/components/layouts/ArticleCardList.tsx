@@ -12,8 +12,8 @@ import Image from "next/image"
 const ArticleCardList = () => {
   return (
     <>
-      <div className="flex gap-4 w-[95%] md:px-4 h-36 md:h-48 text-white">
-        <div className="relative min-w-[40%] md:min-w-[20%] rounded-lg ">
+      <div className="flex gap-4 w-full md:px-4 h-36 md:h-52 text-white p-2">
+        <div className="relative w- h-full aspect-1">
           <Image
             src={ProductImage1}
             alt="Product 1"
@@ -25,16 +25,23 @@ const ArticleCardList = () => {
             }}
           />
         </div>
-        <div className="flex flex-col gap-2 p-4">
+
+        <div className="flex flex-col gap-2 py-2 md:py-5">
           <div className="">
-            <div className="text-sm md:text-md font-bold">
-              Final Series of Northrop...
+            <div className="text-sm md:text-md overflow-hidden font-bold">
+              <p className=" line-clamp-2">
+                Final Series of Northrop Grumman-Built C-Band Satellites
+                Successfully Launch
+              </p>
             </div>
             <div className="text-xs text-gray-500">12/02/23 12:02</div>
           </div>
           <div className="text-xs md:text-sm">
             <p className="line-clamp-2 md:line-clamp-3">
-              Leveraging our decades of #definingpossible...
+              Leveraging our Leveraging our decades of #definingpossible with
+              advanced unmanned aircraft systems, we’ve teamed up with
+              @shieldaitech to prototype a next generation V-BAT for the Future
+              Tactical Unmanned Aircraft System Program.
             </p>
           </div>
           <div className="text-orange-600 underline text-xs">Read more</div>
