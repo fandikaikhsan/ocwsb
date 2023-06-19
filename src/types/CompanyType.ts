@@ -17,7 +17,3 @@ export interface PortofolioCardType {
   short_desc: string
   path?: string
 }
-
-export interface VideoComponentType {
-  source: string
-}

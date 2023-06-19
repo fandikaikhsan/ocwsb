@@ -1,4 +1,4 @@
-import { VideoComponentType } from "@/types/CompanyType"
+import { VideoComponentType } from "@/types/CommonType"
 import React, { FC } from "react"
 
 const VideoComponent: FC<VideoComponentType> = ({ source }) => {
