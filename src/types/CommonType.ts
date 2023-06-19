@@ -7,7 +7,7 @@ export interface ListGaleryComponentType {
 
 export interface ListGaleryValueType {
   id?: number
-  title: string
+  name: string
   image: string
   path: string
 }

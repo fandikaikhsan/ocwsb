@@ -13,19 +13,19 @@ const data = {
   products: [
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet.",
+      name: "Lorem ipsum dolor sit amet.",
       image: "https://picsum.photos/200/300",
       path: "/",
     },
     {
       id: 2,
-      title: "Consectetur adipiscing elit.",
+      name: "Consectetur adipiscing elit.",
       image: "https://picsum.photos/200/300",
       path: "/",
     },
     {
       id: 3,
-      title: "Lorem ipsum dolor sit amet.",
+      name: "Lorem ipsum dolor sit amet.",
       image: "https://picsum.photos/200/300",
       path: "/",
     },
