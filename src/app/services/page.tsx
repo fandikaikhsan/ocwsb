@@ -10,7 +10,7 @@ const data = {
     title: "Delighted Service",
     url: "https://www.youtube.com/embed/1GSq7Je32iw",
   },
-  products: [
+  services: [
     {
       id: 1,
       title: "Lorem ipsum dolor sit amet.",
@@ -39,7 +39,7 @@ export default function Services() {
         title={data.title}
         short_desc={data.short_desc}
         description={data.description}
-        products={data.products}
+        products={data.services}
         video={data.video}
       />
     </>

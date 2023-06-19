@@ -3,15 +3,15 @@ import PageHeader from "@/components/containers/PageHeader"
 import ListGalery from "@/components/layouts/ListGalery"
 import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
-import { ProductsPageType } from "@/types/ProductsType"
+import { ServicesPageType } from "@/types/ServicesType"
 
 export default function ServicesPage({
   title,
   short_desc,
   description,
-  products,
+  services,
   video,
-}: ProductsPageType) {
+}: ServicesPageType) {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-10 bg-black">
@@ -22,7 +22,7 @@ export default function ServicesPage({
           </div>
         </div>
         <div>
-          <ListGalery values={products} />
+          <ListGalery values={services} />
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
