@@ -1,5 +1,5 @@
 import React from "react"
-import NewsPage from "@/components/pages/news"
+import NewsPage from "@/components/pages/NewsPage"
 
 export default function Page() {
   return (
