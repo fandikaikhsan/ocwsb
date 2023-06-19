@@ -3,7 +3,7 @@ import React, { FC } from "react"
 interface PageHeaderProps {
   title: string
   description: string
-  type: "title" | "detail"
+  type?: "title" | "detail"
 }
 
 const PageHeader: FC<PageHeaderProps> = ({ title, description, type }) => {
