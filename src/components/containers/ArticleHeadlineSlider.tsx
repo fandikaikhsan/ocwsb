@@ -6,8 +6,14 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import ArticleCardHeadline from "../layouts/ArticleCardHeadline"
+import {
+  ArticleCardHeadlineType,
+  ArticleHeadlineSliderType,
+} from "@/types/ArticleType"
 
-const ArticleHeadlineSlider: FC<any> = ({ headlines }) => {
+const ArticleHeadlineSlider: FC<ArticleHeadlineSliderType> = ({
+  headlines,
+}) => {
   console.log("headline: ", headlines)
   headlines.map((headline: any) => console.log("headline: ", headline.title))
 
@@ -23,16 +29,14 @@ const ArticleHeadlineSlider: FC<any> = ({ headlines }) => {
         loop
         className="swiper-custom-navigation"
       >
-        {headlines.map((index: any, headline: any) => (
-          <SwiperSlide
-            key={index}
-            style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
-          >
+        {headlines.map((headline: ArticleCardHeadlineType) => (
+          <SwiperSlide style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}>
             <ArticleCardHeadline
               title={headline.title}
               date={headline.date}
               short_desc={headline.short_desc}
-              image={headline.banner_image}
+              image={headline.image}
+              path={headline.path}
             />
           </SwiperSlide>
         ))}
