@@ -20,14 +20,23 @@ const data = {
   },
 }
 
-export default function ContactUs() {
+async function getContactUs() {
+  const res = await fetch("http://localhost:8002/v1/contact")
+  if (!res.ok) {
+    throw new Error("Failed to fetch Contact Us data.")
+  }
+  return res.json()
+}
+
+export default async function ContactUs() {
+  const fetch = await getContactUs()
   return (
     <>
       <ContactUsPage
-        title={data.title}
-        description={data.description}
-        body={data.body}
-        cta_banner={data.cta_banner}
+        title={fetch.data.title}
+        description={fetch.data.description}
+        body={fetch.data.body}
+        cta_banner={fetch.data.cta_banner}
       />
     </>
   )
