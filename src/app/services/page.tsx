@@ -32,15 +32,27 @@ const data = {
   ],
 }
 
-export default function Services() {
+async function getService() {
+  const res = await fetch("http://localhost:8002/v1/service", {
+    cache: "no-cache",
+  })
+  if (!res.ok) {
+    throw new Error("Failed to fetch Service data.")
+  }
+  return res.json()
+}
+
+export default async function Services() {
+  const fetch = await getService()
+
   return (
     <>
       <ProductsPage
-        title={data.title}
-        short_desc={data.short_desc}
-        description={data.description}
-        products={data.services}
-        video={data.video}
+        title={fetch.data.title}
+        short_desc={fetch.data.short_desc}
+        description={fetch.data.description}
+        products={fetch.data.services}
+        video={fetch.data.video}
       />
     </>
   )
