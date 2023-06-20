@@ -26,13 +26,26 @@ const data = {
   ],
 }
 
-export default function Partners() {
+async function getPartner() {
+  const res = await fetch("http://localhost:8002/v1/partner", {
+    next: { revalidate: 5 },
+  })
+  if (!res.ok) {
+    throw new Error("Failed to fetch Partner data.")
+  }
+
+  return res.json()
+}
+
+export default async function Partners() {
+  const fetch = await getPartner()
+
   return (
     <>
       <PartnersPage
-        title={data.title}
-        description={data.description}
-        partners={data.partners}
+        title={fetch.data.title}
+        description={fetch.data.description}
+        partners={fetch.data.partners}
       />
     </>
   )

@@ -23,13 +23,22 @@ const data = {
   ],
 }
 
-export default function Company() {
+async function getCompany() {
+  const res = await fetch("http://localhost:8002/v1/company")
+  if (!res.ok) {
+    throw new Error("Failed to fetch Company data.")
+  }
+  return res.json()
+}
+
+export default async function Company() {
+  const fetch = await getCompany()
   return (
     <CompanyPage
-      title={data.title}
-      description={data.description}
-      video={data.video}
-      portofolios={data.portofolios}
+      title={fetch.data.title}
+      description={fetch.data.description}
+      video={fetch.data.video}
+      portofolios={fetch.data.portofolios}
     />
   )
 }
