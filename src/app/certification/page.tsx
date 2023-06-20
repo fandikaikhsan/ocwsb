@@ -28,12 +28,25 @@ const data = {
   ],
 }
 
-export default function Certification() {
+async function getCertification() {
+  const res = await fetch("http://localhost:8002/v1/certification", {
+    next: { revalidate: 5 },
+  })
+  if (!res.ok) {
+    throw new Error("Failed to fetch Certification data.")
+  }
+
+  return res.json()
+}
+
+export default async function Certification() {
+  const fetch = await getCertification()
+
   return (
     <CertificationPage
-      title={data.title}
-      description={data.description}
-      certifications={data.certifications}
+      title={fetch.data.title}
+      description={fetch.data.description}
+      certifications={fetch.data.certifications}
     />
   )
 }
