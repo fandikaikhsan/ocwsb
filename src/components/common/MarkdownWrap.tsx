@@ -45,14 +45,16 @@ const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
   }
 
   img {
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    margin: 12px 0;
+    width: 300px;
+    height: 300px;
   }
 
   p {
     color: ${(props) => props.color};
+    text-color: ${(props) => props.color};
     font-size: 14px;
   }
 
