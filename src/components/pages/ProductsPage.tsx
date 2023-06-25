@@ -4,6 +4,7 @@ import ListGalery from "@/components/layouts/ListGalery"
 import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductsPageType } from "@/types/ProductsType"
+import MarkdownWrap from "../common/MarkdownWrap"
 
 export default function ProductsPage({
   title,
@@ -28,8 +29,9 @@ export default function ProductsPage({
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
           <VideoComponent source={video.url} />
         </div>
-        {/* @TODO: Markdown component here */}
-        <div className="w-full h-[30rem] bg-[#74290E]">{description}</div>
+        <div className="w-full h-[30rem] bg-[#74290E] p-5">
+          <MarkdownWrap description={description} color="white" />
+        </div>
       </div>
       <FooterSection type={"black"} />
     </>
