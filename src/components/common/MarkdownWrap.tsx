@@ -30,12 +30,14 @@ const MarkdownWrap: FC<MarkdownWrapProps> = ({ description, color }) => {
 const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
   h1 {
     color: ${(props) => props.color};
+    padding: 0.5rem 0rem;
     text-decoration: bold;
     font-size: 2rem;
   }
 
   h2 {
     color: ${(props) => props.color};
+    padding: 0.5rem 0rem;
     text-decoration: none;
     font-size: 1.5rem;
   }
@@ -50,9 +52,11 @@ const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
     border-radius: 1rem;
     width: 300px;
     height: 300px;
+    padding: 1rem;
   }
 
   p {
+    padding: 0.5rem 0rem;
     color: ${(props) => props.color};
     text-color: ${(props) => props.color};
     font-size: 14px;

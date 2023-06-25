@@ -29,8 +29,10 @@ export default function ProductsPage({
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
           <VideoComponent source={video.url} />
         </div>
-        <div className="w-full bg-[#74290E] p-5 text-center overflow-visible">
-          <MarkdownWrap description={description} color="white" />
+        <div className="flex flex-col justify-center items-center w-full bg-[#74290E]">
+          <div className="w-full md:w-[70%] bg-[#74290E] p-5 text-center overflow-visible">
+            <MarkdownWrap description={description} color="white" />
+          </div>
         </div>
       </div>
       <FooterSection type={"black"} />
