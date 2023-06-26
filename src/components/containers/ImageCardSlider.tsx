@@ -36,7 +36,11 @@ const ImageCardSlider: FC<ImageCardSliderType> = ({ images }) => {
             key={index}
             style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
           >
-            <BannerImageCard id={index} title={image.title} path={image.path} />
+            <BannerImageCard
+              id={index}
+              title={image.title}
+              image={image.image}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

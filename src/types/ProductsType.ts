@@ -1,4 +1,5 @@
 import { ListGaleryValueType } from "./CommonType"
+import { ImageCardType } from "./CommonType"
 
 export interface ProductsPageType {
   title: string
@@ -15,6 +16,6 @@ export interface ProductDetailPageType {
   title: string
   short_desc: string
   description: string
-  image: ListGaleryValueType[]
+  image: ImageCardType[]
   specification: string
 }
