@@ -1,15 +1,15 @@
 import React, { FC } from "react"
 import Image from "next/image"
-import ProductImage3 from "/public/products/product-3.jpg"
+import { ImageCardType } from "@/types/CommonType"
 
-const BannerImageCard: FC<any> = ({ image }) => {
+const BannerImageCard: FC<ImageCardType> = ({ title, path }) => {
   return (
     <>
       <div className="relative w-full h-[10rem] md:h-[20rem] rounded-[1rem]">
         <div className="absolute opacity-30 z-10 bg-black w-full h-full"></div>
         <Image
-          src={image || ProductImage3}
-          alt="Product 3"
+          src={path}
+          alt={title}
           fill={true}
           style={{
             objectFit: "cover",

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -6,8 +8,9 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import BannerImageCard from "../layouts/BannerImageCard"
+import { ImageCardSliderType } from "@/types/CommonType"
 
-const ImageCardSlider: FC<any> = ({ images }) => {
+const ImageCardSlider: FC<ImageCardSliderType> = ({ images }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [serviceData, setServiceData] = useState(0)
 
@@ -33,7 +36,7 @@ const ImageCardSlider: FC<any> = ({ images }) => {
             key={index}
             style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
           >
-            <BannerImageCard image={image.path} />
+            <BannerImageCard id={index} title={image.title} path={image.path} />
           </SwiperSlide>
         ))}
       </Swiper>

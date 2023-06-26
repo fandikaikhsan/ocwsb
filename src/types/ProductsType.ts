@@ -10,3 +10,11 @@ export interface ProductsPageType {
     url: string
   }
 }
+
+export interface ProductDetailPageType {
+  title: string
+  short_desc: string
+  description: string
+  image: ListGaleryValueType[]
+  specification: string
+}
