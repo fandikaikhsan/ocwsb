@@ -5,11 +5,11 @@
 // import ArticleCardHeadline from "@/components/layouts/ArticleCardHeadline"
 // import PortfolioCard from "@/components/layouts/PortfolioCard"
 // import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
-// import PageHeader from "@/components/containers/PageHeader"
+import PageHeader from "@/components/containers/PageHeader"
 // import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 // import BannerImageCard from "@/components/layouts/BannerImageCard"
 // import VideoComponent from "@/components/common/VideoComponent"
-// import ImageCardSlider from "@/components/containers/ImageCardSlider"
+import ImageCardSlider from "@/components/containers/ImageCardSlider"
 // import ArticleHeadlineSlider from "@/components/containers/ArticleHeadlineSlider"
 // import PortfolioCardSlider from "@/components/containers/PortofolioCardSlider"
 // import CareerCardSlider from "@/components/containers/CareerCardSlider"
@@ -29,20 +29,23 @@
 //   },
 // ]
 
-// const images = [
-//   {
-//     id: 1,
-//     path: "/../public/products/product-1.jpg",
-//   },
-//   {
-//     id: 2,
-//     path: "/../public/products/product-2.jpg",
-//   },
-//   {
-//     id: 3,
-//     path: "/../public/products/product-3.jpg",
-//   },
-// ]
+const imagesSample = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet.",
+    image: "/../public/products/product-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum dolor sit amet.",
+    image: "/../public/products/product-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Lorem ipsum dolor sit amet.",
+    image: "/../public/products/product-3.jpg",
+  },
+]
 
 // const portofolios = [
 //   {
@@ -79,6 +82,17 @@
 //     banner_image: "/../public/products/product-2.jpg",
 //   },
 // ]
+
+export default function ComponentPage() {
+  return (
+    <>
+      <PageHeader title="Components" />
+      <div>
+        <ImageCardSlider images={imagesSample} />
+      </div>
+    </>
+  )
+}
 
 // export default function Components() {
 //   return (

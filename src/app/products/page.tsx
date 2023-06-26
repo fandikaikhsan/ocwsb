@@ -32,15 +32,26 @@ const data = {
   ],
 }
 
-export default function Products() {
+async function getProduct() {
+  const res = await fetch("http://localhost:8002/v1/product", {
+    cache: "no-cache",
+  })
+  if (!res.ok) {
+    throw new Error("Failed to fetch Product data.")
+  }
+  return res.json()
+}
+
+export default async function Products() {
+  const fetch = await getProduct()
   return (
     <>
       <ProductsPage
-        title={data.title}
-        short_desc={data.short_desc}
-        description={data.description}
-        products={data.products}
-        video={data.video}
+        title={fetch.data.title}
+        short_desc={fetch.data.short_desc}
+        description={fetch.data.description}
+        products={fetch.data.products}
+        video={fetch.data.video}
       />
     </>
   )

@@ -1,4 +1,5 @@
 import { ListGaleryValueType } from "./CommonType"
+import { ImageCardType } from "./CommonType"
 
 export interface ServicesPageType {
   title: string
@@ -9,4 +10,12 @@ export interface ServicesPageType {
     title: string
     url: string
   }
+}
+
+export interface ServiceDetailPageType {
+  title: string
+  short_desc: string
+  description: string
+  image: ImageCardType[]
+  specification: string
 }

@@ -7,7 +7,7 @@ const CertificationCardSlider: FC<CertificationCardSliderType> = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-center overflow-scroll w-full">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center overflow-hidden w-full">
         {certifications.map((certification) => (
           <div key={certification.id} className="relative w-52 h-52">
             <Image

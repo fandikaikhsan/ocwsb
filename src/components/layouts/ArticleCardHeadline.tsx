@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import ProductImage2 from "/public/products/product-2.jpg"
+import Link from "next/link"
 import Image from "next/image"
 import { ArticleCardHeadlineType } from "@/types/NewsType"
 
@@ -39,7 +39,9 @@ const ArticleCardHeadline: FC<ArticleCardHeadlineType> = ({
             <div className="text-sm text-white w-[95%] md:w-[80%] ">
               {short_desc}
             </div>
-            <div className="text-sm underline text-[#FF9068]">Read More</div>
+            <Link href={`/news/${path}`}>
+              <div className="text-sm underline text-[#FF9068]">Read More</div>
+            </Link>
           </div>
         </div>
       </div>

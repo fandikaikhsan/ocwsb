@@ -16,9 +16,8 @@ export default function NewsPage({ title, headlines, recents }: NewsPageType) {
         <div className="w-full py-5 md:w-[80%]">
           <ArticleCardSlider articles={recents} />
         </div>
-        <div className="w-full h-[30rem] bg-[#74290E]">Description here</div>
       </div>
-      <FooterSection type={"black"} />
+      <FooterSection type={"red"} />
     </>
   )
 }

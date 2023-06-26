@@ -26,13 +26,22 @@ const data = {
   ],
 }
 
-export default function OurValue() {
+async function getValue() {
+  const res = await fetch("http://localhost:8002/v1/value")
+  if (!res.ok) {
+    throw new Error("Failed to fetch Value data.")
+  }
+  return res.json()
+}
+
+export default async function OurValue() {
+  const fetch = await getValue()
   return (
     <>
       <OurValuePage
-        title={data.title}
-        description={data.description}
-        values={data.values}
+        title={fetch.data.title}
+        description={fetch.data.description}
+        values={fetch.data.values}
       />
     </>
   )
