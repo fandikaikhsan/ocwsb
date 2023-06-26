@@ -29,21 +29,21 @@ import ImageCardSlider from "@/components/containers/ImageCardSlider"
 //   },
 // ]
 
-const images = [
+const imagesSample = [
   {
     id: 1,
     title: "Lorem ipsum dolor sit amet.",
-    path: "/../public/products/product-1.jpg",
+    image: "/../public/products/product-1.jpg",
   },
   {
     id: 2,
     title: "Lorem ipsum dolor sit amet.",
-    path: "/../public/products/product-2.jpg",
+    image: "/../public/products/product-2.jpg",
   },
   {
     id: 3,
     title: "Lorem ipsum dolor sit amet.",
-    path: "/../public/products/product-3.jpg",
+    image: "/../public/products/product-3.jpg",
   },
 ]
 
@@ -88,7 +88,7 @@ export default function ComponentPage() {
     <>
       <PageHeader title="Components" />
       <div>
-        <ImageCardSlider images={images} />
+        <ImageCardSlider images={imagesSample} />
       </div>
     </>
   )

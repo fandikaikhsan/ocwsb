@@ -19,5 +19,6 @@ export interface ImageCardSliderType {
 export interface ImageCardType {
   id: number
   title: string
-  path: string
+  image: string
+  path?: string
 }
