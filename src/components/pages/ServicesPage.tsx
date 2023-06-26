@@ -4,6 +4,7 @@ import ListGalery from "@/components/layouts/ListGalery"
 import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ServicesPageType } from "@/types/ServicesType"
+import ServiceDescriptionSection from "../containers/ServiceDescriptionSection"
 
 export default function ServicesPage({
   title,
@@ -29,7 +30,7 @@ export default function ServicesPage({
           <VideoComponent source={video.url} />
         </div>
         {/* @TODO: Markdown component here */}
-        <div className="w-full h-[30rem] bg-[#74290E]">{description}</div>
+        <ServiceDescriptionSection description={description} color="white" />
       </div>
       <FooterSection type={"black"} />
     </>
