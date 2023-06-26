@@ -1,22 +1,28 @@
 import React, { FC } from "react"
 import MarkdownWrap from "../common/MarkdownWrap"
 
-interface ServiceDescriptionSectionProps {
+interface ProductDescriptionSectionProps {
   description: string
   color?: string
+  background?: string
 }
 
-const ServiceDescriptionSection: FC<ServiceDescriptionSectionProps> = ({
+const ProductDescriptionSection: FC<ProductDescriptionSectionProps> = ({
   description,
   color,
+  background,
 }) => {
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-[#74290E]">
-      <div className="w-full md:w-[70%] bg-[#74290E] p-5 text-center overflow-visible">
+    <div
+      className={`${
+        background ? "bg-" + background + "-500" : "bg-[#74290E]"
+      } flex flex-col justify-center items-center w-full`}
+    >
+      <div className="w-full md:w-[70%] p-5 text-center overflow-visible">
         <MarkdownWrap description={description} color={color} />
       </div>
     </div>
   )
 }
 
-export default ServiceDescriptionSection
+export default ProductDescriptionSection

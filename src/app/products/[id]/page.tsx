@@ -1,35 +1,27 @@
 import ProductDetailPage from "@/components/pages/ProductDetailPage"
 
-const data = {
-  title: "Product 1",
-  short_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda illum aliquam quos amet adipisci qui pariatur, hic porro mollitia itaque veritatis ipsum culpa possimus numquam eius. Veniam, mollitia neque!",
-  specification:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda illum aliquam quos amet adipisci qui pariatur, hic porro mollitia itaque veritatis ipsum culpa possimus numquam eius. Veniam, mollitia neque!",
-  image: [
-    {
-      id: 1,
-      title: "Lorem ipsum dolor sit amet.",
-      image: "https://picsum.photos/200/300",
-    },
-    {
-      id: 2,
-      title: "Lorem ipsum dolor sit amet.",
-      image: "https://picsum.photos/200/300",
-    },
-  ],
+async function getProductDetail(id: string) {
+  const res = await fetch(`http://localhost:8002/v1/product/${id}`)
+  if (!res.ok) {
+    throw new Error("Failed to fetch Product data.")
+  }
+  return res.json()
 }
 
-export default function ProductDetail() {
+export default async function ProductDetail({
+  params,
+}: {
+  params: { id: string }
+}) {
+  const fetch = await getProductDetail(params.id)
   return (
     <>
       <ProductDetailPage
-        title={data.title}
-        short_desc={data.short_desc}
-        description={data.short_desc}
-        image={data.image}
-        specification={data.specification}
+        title={fetch.data.title}
+        short_desc={fetch.data.short_desc}
+        description={fetch.data.short_desc}
+        image={fetch.data.image}
+        specification={fetch.data.specification}
       />
     </>
   )
