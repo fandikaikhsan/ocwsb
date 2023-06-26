@@ -4,7 +4,7 @@ import ListGalery from "@/components/layouts/ListGalery"
 import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductsPageType } from "@/types/ProductsType"
-import MarkdownWrap from "../common/MarkdownWrap"
+import ProductDescriptionSection from "../containers/ProductDescriptionSection"
 
 export default function ProductsPage({
   title,
@@ -29,11 +29,7 @@ export default function ProductsPage({
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
           <VideoComponent source={video.url} />
         </div>
-        <div className="flex flex-col justify-center items-center w-full bg-[#74290E]">
-          <div className="w-full md:w-[70%] bg-[#74290E] p-5 text-center overflow-visible">
-            <MarkdownWrap description={description} color="white" />
-          </div>
-        </div>
+        <ProductDescriptionSection description={description} color="white" />
       </div>
       <FooterSection type={"black"} />
     </>
