@@ -11,7 +11,7 @@ const PageHeader: FC<PageHeaderProps> = ({ title, description, type }) => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 justify-center items-center w-full bg-[#74290E] h-56">
+      <div className="flex flex-col gap-4 justify-center items-center text-center w-full bg-[#74290E] py-10">
         <div className="text-[2rem] text-white font-maqin uppercase">
           {title}
         </div>

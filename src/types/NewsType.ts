@@ -31,3 +31,11 @@ export interface ArticleCardSliderType {
   id?: number
   articles: ArticleCardListType[]
 }
+
+export interface NewsDetailPageType {
+  id?: number
+  title: string
+  author: string
+  date: string
+  content: string
+}
