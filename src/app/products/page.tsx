@@ -33,7 +33,7 @@ const data = {
 }
 
 async function getProduct() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/product`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/product`, {
     cache: "no-cache",
   })
   if (!res.ok) {

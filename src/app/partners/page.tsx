@@ -27,7 +27,7 @@ const data = {
 }
 
 async function getPartner() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/partner`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/partner`, {
     next: { revalidate: 5 },
   })
   if (!res.ok) {

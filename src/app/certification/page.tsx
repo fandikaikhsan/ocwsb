@@ -30,7 +30,7 @@ const data = {
 
 async function getCertification() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_KEY}/v1/certification`,
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/certification`,
     {
       next: { revalidate: 5 },
     }

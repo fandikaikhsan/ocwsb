@@ -33,7 +33,7 @@ const data = {
 }
 
 async function getService() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/service`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/service`, {
     cache: "no-cache",
   })
   if (!res.ok) {
