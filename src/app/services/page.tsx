@@ -1,36 +1,4 @@
-import ProductsPage from "@/components/pages/ProductsPage"
-
-const data = {
-  title: "Services",
-  short_desc:
-    "We engaged in assembly, integration, tests, maintenance, training, and other services in the defence industry.",
-  description:
-    "In cooperation with Rheinmetall Air Defence, Switzerland as the main Principal, work towards localizing production activities for military equipment in the form of Assembly, Maintenance, Repair, Overhaul, Training, and local spare parts sourcing.",
-  video: {
-    title: "Delighted Service",
-    url: "https://www.youtube.com/embed/1GSq7Je32iw",
-  },
-  services: [
-    {
-      id: 1,
-      name: "Lorem ipsum dolor sit amet.",
-      image: "https://picsum.photos/200/300",
-      path: "/",
-    },
-    {
-      id: 2,
-      name: "Consectetur adipiscing elit.",
-      image: "https://picsum.photos/200/300",
-      path: "/",
-    },
-    {
-      id: 3,
-      name: "Lorem ipsum dolor sit amet.",
-      image: "https://picsum.photos/200/300",
-      path: "/",
-    },
-  ],
-}
+import ServicesPage from "@/components/pages/ServicesPage"
 
 async function getService() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/service`, {
@@ -47,11 +15,11 @@ export default async function Services() {
 
   return (
     <>
-      <ProductsPage
+      <ServicesPage
         title={fetch.data.title}
         short_desc={fetch.data.short_desc}
         description={fetch.data.description}
-        products={fetch.data.services}
+        services={fetch.data.services}
         video={fetch.data.video}
       />
     </>
