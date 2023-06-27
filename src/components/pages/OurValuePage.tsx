@@ -22,7 +22,7 @@ export default function OurValuePage({
           <div className="text-[2rem] font-maqin text-white uppercase">
             Our Value
           </div>
-          <ListGalery values={values} />
+          <ListGalery values={values} page="our-value" />
         </div>
       </div>
       <FooterSection type={"red"} />

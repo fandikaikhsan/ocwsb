@@ -19,7 +19,7 @@ export default function PartnersPage({
           </div>
         </div>
         <div>
-          <ListGalery values={partners} />
+          <ListGalery values={partners} page="partners" />
         </div>
       </div>
       <FooterSection type={"red"} />
