@@ -64,9 +64,11 @@ const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
 
   ol,
   ul {
-    color: #575758;
-    font-size: 14px;
-    margin-left: 20px;
+    color: ${(props) => props.color};
+    text-color: ${(props) => props.color};
+    margin-left: 30px;
+    list-style-type: circle;
+    text-align: left;
   }
 `
 
