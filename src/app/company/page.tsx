@@ -24,7 +24,7 @@ const data = {
 }
 
 async function getCompany() {
-  const res = await fetch("http://localhost:8002/v1/company")
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/company`)
   if (!res.ok) {
     throw new Error("Failed to fetch Company data.")
   }

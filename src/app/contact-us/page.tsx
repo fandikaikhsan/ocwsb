@@ -21,7 +21,7 @@ const data = {
 }
 
 async function getContactUs() {
-  const res = await fetch("http://localhost:8002/v1/contact")
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/contact`)
   if (!res.ok) {
     throw new Error("Failed to fetch Contact Us data.")
   }

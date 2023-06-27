@@ -2,7 +2,7 @@ import React from "react"
 import NewsDetailPage from "@/components/pages/NewsDetailPage"
 
 async function getNews(slug: string) {
-  const res = await fetch(`http://localhost:8002/v1/news/${slug}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_KEY}/v1/news/${slug}`)
   if (!res.ok) {
     throw new Error("Failed to fetch News data.")
   }

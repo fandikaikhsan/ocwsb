@@ -1,7 +1,9 @@
 import ProductDetailPage from "@/components/pages/ProductDetailPage"
 
 async function getProductDetail(id: string) {
-  const res = await fetch(`http://localhost:8002/v1/product/${id}`)
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_KEY}/v1/product/${id}`
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Product data.")
   }

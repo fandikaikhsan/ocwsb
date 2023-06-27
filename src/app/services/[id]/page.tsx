@@ -1,7 +1,9 @@
 import ServiceDetailPage from "@/components/pages/ServiceDetailPage"
 
 async function getServiceDetail(id: string) {
-  const res = await fetch(`http://localhost:8002/v1/service/${id}`)
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_KEY}/v1/service/${id}`
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Service data.")
   }
