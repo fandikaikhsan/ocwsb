@@ -6,9 +6,14 @@ import Link from "next/link"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen)
+  }
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen)
   }
 
   return (
@@ -47,12 +52,39 @@ const Navbar = () => {
         }`}
       >
         <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
-          <Link
-            href="/about"
-            className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
-          >
-            About Us
-          </Link>
+          <div className="relative block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800 cursor-pointer">
+            <span
+              onMouseEnter={() => setDropdownOpen(true)}
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              About Us
+            </span>
+            <div
+              onMouseLeave={() => setDropdownOpen(false)}
+              className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 ${
+                dropdownOpen ? "block" : "hidden"
+              }`}
+            >
+              <Link
+                href="/our-company"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Our Company
+              </Link>
+              <Link
+                href="/our-history"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Our History
+              </Link>
+              <Link
+                href="/our-value"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Our Value
+              </Link>
+            </div>
+          </div>
           <Link
             href="/products"
             className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
