@@ -50,7 +50,7 @@ const FormSection = () => {
       return
     }
     try {
-      await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/v1/inquiry`, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")

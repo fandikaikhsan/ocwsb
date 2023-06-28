@@ -29,9 +29,12 @@ const data = {
 }
 
 async function getCertification() {
-  const res = await fetch("http://localhost:8002/v1/certification", {
-    next: { revalidate: 5 },
-  })
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/certification`,
+    {
+      next: { revalidate: 5 },
+    }
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Certification data.")
   }

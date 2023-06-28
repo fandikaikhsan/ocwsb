@@ -7,6 +7,7 @@ import FormSection from "@/components/containers/FormSection"
 import DesktopFormSection from "@/components/containers/DesktopFormSection"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
 import { ContactUsPageType } from "@/types/ContactUsType"
+import Navbar from "../layouts/Nav"
 
 export default function ContactUsPage({
   title,
@@ -16,14 +17,10 @@ export default function ContactUsPage({
 }: ContactUsPageType) {
   return (
     <>
+      <Navbar />
       <div className="bg-black">
         <div className="flex flex-col justify-center items-center gap-10 bg-black">
           <PageHeader title={title} />
-          <div className="flex flex-col gap-4 justify-center items-center py-2">
-            <div className="text-sm md:text-lg text-white text-center w-[90%] md:w-[60%]">
-              {description}
-            </div>
-          </div>
           <div className="w-[90%] md:w-[80%]">
             <ContactUsBodySection
               office_address={body.office_address}

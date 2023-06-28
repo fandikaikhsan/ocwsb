@@ -1,13 +1,13 @@
 import React, { FC } from "react"
 import MarkdownWrap from "../common/MarkdownWrap"
 
-interface ServiceDescriptionSectionProps {
+interface CompanyDescriptionSectionProps {
   description: string
   color?: string
   background?: string
 }
 
-const ServiceDescriptionSection: FC<ServiceDescriptionSectionProps> = ({
+const CompanyDescriptionSection: FC<CompanyDescriptionSectionProps> = ({
   description,
   color,
   background,
@@ -25,4 +25,4 @@ const ServiceDescriptionSection: FC<ServiceDescriptionSectionProps> = ({
   )
 }
 
-export default ServiceDescriptionSection
+export default CompanyDescriptionSection

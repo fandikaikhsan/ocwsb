@@ -3,6 +3,8 @@ export interface VideoComponentType {
 }
 export interface ListGaleryComponentType {
   values: ListGaleryValueType[]
+  page: string
+  clickable?: boolean
 }
 
 export interface ListGaleryValueType {

@@ -1,4 +1,5 @@
 import React from "react"
+import Navbar from "@/components/layouts/Nav"
 import PageHeader from "@/components/containers/PageHeader"
 import ListGalery from "@/components/layouts/ListGalery"
 import VideoComponent from "@/components/common/VideoComponent"
@@ -15,6 +16,7 @@ export default function ProductsPage({
 }: ProductsPageType) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col justify-center items-center gap-10 bg-black">
         <PageHeader title={title} />
         <div className="flex flex-col gap-4 justify-center items-center py-5">
@@ -23,7 +25,7 @@ export default function ProductsPage({
           </div>
         </div>
         <div>
-          <ListGalery values={products} />
+          <ListGalery values={products} page="products" clickable={true} />
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>

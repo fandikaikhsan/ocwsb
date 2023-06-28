@@ -36,7 +36,7 @@ const ArticleCardList: FC<ArticleCardListType> = ({
           <div className="text-xs md:text-sm">
             <p className="line-clamp-2 md:line-clamp-3">{short_desc}</p>
           </div>
-          <Link href={path}>
+          <Link href={`/news/${path}`}>
             <div className="text-orange-600 underline text-xs">Read more</div>
           </Link>
         </div>

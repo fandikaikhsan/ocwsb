@@ -27,7 +27,7 @@ const data = {
 }
 
 async function getValue() {
-  const res = await fetch("http://localhost:8002/v1/value")
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/value`)
   if (!res.ok) {
     throw new Error("Failed to fetch Value data.")
   }

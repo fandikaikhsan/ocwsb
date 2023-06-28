@@ -4,6 +4,7 @@ import ImageCardSlider from "../containers/ImageCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductDetailPageType } from "@/types/ProductsType"
 import ProductDescriptionSection from "../containers/ProductDescriptionSection"
+import Navbar from "@/components/layouts/Nav"
 
 export default function ProductDetailPage({
   title,
@@ -12,21 +13,30 @@ export default function ProductDetailPage({
   image,
   specification,
 }: ProductDetailPageType) {
+  console.log(specification && specification.length > 0)
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-10 bg-black">
+      <Navbar />
+      <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
-        <div className="flex flex-col w-full gap-4 justify-center items-center py-5">
+        <div className="content flex-1 flex flex-col gap-8 items-center justify-center">
           <ProductDescriptionSection
             description={description}
             color="white"
             background="black"
           />
+          <div className="w-[95%] md:w-[80%]">
+            <ImageCardSlider images={image} />
+          </div>
+
+          {specification?.length > 0 && (
+            <ProductDescriptionSection
+              description={specification}
+              color="white"
+            />
+          )}
         </div>
-        <div className="w-[95%] md:w-[80%]">
-          <ImageCardSlider images={image} />
-        </div>
-        <ProductDescriptionSection description={specification} color="white" />
       </div>
       <FooterSection type={"black"} />
     </>

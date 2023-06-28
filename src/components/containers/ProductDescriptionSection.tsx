@@ -12,10 +12,11 @@ const ProductDescriptionSection: FC<ProductDescriptionSectionProps> = ({
   color,
   background,
 }) => {
+  console.log("fandika", description)
   return (
     <div
       className={`${
-        background ? "bg-" + background + "-500" : "bg-[#74290E]"
+        background ? "bg-" + background : "bg-[#74290E]"
       } flex flex-col justify-center items-center w-full`}
     >
       <div className="w-full md:w-[70%] p-5 text-center overflow-visible">
