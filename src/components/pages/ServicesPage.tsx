@@ -23,13 +23,12 @@ export default function ServicesPage({
           </div>
         </div>
         <div>
-          <ListGalery values={services} page="services" />
+          <ListGalery values={services} page="services" clickable={true} />
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
           <VideoComponent source={video.url} />
         </div>
-        {/* @TODO: Markdown component here */}
         <ServiceDescriptionSection description={description} color="white" />
       </div>
       <FooterSection type={"black"} />

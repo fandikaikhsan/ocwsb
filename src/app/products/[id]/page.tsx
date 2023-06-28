@@ -19,9 +19,9 @@ export default async function ProductDetail({
       <ProductDetailPage
         title={fetch.data.title}
         short_desc={fetch.data.short_desc}
-        description={fetch.data.short_desc}
+        description={fetch.data.description}
         image={fetch.data.image}
-        specification={fetch.data.specification}
+        specification={fetch.data.spesification}
       />
     </>
   )

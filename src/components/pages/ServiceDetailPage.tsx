@@ -14,9 +14,9 @@ export default function ServiceDetailPage({
 }: ServiceDetailPageType) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-10 bg-black">
+      <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
-        <div className="flex flex-col w-full gap-4 justify-center items-center py-5">
+        <div className="content flex-1 flex flex-col gap-8 items-center justify-center">
           <ServiceDescriptionSection
             description={description}
             color="white"
@@ -26,7 +26,13 @@ export default function ServiceDetailPage({
         <div className="w-[95%] md:w-[80%]">
           <ImageCardSlider images={image} />
         </div>
-        <ServiceDescriptionSection description={specification} color="white" />
+        {specification ||
+          (specification?.length > 0 && (
+            <ServiceDescriptionSection
+              description={specification}
+              color="white"
+            />
+          ))}
       </div>
       <FooterSection type={"black"} />
     </>

@@ -14,15 +14,17 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
 
   return (
     <>
-      <PageHeader title={title} description={headerDesc} type="detail" />
-      <div className="flex flex-col items-center justify-center">
-        <NewsContentSection
-          description={content}
-          background="black"
-          color="white"
-        />
+      <div className="flex flex-col bg-black min-h-screen">
+        <PageHeader title={title} description={headerDesc} type="detail" />
+        <div className="content flex-1 flex flex-col items-center justify-center">
+          <NewsContentSection
+            description={content}
+            background="black"
+            color="white"
+          />
+        </div>
+        <FooterSection type={"red"} />
       </div>
-      <FooterSection type={"red"} />
     </>
   )
 }

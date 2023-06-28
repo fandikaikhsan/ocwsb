@@ -11,13 +11,13 @@ export default function OurValuePage({
 }: OurValuePageType) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-10 pb-20 bg-black">
+      <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} />
-        <div className="flex flex-col gap-5 justify-center items-center w-full">
+        <div className="content flex-1 flex flex-col py-10 items-center justify-center">
           <ListGalery values={values} page="our-value" />
         </div>
+        <FooterSection type={"red"} />
       </div>
-      <FooterSection type={"red"} />
     </>
   )
 }

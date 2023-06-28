@@ -16,6 +16,7 @@ export default function CompanyPage({
     <>
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader title={title} />
+
         <div className="flex flex-col gap-4 justify-center items-center">
           <CompanyDescriptionSection
             description={description}

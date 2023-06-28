@@ -19,17 +19,29 @@ const ListGalery: FC<ListGaleryComponentType> = ({
               <div
                 className={`${
                   clickable ? "cursor-pointer" : ""
-                } relative bg-green-400 h-40 w-40 md:h-64 md:w-64`}
+                } relative h-40 w-40 md:h-64 md:w-64`}
               >
-                <Link href={`/${page}/${value.id}`}>
-                  <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
-                  <Image
-                    src={value.image}
-                    alt={value.name}
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                  />
-                </Link>
+                {clickable ? (
+                  <Link href={`/${page}/${value.id}`}>
+                    <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
+                    <Image
+                      src={value.image}
+                      alt={value.name}
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </Link>
+                ) : (
+                  <>
+                    <div className="absolute cursor-default opacity-20 z-10 bg-black w-full h-full"></div>
+                    <Image
+                      src={value.image}
+                      alt={value.name}
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </>
+                )}
               </div>
               <div className="flex p-8 h-40 w-40 md:h-64 md:w-64 text-white text-xs md:text-sm items-center">
                 {value.name}
@@ -40,16 +52,28 @@ const ListGalery: FC<ListGaleryComponentType> = ({
               <div className="flex p-8 h-40 w-40 md:h-64 md:w-64 text-white text-xs md:text-sm items-center">
                 {value.name}
               </div>
-              <div className="relative cursor-pointer bg-green-400 h-40 w-40 md:h-64 md:w-64">
-                <Link href={`/${page}/${value.id}`}>
-                  <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
-                  <Image
-                    src={value.image}
-                    alt={value.name}
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                  />
-                </Link>
+              <div className={`relative h-40 w-40 md:h-64 md:w-64`}>
+                {clickable ? (
+                  <Link href={`/${page}/${value.id}`}>
+                    <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
+                    <Image
+                      src={value.image}
+                      alt={value.name}
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </Link>
+                ) : (
+                  <>
+                    <div className="absolute cursor-default opacity-20 z-10 bg-black w-full h-full"></div>
+                    <Image
+                      src={value.image}
+                      alt={value.name}
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </>
+                )}
               </div>
             </>
           )

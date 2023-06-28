@@ -23,7 +23,7 @@ export default function ProductsPage({
           </div>
         </div>
         <div>
-          <ListGalery values={products} page="products" clickable={false} />
+          <ListGalery values={products} page="products" clickable={true} />
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white">{video.title}</div>
