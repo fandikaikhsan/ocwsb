@@ -73,12 +73,6 @@ const Navbar = () => {
                   Our Company
                 </Link>
                 <Link
-                  href="/our-history"
-                  className="block px-4 py-2 text-sm text-white hover:bg-red-800"
-                >
-                  Our History
-                </Link>
-                <Link
                   href="/our-value"
                   className="block px-4 py-2 text-sm text-white hover:bg-red-800"
                 >
