@@ -18,12 +18,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="absolute top-0 w-full h-16 md:h-20 z-0 bg-red-800"></div>
       <nav
-        className={`sticky flex items-center justify-between flex-wrap top-0 w-full z-10 ${
-          isOpen
-            ? "bg-black bg-opacity-70 backdrop-filter backdrop-blur-md"
-            : "bg-black bg-opacity-70 backdrop-filter backdrop-blur-md"
+        className={`flex items-center justify-between flex-wrap fixed top-0 w-full z-10 ${
+          isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
         }`}
       >
         <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
