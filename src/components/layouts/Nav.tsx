@@ -61,27 +61,33 @@ const Navbar = () => {
             </span>
             <div
               onMouseLeave={() => setDropdownOpen(false)}
-              className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 ${
+              className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-700 ring-1 ring-black ring-opacity-5 ${
                 dropdownOpen ? "block" : "hidden"
               }`}
             >
               <Link
-                href="/our-company"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                href="/company"
+                className="block px-4 py-2 text-sm text-white hover:bg-red-800"
               >
                 Our Company
               </Link>
               <Link
                 href="/our-history"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-white hover:bg-red-800"
               >
                 Our History
               </Link>
               <Link
                 href="/our-value"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-white hover:bg-red-800"
               >
                 Our Value
+              </Link>
+              <Link
+                href="/certification"
+                className="block px-4 py-2 text-sm text-white hover:bg-red-800"
+              >
+                Certifications
               </Link>
             </div>
           </div>

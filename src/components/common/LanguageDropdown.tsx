@@ -68,7 +68,7 @@ const LanguageDropdown = () => {
                   selectedLanguage === language.code
                     ? "bg-orange-700 text-white"
                     : "text-white"
-                } block w-full text-left px-4 py-2 text-sm`}
+                } flex w-full text-left px-4 py-2 text-sm`}
                 onClick={() => handleChangeLanguage(language.code)}
                 role="menuitem"
               >
