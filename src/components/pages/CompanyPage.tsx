@@ -5,6 +5,7 @@ import FooterSection from "@/components/containers/FooterSection"
 import PortfolioCardSlider from "@/components/containers/PortofolioCardSlider"
 import { CompanyPageType } from "@/types/CompanyType"
 import CompanyDescriptionSection from "../containers/CompanyDescriptionSection"
+import Navbar from "../layouts/Nav"
 
 export default function CompanyPage({
   title,
@@ -14,6 +15,7 @@ export default function CompanyPage({
 }: CompanyPageType) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader title={title} />
 

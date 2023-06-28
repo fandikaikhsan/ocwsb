@@ -3,6 +3,7 @@ import PageHeader from "@/components/containers/PageHeader"
 import CertificationCardSlider from "@/components/containers/CertificationCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import { CertificationPageType } from "@/types/CertificationType"
+import Navbar from "../layouts/Nav"
 
 export default function CertificationPage({
   title,
@@ -11,6 +12,7 @@ export default function CertificationPage({
 }: CertificationPageType) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={description} />
         <div className="content flex-1 flex flex-col items-center justify-center">

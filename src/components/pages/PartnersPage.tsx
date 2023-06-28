@@ -3,6 +3,7 @@ import PageHeader from "@/components/containers/PageHeader"
 import ListGalery from "@/components/layouts/ListGalery"
 import FooterSection from "@/components/containers/FooterSection"
 import { PartnersPageType } from "@/types/PartnersType"
+import Navbar from "@/components/layouts/Nav"
 
 export default function PartnersPage({
   title,
@@ -11,6 +12,7 @@ export default function PartnersPage({
 }: PartnersPageType) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} />
         <div className="content flex-1 flex flex-col py-8 gap-10 items-center justify-center">

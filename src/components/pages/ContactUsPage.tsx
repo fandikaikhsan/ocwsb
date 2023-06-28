@@ -7,6 +7,7 @@ import FormSection from "@/components/containers/FormSection"
 import DesktopFormSection from "@/components/containers/DesktopFormSection"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
 import { ContactUsPageType } from "@/types/ContactUsType"
+import Navbar from "../layouts/Nav"
 
 export default function ContactUsPage({
   title,
@@ -16,6 +17,7 @@ export default function ContactUsPage({
 }: ContactUsPageType) {
   return (
     <>
+      <Navbar />
       <div className="bg-black">
         <div className="flex flex-col justify-center items-center gap-10 bg-black">
           <PageHeader title={title} />
