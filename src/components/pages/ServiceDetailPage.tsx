@@ -28,13 +28,12 @@ export default function ServiceDetailPage({
         <div className="w-[95%] md:w-[80%]">
           <ImageCardSlider images={image} />
         </div>
-        {specification ||
-          (specification?.length > 0 && (
-            <ServiceDescriptionSection
-              description={specification}
-              color="white"
-            />
-          ))}
+        {specification?.length > 0 && (
+          <ServiceDescriptionSection
+            description={specification}
+            color="white"
+          />
+        )}
       </div>
       <FooterSection type={"black"} />
     </>

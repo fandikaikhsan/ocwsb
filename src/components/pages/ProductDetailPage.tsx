@@ -13,6 +13,8 @@ export default function ProductDetailPage({
   image,
   specification,
 }: ProductDetailPageType) {
+  console.log(specification && specification.length > 0)
+
   return (
     <>
       <Navbar />
@@ -27,13 +29,13 @@ export default function ProductDetailPage({
           <div className="w-[95%] md:w-[80%]">
             <ImageCardSlider images={image} />
           </div>
-          {specification ||
-            (specification?.length > 0 && (
-              <ProductDescriptionSection
-                description={specification}
-                color="white"
-              />
-            ))}
+
+          {specification?.length > 0 && (
+            <ProductDescriptionSection
+              description={specification}
+              color="white"
+            />
+          )}
         </div>
       </div>
       <FooterSection type={"black"} />
