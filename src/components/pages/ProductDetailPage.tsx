@@ -26,6 +26,7 @@ export default function ProductDetailPage({
             color="white"
             background="black"
           />
+
           <div className="w-[95%] md:w-[80%]">
             <ImageCardSlider images={image} />
           </div>

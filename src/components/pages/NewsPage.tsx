@@ -15,8 +15,11 @@ export default function NewsPage({ title, headlines, recents }: NewsPageType) {
         <div className="w-[90%] md:w-[80%]">
           <ArticleHeadlineSlider headlines={headlines} />
         </div>
-        <div className="w-full py-5 md:w-[80%]">
-          <ArticleCardSlider articles={recents} />
+        <div className="flex flex-col justify-center items-center py-10 gap-5">
+          <div className=" font-maqin text-4xl text-white">Recent News</div>
+          <div className="w-full md:w-[80%]">
+            <ArticleCardSlider articles={recents} />
+          </div>
         </div>
       </div>
       <FooterSection type={"red"} />

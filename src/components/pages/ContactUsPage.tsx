@@ -43,12 +43,12 @@ export default function ContactUsPage({
             <DesktopFormSection />
           </AnimatedComponent>
         </div>
-        <ContactUsCTABanner
+        {/* <ContactUsCTABanner
           title={cta_banner.title}
           image={cta_banner.image}
           button_text={cta_banner.button_text}
           path={cta_banner.path}
-        />
+        /> */}
         <FooterSection type={"red"} />
       </div>
     </>

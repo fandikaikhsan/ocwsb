@@ -13,21 +13,25 @@ export default function ServiceDetailPage({
   image,
   specification,
 }: ServiceDetailPageType) {
+  console.log(image)
+
   return (
     <>
       <Navbar />
-      <div className="flex flex-col bg-black min-h-screen">
-        <PageHeader title={title} description={short_desc} type="detail" />
-        <div className="content flex-1 flex flex-col gap-8 items-center justify-center">
+      <PageHeader title={title} description={short_desc} type="detail" />
+      <div className="flex flex-col bg-black min-h-screen py-10">
+        <div className="content flex-1 flex flex-col gap-8 items-center justify-center p">
           <ServiceDescriptionSection
             description={description}
             color="white"
             background="black"
           />
         </div>
-        <div className="w-[95%] md:w-[80%]">
+
+        <div className="w-[95%] md:w-[80%] mx-auto">
           <ImageCardSlider images={image} />
         </div>
+
         {specification?.length > 0 && (
           <ServiceDescriptionSection
             description={specification}
@@ -35,7 +39,7 @@ export default function ServiceDetailPage({
           />
         )}
       </div>
-      <FooterSection type={"black"} />
+      <FooterSection type={"red"} />
     </>
   )
 }
