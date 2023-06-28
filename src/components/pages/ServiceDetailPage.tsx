@@ -4,6 +4,7 @@ import ImageCardSlider from "../containers/ImageCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import { ServiceDetailPageType } from "@/types/ServicesType"
 import ServiceDescriptionSection from "../containers/ServiceDescriptionSection"
+import Navbar from "@/components/layouts/Nav"
 
 export default function ServiceDetailPage({
   title,
@@ -14,6 +15,7 @@ export default function ServiceDetailPage({
 }: ServiceDetailPageType) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
         <div className="content flex-1 flex flex-col gap-8 items-center justify-center">
