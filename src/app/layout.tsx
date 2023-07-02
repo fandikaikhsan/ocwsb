@@ -4,8 +4,8 @@ import { Metadata } from "next"
 // const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Metdata Title",
-  description: "Metadata Description",
+  title: "OCWSB Pratama",
+  description: "Welcome to OCWSB Pratama Website",
 }
 
 export default function RootLayout({
