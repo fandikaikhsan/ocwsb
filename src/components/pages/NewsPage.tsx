@@ -10,14 +10,14 @@ export default function NewsPage({ title, headlines, recents }: NewsPageType) {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col justify-center items-center gap-10 bg-black">
-        <PageHeader title={title} />
+      <PageHeader title={title} />
+      <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         <div className="w-[90%] md:w-[80%]">
           <ArticleHeadlineSlider headlines={headlines} />
         </div>
-        <div className="flex flex-col justify-center items-center py-10 gap-5">
+        <div className="flex flex-col justify-center items-center gap-5">
           <div className=" font-maqin text-4xl text-white">Recent News</div>
-          <div className="w-full md:w-[80%]">
+          <div className="w-[95%] md:w-[80%]">
             <ArticleCardSlider articles={recents} />
           </div>
         </div>
