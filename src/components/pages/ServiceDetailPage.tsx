@@ -13,8 +13,6 @@ export default function ServiceDetailPage({
   image,
   specification,
 }: ServiceDetailPageType) {
-  console.log(image)
-
   return (
     <>
       <Navbar />

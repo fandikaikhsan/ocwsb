@@ -13,8 +13,6 @@ export default function ProductDetailPage({
   image,
   specification,
 }: ProductDetailPageType) {
-  console.log(specification && specification.length > 0)
-
   return (
     <>
       <Navbar />

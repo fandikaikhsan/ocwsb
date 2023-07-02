@@ -12,7 +12,6 @@ const ProductDescriptionSection: FC<ProductDescriptionSectionProps> = ({
   color,
   background,
 }) => {
-  console.log("fandika", description)
   return (
     <div
       className={`${
