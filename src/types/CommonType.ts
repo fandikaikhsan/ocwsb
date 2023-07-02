@@ -8,6 +8,7 @@ export interface ListGaleryComponentType {
   paddingx?: number
   paddingy?: number
   textposition?: string
+  textdesktopsize?: string
 }
 
 export interface ListGaleryValueType {
