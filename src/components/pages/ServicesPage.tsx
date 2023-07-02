@@ -17,9 +17,8 @@ export default function ServicesPage({
   return (
     <>
       <Navbar />
-      <div className="flex flex-col justify-center items-center gap-10 bg-black">
-        <PageHeader title={title} />
-
+      <PageHeader title={title} />
+      <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         {short_desc?.length > 0 && (
           <div className="flex flex-col gap-4 justify-center items-center py-5">
             <div className="text-sm text-white text-center w-[90%] md:w-[60%]">
@@ -28,8 +27,13 @@ export default function ServicesPage({
           </div>
         )}
 
-        <div className="py-5">
-          <ListGalery values={services} page="services" clickable={true} />
+        <div>
+          <ListGalery
+            values={services}
+            page="services"
+            clickable={true}
+            textposition="center"
+          />
         </div>
 
         {video?.url?.length > 0 && (

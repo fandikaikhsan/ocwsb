@@ -16,7 +16,12 @@ export default function OurValuePage({
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} />
         <div className="content flex-1 flex flex-col py-10 items-center justify-center">
-          <ListGalery values={values} page="our-value" />
+          <ListGalery
+            values={values}
+            page="our-value"
+            paddingy={2}
+            paddingx={4}
+          />
         </div>
         <FooterSection type={"red"} />
       </div>
