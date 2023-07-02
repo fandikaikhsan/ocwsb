@@ -17,8 +17,8 @@ export default function ServiceDetailPage({
     <>
       <Navbar />
       <PageHeader title={title} description={short_desc} type="detail" />
-      <div className="flex flex-col bg-black min-h-screen py-10">
-        <div className="content flex-1 flex flex-col gap-8 items-center justify-center p">
+      <div className="flex flex-col bg-black min-h-screen gap-8 py-10">
+        <div className="content flex-1 flex flex-col  items-center justify-center p">
           <ServiceDescriptionSection
             description={description}
             color="white"
@@ -37,7 +37,7 @@ export default function ServiceDetailPage({
           />
         )}
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"black"} />
     </>
   )
 }
