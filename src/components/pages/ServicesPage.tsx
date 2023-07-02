@@ -33,6 +33,7 @@ export default function ServicesPage({
             page="services"
             clickable={true}
             textposition="center"
+            textdesktopsize="lg"
           />
         </div>
 

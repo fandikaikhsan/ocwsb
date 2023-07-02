@@ -33,6 +33,7 @@ export default function ProductsPage({
             page="products"
             clickable={true}
             textposition="center"
+            textdesktopsize="lg"
           />
         </div>
 
