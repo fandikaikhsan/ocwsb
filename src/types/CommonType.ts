@@ -5,6 +5,9 @@ export interface ListGaleryComponentType {
   values: ListGaleryValueType[]
   page: string
   clickable?: boolean
+  paddingx?: number
+  paddingy?: number
+  textposition?: string
 }
 
 export interface ListGaleryValueType {
