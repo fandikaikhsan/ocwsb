@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import LanguageDropdown from "../common/LanguageDropdown"
 import Link from "next/link"
+import Image from "next/image"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,8 +26,10 @@ const Navbar = () => {
       >
         <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
           <Link href="/">
-            <img
-              src="ocwsb-logo-4-nobg.png"
+            <Image
+              src="/ocwsb-logo-4-nobg.png"
+              width={123}
+              height={48}
               alt="OCWSB"
               className="h-14 md:h-16"
             />

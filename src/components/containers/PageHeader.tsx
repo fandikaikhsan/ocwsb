@@ -12,7 +12,7 @@ const PageHeader: FC<PageHeaderProps> = ({ title, description, type }) => {
   return (
     <>
       <div className="flex flex-col gap-4 justify-center items-center text-center w-full bg-[#74290E] pt-32 pb-16">
-        <div className="text-[2rem] text-white font-maqin uppercase">
+        <div className="text-[2rem] w-[90%] text-white font-maqin uppercase">
           {title}
         </div>
         {type === "detail" ? (

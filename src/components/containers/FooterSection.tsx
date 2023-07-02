@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import Image from "next/image"
 
 const FooterSection: FC<any> = (props) => {
   const { type = "red" } = props
@@ -9,41 +10,41 @@ const FooterSection: FC<any> = (props) => {
         type == "red" ? "bg-footer-pattern bg-cover" : "bg-black"
       } bg-cover py-8`}
     >
-      <div className="hidden md:block mx-auto mr-8 md:mb-4 px-12 text-white">
-        <div className="flex flex-row gap-6 items-center flex-shrink-0 text-white md:mr-2">
-          <a href="#">
-            <img
-              src="ocwsb-logo.png"
-              alt="OCWSB"
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
-          </a>
-          <a href="#">
-            <img
-              src="iso-9001.png"
-              alt="ISO"
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
-          </a>
+      <div className=" mx-auto mr-8 md:mb-4 px-12 text-white">
+        <div className="hidden md:flex flex-row gap-6 items-center flex-shrink-0 text-white md:mr-2">
+          <Image
+            src="/ocwsb-logo.png"
+            alt="OCWSB"
+            width={60}
+            height={150}
+            className="ml-4 md:ml-0 mb-4 md:mb-0 h-24 md:h-16"
+          />
+          <Image
+            src="/iso-9001.png"
+            alt="ISO"
+            width={60}
+            height={150}
+            className="ml-4 md:ml-0 mb-4 md:mb-0 hh-24 md:h-16"
+          />
         </div>
       </div>
 
       <div>
         <div className="flex md:hidden flex-row gap-3 items-center flex-shrink-0 text-white md:mr-2">
-          <a href="#">
-            <img
-              src="ocwsb-logo.png"
-              alt="OCWSB"
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
-          </a>
-          <a href="#">
-            <img
-              src="iso-9001.png"
-              alt="ISO"
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
-          </a>
+          <Image
+            src="/ocwsb-logo.png"
+            alt="OCWSB"
+            width={60}
+            height={100}
+            className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+          />
+          <Image
+            src="/iso-9001.png"
+            alt="ISO"
+            width={60}
+            height={100}
+            className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+          />
         </div>
       </div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
