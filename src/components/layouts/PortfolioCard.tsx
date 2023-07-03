@@ -17,6 +17,7 @@ const PortfolioCard: FC<PortofolioCardType> = ({
           <div className="text-center text-sm text-white">{short_desc}</div>
         </div>
         <div className="absolute opacity-50 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
+        <div className="absolute opacity-50 -z-10 bg-white w-full h-full"></div>
         <Image
           src={image}
           alt="Product 3"

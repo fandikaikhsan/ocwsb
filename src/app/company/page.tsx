@@ -1,7 +1,9 @@
 import CompanyPage from "@/components/pages/CompanyPage"
 
 async function getCompany() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/company`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/company`, {
+    cache: "no-cache",
+  })
   if (!res.ok) {
     throw new Error("Failed to fetch Company data.")
   }
