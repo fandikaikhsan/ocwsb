@@ -20,9 +20,13 @@ export default function PartnersPage({
             {description}
           </div>
         </div>
-
         <div>
-          <ListGalery values={partners} page="partners" textposition="center" />
+          <ListGalery
+            values={partners}
+            page="partners"
+            textposition="center"
+            textdesktopsize="lg"
+          />
         </div>
       </div>
       <FooterSection type={"red"} />
