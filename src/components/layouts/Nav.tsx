@@ -24,7 +24,7 @@ const Navbar = () => {
           isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
         }`}
       >
-        <div className="flex items-center py-1 md:py-2 px-6 md:px-16 flex-shrink-0 text-white">
+        <div className="flex items-center py-1 md:py-2 px-6 flex-shrink-0 text-white">
           <Link href="/">
             <Image
               src="/ocwsb-logo-4-nobg.png"
@@ -35,7 +35,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="block md:hidden px-6">
+        <div className="block lg:hidden px-6">
           <button
             onClick={toggleMobileMenu}
             className="flex items-center px-4 py-3 border rounded text-white border-white hover:text-white hover:border-white"
@@ -51,12 +51,12 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`w-full flex-grow md:flex px-8 py-4 md:items-center md:w-auto ${
+          className={`w-full flex-grow lg:flex px-8 py-4 md:items-center lg:w-auto ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <div className="md:flex md:gap-8 text-sm md:text-[1rem] md:ml-auto md:justify-end">
-            <div className="relative block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800 cursor-pointer">
+          <div className="lg:flex lg:gap-8 text-sm lg:text-[1rem] md:ml-auto md:justify-end">
+            <div className="relative block mt-4 md:inline-block lg:mt-0 mr-4 text-white hover:text-red-800 cursor-pointer">
               <span
                 onMouseEnter={() => setDropdownOpen(true)}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -65,7 +65,7 @@ const Navbar = () => {
               </span>
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
-                className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-700 ring-1 ring-black ring-opacity-5 ${
+                className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 ${
                   dropdownOpen ? "block" : "hidden"
                 }`}
               >
@@ -91,35 +91,35 @@ const Navbar = () => {
             </div>
             <Link
               href="/products"
-              className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
               Product
             </Link>
             <Link
               href="/services"
-              className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
               Service
             </Link>
             <Link
               href="/news"
-              className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
               News
             </Link>
             <Link
               href="/partners"
-              className="block mt-4 md:inline-block md:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
               Our Partners
             </Link>
             <Link
               href="/contact-us"
-              className="block mt-4 md:inline-block md:mt-0 text-white hover:text-red-800"
+              className="block mt-4 md:inline-block lg:mt-0 text-white hover:text-red-800"
             >
               Contact Us
             </Link>
-            <div className="mt-6 md:mt-0">
+            <div className="mt-6 lg:mt-0">
               <LanguageDropdown />
             </div>
           </div>
