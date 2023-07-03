@@ -16,32 +16,32 @@ export default function ServiceDetailPage({
   return (
     <>
       <Navbar />
-      <PageHeader title={title} description={short_desc} type="detail" />
-      <div className="flex flex-col bg-black gap-8 py-10">
-        <div className="content flex-1 flex flex-col items-center justify-center">
+      <div className="flex flex-col bg-black min-h-screen">
+        <PageHeader title={title} description={short_desc} type="detail" />
+        <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
           <ServiceDescriptionSection
             description={description}
             color="white"
             background="black"
           />
-        </div>
 
-        <div className="w-[95%] md:w-[80%] mx-auto">
-          <ImageCardSlider images={image} />
-        </div>
+          <div className="w-[95%] md:w-[80%]">
+            <ImageCardSlider images={image} />
+          </div>
 
-        {specification?.length > 0 && (
-          <ServiceDescriptionSection
-            description={specification}
-            color="white"
-          />
+          {specification?.length > 0 && (
+            <ServiceDescriptionSection
+              description={specification}
+              color="white"
+            />
+          )}
+        </div>
+        {specification?.length > 0 ? (
+          <FooterSection type={"black"} />
+        ) : (
+          <FooterSection type={"red"} />
         )}
       </div>
-      {specification?.length > 0 ? (
-        <FooterSection type={"black"} />
-      ) : (
-        <FooterSection type={"red"} />
-      )}
     </>
   )
 }

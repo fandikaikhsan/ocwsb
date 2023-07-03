@@ -65,7 +65,7 @@ const Navbar = () => {
               </span>
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
-                className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 ${
+                className={`absolute left-0 mt-2 w-48 rounded-md bg-gray-800 shadow-lg py-1 ring-1 ring-black ring-opacity-5 ${
                   dropdownOpen ? "block" : "hidden"
                 }`}
               >

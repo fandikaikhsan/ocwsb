@@ -18,7 +18,7 @@ export default function ProductDetailPage({
       <Navbar />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
-        <div className="content flex-1 flex flex-col gap-8 items-center justify-center">
+        <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
           <ProductDescriptionSection
             description={description}
             color="white"
@@ -36,8 +36,8 @@ export default function ProductDetailPage({
             />
           )}
         </div>
+        <FooterSection type={"black"} />
       </div>
-      <FooterSection type={"black"} />
     </>
   )
 }
