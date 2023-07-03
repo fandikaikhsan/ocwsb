@@ -50,6 +50,7 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
             description={banner.subtitle}
             image={banner.image}
             image_mobile={banner.image_mobile}
+            url={banner.cta?.url}
           />
         </SwiperSlide>
       ))}

@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import SolidButton from "../common/SolidButton"
+import Link from "next/link"
 
 interface BannerCardProps {
   title: string
@@ -40,7 +41,9 @@ const BannerCard: FC<BannerCardProps> = (props) => {
           {/* <h2 className="text-white font-maqin mb-8 text-xl sm:text-2xl">
             {description}
           </h2> */}
-          <SolidButton text="Read more" />
+          <Link href={url ?? "/"}>
+            <SolidButton text="Read more" />
+          </Link>
         </div>
       </div>
     </>

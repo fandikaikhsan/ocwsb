@@ -11,7 +11,7 @@ const products = [
     image_mobile: "Product-1",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/products/7",
     },
   },
   {
@@ -25,7 +25,7 @@ const products = [
     image_mobile: "Product 2",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/products/1",
     },
   },
   {
@@ -40,7 +40,7 @@ const products = [
     image_mobile: "Product 4",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/products/2",
     },
   },
   {
@@ -54,7 +54,7 @@ const products = [
     image_mobile: "Product 5",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/products/3",
     },
   },
 ]
@@ -70,7 +70,7 @@ const services = [
     image_mobile: "",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/services/1",
     },
   },
   {
@@ -84,7 +84,7 @@ const services = [
     image_mobile: "Maintenance",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/services/2",
     },
   },
   {
@@ -98,7 +98,7 @@ const services = [
     image_mobile: "Traning Services",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/services/4",
     },
   },
   {
@@ -111,7 +111,7 @@ const services = [
     image_mobile: "",
     cta: {
       text: "Find Out More",
-      url: "",
+      url: "/services/3",
     },
   },
 ]
@@ -127,7 +127,7 @@ const banners = [
     image_mobile: "/banners/banner-1-mobile.jpg",
     cta: {
       text: "Read More",
-      url: "",
+      url: "/company",
     },
   },
   {
@@ -140,7 +140,7 @@ const banners = [
     image_mobile: "/banners/banner-2-mobile.jpg",
     cta: {
       text: "Read More",
-      url: "",
+      url: "/products",
     },
   },
   {
@@ -153,7 +153,7 @@ const banners = [
     image_mobile: "/banners/banner-3-mobile.jpg",
     cta: {
       text: "Read More",
-      url: "",
+      url: "/services",
     },
   },
 ]
