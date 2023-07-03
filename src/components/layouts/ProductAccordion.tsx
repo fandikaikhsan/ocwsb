@@ -1,14 +1,16 @@
 import React, { FC, useState } from "react"
+import Link from "next/link"
 
 interface ProductAccordionProps {
   title: string
   desc: string
   image: string
+  path?: string
 }
 
 const ProductAccordion: FC<ProductAccordionProps> = (props) => {
   const [isAccordionOpen, setAccordionOpen] = useState(false)
-  const { title, desc, image } = props
+  const { title, desc, image, path } = props
   return (
     <div
       className="relative rounded-md shadow-md overflow-hidden"
@@ -28,7 +30,7 @@ const ProductAccordion: FC<ProductAccordionProps> = (props) => {
           onClick={() => {
             isAccordionOpen ? setAccordionOpen(false) : setAccordionOpen(true)
           }}
-          className="flex items-center justify-between w-full p-5 text-xl text-left text-white font-maqin border rounded-md "
+          className=" flex items-center justify-between w-full p-5 text-xl text-left text-white font-maqin border rounded-md "
         >
           <span>{title}</span>
           <svg
@@ -61,7 +63,12 @@ const ProductAccordion: FC<ProductAccordionProps> = (props) => {
             backgroundPosition: "center",
           }}
         >
-          <p className="mb-2 text-white font-bold">{desc}</p>
+          <Link href={path ?? "/"}>
+            <p className="mb-2 text-white font-bold">{desc}</p>
+            <div className="hover:cursor-pointer text-white text-sm underline">
+              Read more
+            </div>
+          </Link>
         </div>
       </div>
     </div>

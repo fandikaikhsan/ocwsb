@@ -28,6 +28,7 @@ const ProductAccordionSection: FC<ProductAccordionSectionProps> = ({
             title={product.title}
             desc={product.desc}
             image={product.image}
+            path={product.cta?.url}
           />
         </div>
       ))}

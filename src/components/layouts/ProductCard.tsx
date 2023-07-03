@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import Link from "next/link"
 
 interface ProductCardProps {
   title: string
@@ -31,12 +32,16 @@ const ProductCard: FC<ProductCardProps> = (props) => {
             </h3>
             <p className="text-white font-maqin text-2xl mb-4">{description}</p>
           </div>
-          <a
+          {/* <a
             onClick={onClick}
             className=" hover:cursor-pointer text-white text-xl underline"
-          >
-            Find Out More
-          </a>
+          > */}
+          <Link href={path ?? "/"}>
+            <div className="hover:cursor-pointer text-white text-xl underline">
+              Find Out More
+            </div>
+          </Link>
+          {/* </a> */}
         </div>
       </div>
     </>

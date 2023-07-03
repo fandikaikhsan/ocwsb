@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import GradientBorderButton from "../common/GradientBorderButton"
+import Link from "next/link"
 
 interface ServiceCardProps {
   id: number
@@ -25,7 +26,8 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
   return (
     <>
-      <a onClick={onClick} className=" hover:cursor-pointer">
+      {/* <a onClick={onClick} className=" hover:cursor-pointer"> */}
+      <Link href={cta.url ?? "/"}>
         <div
           className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
         >
@@ -51,7 +53,8 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
           </button> */}
           </div>
         </div>
-      </a>
+      </Link>
+      {/* </a> */}
     </>
   )
 }
