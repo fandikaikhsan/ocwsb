@@ -1,3 +1,5 @@
+import { ImageCardType } from "./CommonType"
+
 export interface NewsPageType {
   title: string
   headlines: ArticleCardHeadlineType[]
@@ -35,6 +37,7 @@ export interface ArticleCardSliderType {
 export interface NewsDetailPageType {
   id?: number
   title: string
+  image: ImageCardType[]
   author: string
   date: string
   content: string

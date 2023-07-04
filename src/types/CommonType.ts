@@ -9,6 +9,7 @@ export interface ListGaleryComponentType {
   paddingy?: number
   textposition?: string
   textdesktopsize?: string
+  type?: "default" | "wide"
 }
 
 export interface ListGaleryValueType {

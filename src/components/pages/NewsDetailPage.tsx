@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import PageHeader from "@/components/containers/PageHeader"
+import ImageCardSlider from "../containers/ImageCardSlider"
 import NewsContentSection from "@/components/containers/NewsContentSection"
 import FooterSection from "@/components/containers/FooterSection"
 import { NewsDetailPageType } from "@/types/NewsType"
@@ -10,6 +11,7 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
   author,
   date,
   content,
+  image,
 }) => {
   const headerDesc = `${author} - ${date}`
 
@@ -18,7 +20,10 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
       <Navbar />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={headerDesc} type="detail" />
-        <div className="content flex-1 flex flex-col items-center justify-center">
+        <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
+          <div className="w-[95%] md:w-[70%]">
+            <ImageCardSlider images={image} />
+          </div>
           <NewsContentSection
             description={content}
             background="black"
