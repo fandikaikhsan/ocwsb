@@ -1,7 +1,12 @@
 import ProductDetailPage from "@/components/pages/ProductDetailPage"
 
 async function getProductDetail(id: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/product/${id}`)
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/product/${id}`,
+    {
+      cache: "no-cache",
+    }
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Product data.")
   }
