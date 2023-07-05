@@ -32,7 +32,7 @@ const ServiceModal: React.FC<any> = ({ props, setIsOpen }) => {
 
         <div className="relative bg-gray-900 rounded-lg max-w-md w-full mx-auto">
           <div className="relative">
-            <Image
+            <img
               src={image}
               alt={title}
               className="w-full h-48 object-cover opacity-40 rounded-t-lg"

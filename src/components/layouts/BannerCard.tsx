@@ -25,12 +25,12 @@ const BannerCard: FC<BannerCardProps> = (props) => {
   return (
     <>
       <div className="relative w-full h-[40rem] md:h-[52rem] overflow-hidden">
-        <Image
+        <img
           src={image}
           alt="Banner"
           className="hidden md:block absolute top-1/2 left-1/2 opacity-80 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
         />
-        <Image
+        <img
           src={image_mobile}
           alt="Banner"
           className="absolute md:hidden top-1/2 left-1/2 opacity-70 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"

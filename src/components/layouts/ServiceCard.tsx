@@ -27,12 +27,11 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
   return (
     <>
-      {/* <a onClick={onClick} className=" hover:cursor-pointer"> */}
       <Link href={cta.url ?? "/"}>
         <div
           className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
         >
-          <Image
+          <img
             src={image}
             alt="Card background"
             className="absolute top-1/2 opacity-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover rounded-[1rem]"
@@ -46,16 +45,9 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                 {desc}
               </div>
             </div>
-            {/* <div className="px-4 py-2 hover:cursor-pointer md mt-auto rounded-md self-end">
-              <GradientBorderButton onClick={onClick} text="Find Out More" />
-            </div> */}
-            {/* <button className="bg-transparent border-2 border-white text-white px-4 py-2 rounded-md self-end">
-            Click me
-          </button> */}
           </div>
         </div>
       </Link>
-      {/* </a> */}
     </>
   )
 }

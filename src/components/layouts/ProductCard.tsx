@@ -21,7 +21,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
   return (
     <>
       <div className="relative w-full h-[30rem] rounded-md shadow-md overflow-hidden">
-        <Image
+        <img
           src={image}
           alt="Card background"
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"

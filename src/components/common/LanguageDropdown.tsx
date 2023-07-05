@@ -56,6 +56,8 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
           }
           alt={`${selectedLanguage} flag`}
           className="w-4 h-4 rounded-full border"
+          width={16}
+          height={16}
         />
 
         {/* Language label */}
@@ -95,6 +97,8 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
                   src={language.flag}
                   alt={`${language.code} flag`}
                   className="w-4 h-4 border rounded-full mr-2"
+                  width={16}
+                  height={16}
                 />
                 {language.name}
               </button>
