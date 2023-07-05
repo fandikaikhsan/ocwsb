@@ -21,8 +21,6 @@ export default async function NewsDetail({
 }) {
   const fetch = await getNews(params.slug)
 
-  console.log("image: ", fetch.data.images)
-
   return (
     <>
       <NewsDetailPage
