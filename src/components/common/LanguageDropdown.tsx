@@ -1,27 +1,42 @@
 import { useState } from "react"
+import { useRouter, usePathname } from "next/navigation"
 
 const languages = [
   {
     code: "en",
     name: "English",
     flag: "/flags/en.png",
+    path: "/en",
   },
-  // {
-  //   code: "id",
-  //   name: "Indonesia",
-  //   flag: "/flags/id.png",
-  // },
-  // Add more countries here
+  {
+    code: "id",
+    name: "Indonesia",
+    flag: "/flags/id.png",
+    path: "/id",
+  },
 ]
 
-const LanguageDropdown = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0].code) // default language is the first language in the array
-  const [dropdownOpen, setDropdownOpen] = useState(false) // state for toggling the language dropdown
+const LanguageDropdown = ({ locale }: { locale: string }) => {
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    languages.find((lang) => lang.code === locale)?.code || "en"
+  )
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const handleChangeLanguage = (languageCode: any) => {
+    if (pathname?.includes(selectedLanguage)) {
+      setDropdownOpen(false)
+    }
+    if (pathname === "/" && selectedLanguage != "en") {
+      router.push(`/${languageCode}`)
+      setSelectedLanguage(languageCode)
+      setDropdownOpen(false)
+    }
+    router.push(`/${languageCode}`)
     setSelectedLanguage(languageCode)
     setDropdownOpen(false)
-    // TODO: update the language of the app here
   }
 
   return (
