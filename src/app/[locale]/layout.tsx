@@ -21,17 +21,10 @@ export default async function LocaleLayout({
   children,
   params: { locale },
 }: any) {
-  let fetchData, messages
-
-  // @TODO: Add params on fetch
-  // we can use header too
+  let messages
 
   try {
-    fetchData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/partner`, {
-      cache: "no-cache",
-    })
-    messages = await fetchData.json()
-    console.log("messages", messages)
+    messages = (await import(`../../messages/${locale}.json`)).default
   } catch (err) {
     throw new Error(`Could not load messages for locale "${locale}"`)
   }

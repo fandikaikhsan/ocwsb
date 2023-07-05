@@ -1,11 +1,12 @@
 {
+  "data": {
+    "Locale": "en"
+  },
   "Navbar": {
-    "Level 2": {
-      "Level 3": {
-        "hello": "hello"
-      }
-    },
-    "About Us": "Tentang Kami",
+    "About Us": "About Us",
+    "Our Company": "Our Company",
+    "Our Value": "Our Value",
+    "Certifications": "Certifications",
     "Products": "Prodcuts",
     "Services": "Servis",
     "News": "Berita",

@@ -4,8 +4,9 @@ import React, { useState } from "react"
 import LanguageDropdown from "../common/LanguageDropdown"
 import Link from "next/link"
 import Image from "next/image"
+import locales from "@/messages/locale"
 
-const Navbar = () => {
+const Navbar = ({ locale = "en" }: { locale?: string }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -61,7 +62,7 @@ const Navbar = () => {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                About Us
+                {locales[locale]["Navbar"]["About Us"]}
               </span>
               <div
                 onMouseLeave={() => setDropdownOpen(false)}

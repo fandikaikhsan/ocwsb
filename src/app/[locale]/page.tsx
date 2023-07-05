@@ -1,17 +1,39 @@
 "use client"
 
-import PartnersPage from "@/components/pages/PartnersPage"
+import ProductsPage from "@/components/pages/ProductsPage"
 import { useTranslations } from "next-intl"
 
+async function getProduct(lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/product`,
+    {
+      cache: "no-cache",
+    }
+  )
+  if (!res.ok) {
+    throw new Error("Failed to fetch Product data.")
+  }
+  return res.json()
+}
+
 export default async function Home() {
-  const navbarLang = useTranslations("data")
+  const t = useTranslations("data")
+  const lang = t("Locale")
+
+  const fetch = await getProduct(lang)
 
   // @TODO: useTranslations always has "data" argument
   // then passing the data to the component
   return (
     <>
-      <h1>{navbarLang("title")}</h1>
-      {/* <h2>{bannerLang("Read More")}</h2> */}
+      <ProductsPage
+        title={fetch.data.title}
+        short_desc={fetch.data.short_desc}
+        description={fetch.data.description}
+        products={fetch.data.products}
+        video={fetch.data.video}
+        locale={lang}
+      />
     </>
   )
 }
