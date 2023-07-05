@@ -22,6 +22,10 @@ export default async function LocaleLayout({
   params: { locale },
 }: any) {
   let fetchData, messages
+
+  // @TODO: Add params on fetch
+  // we can use header too
+
   try {
     fetchData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/partner`, {
       cache: "no-cache",

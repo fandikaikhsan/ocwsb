@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl"
 export default async function Home() {
   const navbarLang = useTranslations("data")
 
+  // @TODO: useTranslations always has "data" argument
+  // then passing the data to the component
   return (
     <>
       <h1>{navbarLang("title")}</h1>
