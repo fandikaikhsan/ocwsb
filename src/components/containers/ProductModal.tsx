@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 interface ModalProps {
   props: {
@@ -41,8 +42,9 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
 
         <div className="relative bg-gray-900 rounded-lg max-w-md w-full mx-auto">
           <div className="relative">
-            <img
+            <Image
               src={props.image}
+              alt={props.title}
               className="w-full h-48 object-cover opacity-40 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">

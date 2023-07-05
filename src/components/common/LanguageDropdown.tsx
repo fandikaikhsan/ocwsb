@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useRouter, usePathname } from "next/navigation"
+import Image from "next/image"
 
 const languages = [
   {
@@ -48,8 +49,11 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         {/* Language flag icon */}
-        <img
-          src={languages?.find((lang) => lang?.code === selectedLanguage)?.flag}
+        <Image
+          src={
+            languages?.find((lang) => lang?.code === selectedLanguage)?.flag ||
+            "/flags/en.png"
+          }
           alt={`${selectedLanguage} flag`}
           className="w-4 h-4 rounded-full border"
         />
@@ -87,7 +91,7 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
                 onClick={() => handleChangeLanguage(language.code)}
                 role="menuitem"
               >
-                <img
+                <Image
                   src={language.flag}
                   alt={`${language.code} flag`}
                   className="w-4 h-4 border rounded-full mr-2"

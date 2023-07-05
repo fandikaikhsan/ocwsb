@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ProductCardProps {
   title: string
@@ -20,7 +21,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
   return (
     <>
       <div className="relative w-full h-[30rem] rounded-md shadow-md overflow-hidden">
-        <img
+        <Image
           src={image}
           alt="Card background"
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"

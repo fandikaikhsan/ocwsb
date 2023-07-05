@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import GradientBorderButton from "../common/GradientBorderButton"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ServiceCardProps {
   id: number
@@ -31,7 +32,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
         <div
           className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
         >
-          <img
+          <Image
             src={image}
             alt="Card background"
             className="absolute top-1/2 opacity-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover rounded-[1rem]"
