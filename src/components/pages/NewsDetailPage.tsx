@@ -21,9 +21,11 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={headerDesc} type="detail" />
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
-          <div className="w-[95%] md:w-[70%]">
-            <ImageCardSlider images={image} />
-          </div>
+          {image.length > 1 && (
+            <div className="w-[95%] md:w-[70%]">
+              <ImageCardSlider images={image} />
+            </div>
+          )}
           <NewsContentSection
             description={content}
             background="black"

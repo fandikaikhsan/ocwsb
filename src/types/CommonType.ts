@@ -21,6 +21,7 @@ export interface ListGaleryValueType {
 
 export interface ImageCardSliderType {
   images: ImageCardType[]
+  height?: string
 }
 
 export interface ImageCardType {
