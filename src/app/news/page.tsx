@@ -2,7 +2,9 @@ import React from "react"
 import NewsPage from "@/components/pages/NewsPage"
 
 async function getNews() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/news`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/news`, {
+    cache: "no-cache",
+  })
   if (!res.ok) {
     throw new Error("Failed to fetch News data.")
   }
