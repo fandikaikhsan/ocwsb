@@ -1,11 +1,13 @@
 import { ContactUsBodySectionType } from "@/types/ContactUsType"
 import React, { FC } from "react"
+import locales from "@/messages/locale"
 
 const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
   office_address,
   workshop_address,
   phone,
   email,
+  locale = "en",
 }) => {
   return (
     <>
@@ -13,12 +15,12 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
           <div className="flex flex-col gap-4 w-[80%] md:w-[50%]">
             <div className="text-[2rem] md:text-[3rem] text-white font-maqin">
-              Where We Are
+              {locales[locale]["ContactInfo"]["Where We Are"]}
             </div>
             <div className="flex flex-col gap-4">
               <div>
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  Office
+                  {locales[locale]["ContactInfo"]["Office"]}
                 </div>
                 <p className="text-xs md:text-sm text-white">
                   {office_address}
@@ -26,7 +28,7 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
               </div>
               <div>
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  Workshop
+                  {locales[locale]["ContactInfo"]["Workshop"]}
                 </div>
                 <p className="text-xs md:text-sm text-white">
                   {office_address}
@@ -36,18 +38,18 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
           </div>
           <div className="flex flex-col gap-4 w-[80%] md:w-[50%]">
             <div className="text-[2rem] md:text-[3rem] text-white font-maqin">
-              How to Connect
+              {locales[locale]["ContactInfo"]["How To Connect"]}
             </div>
             <div className="flex flex-col gap-4">
               <div>
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  Phone
+                  {locales[locale]["ContactInfo"]["Phone"]}
                 </div>
                 <p className="text-xs md:text-sm text-white">{phone}</p>
               </div>
               <div>
                 <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  Email
+                  {locales[locale]["ContactInfo"]["Email"]}
                 </div>
                 <p className="text-xs md:text-sm text-white">{email}</p>
               </div>

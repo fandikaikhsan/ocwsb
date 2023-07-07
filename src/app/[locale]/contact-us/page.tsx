@@ -23,6 +23,7 @@ export default async function ContactUs() {
       <ContactUsPage
         title={fetch.data.title}
         description={fetch.data.description}
+        title_form={fetch.data.title_form}
         body={fetch.data.body}
         cta_banner={fetch.data.cta_banner}
         locale={lang}

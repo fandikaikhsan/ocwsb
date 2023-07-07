@@ -31,5 +31,13 @@
       "Phone": "Please enter your phone number",
       "Inquiry": "Please enter your inquiry"
     }
+  },
+  "ContactInfo": {
+    "Where We Are": "Where We Are",
+    "How To Connect": "How To Connect",
+    "Office": "Office",
+    "Workshop": "Workshop",
+    "Phone": "Phone",
+    "Email": "Email"
   }
 }

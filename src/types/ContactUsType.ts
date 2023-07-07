@@ -3,6 +3,7 @@ export interface ContactUsPageType {
   description: string
   body: ContactUsBodySectionType
   cta_banner: ContactUsCTABannerType
+  title_form: string
   locale?: string
 }
 
@@ -11,6 +12,7 @@ export interface ContactUsBodySectionType {
   workshop_address: string
   phone: string
   email: string
+  locale?: string
 }
 
 export interface ContactUsCTABannerType {

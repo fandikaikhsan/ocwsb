@@ -31,5 +31,13 @@
       "Phone": "Silahkan isi nomor telepon Anda",
       "Inquiry": "Silahkan isi pesan Anda"
     }
+  },
+  "ContactInfo": {
+    "Where We Are": "Dimana Kami Berada",
+    "How To Connect": "Hubungi Kami",
+    "Office": "Kantor",
+    "Workshop": "Bengkel",
+    "Phone": "Telepon",
+    "Email": "Email"
   }
 }

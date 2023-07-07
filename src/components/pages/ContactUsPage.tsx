@@ -1,6 +1,5 @@
 import React from "react"
 import PageHeader from "@/components/containers/PageHeader"
-import ContactUsCTABanner from "@/components/containers/ContactUsCTABanner"
 import FooterSection from "@/components/containers/FooterSection"
 import ContactUsBodySection from "@/components/containers/ContactUsBodySection"
 import FormSection from "@/components/containers/FormSection"
@@ -14,6 +13,7 @@ export default function ContactUsPage({
   description,
   body,
   cta_banner,
+  title_form,
   locale,
 }: ContactUsPageType) {
   return (
@@ -29,21 +29,22 @@ export default function ContactUsPage({
                 workshop_address={body.workshop_address}
                 phone={body.phone}
                 email={body.email}
+                locale={locale}
               />
             </AnimatedComponent>
           </div>
         </div>
         <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
-          <AnimatedComponent>LETS TALK!</AnimatedComponent>
+          <AnimatedComponent>{title_form}</AnimatedComponent>
         </div>
         <div className="sm:block md:hidden">
           <AnimatedComponent>
-            <FormSection />
+            <FormSection locale={locale} />
           </AnimatedComponent>
         </div>
         <div className="hidden md:block">
           <AnimatedComponent>
-            <DesktopFormSection />
+            <DesktopFormSection locale={locale} />
           </AnimatedComponent>
         </div>
         {/* <ContactUsCTABanner

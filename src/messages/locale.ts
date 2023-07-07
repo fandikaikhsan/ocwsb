@@ -12,6 +12,9 @@ interface Locale {
     ContactForm: {
       [key: string]: any
     }
+    ContactInfo: {
+      [key: string]: string
+    }
   }
 }
 
