@@ -19,7 +19,7 @@ const HomePage: FC<HomePageType> = ({
 }) => {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className=" bg-black">
         <div className=" mb-36">
           <AnimatedComponent>
@@ -55,12 +55,12 @@ const HomePage: FC<HomePageType> = ({
           </div>
           <div className="sm:block md:hidden">
             <AnimatedComponent>
-              <FormSection />
+              <FormSection locale={locale} />
             </AnimatedComponent>
           </div>
           <div className="hidden md:block">
             <AnimatedComponent>
-              <DesktopFormSection />
+              <DesktopFormSection locale={locale} />
             </AnimatedComponent>
           </div>
         </div>

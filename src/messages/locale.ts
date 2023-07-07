@@ -9,6 +9,9 @@ interface Locale {
     Banner: {
       [key: string]: string
     }
+    ContactForm: {
+      [key: string]: any
+    }
   }
 }
 

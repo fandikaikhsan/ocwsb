@@ -15,5 +15,21 @@
   },
   "Banner": {
     "Read More": "Read More"
+  },
+  "ContactForm": {
+    "Contact Us": "Contact Us",
+    "Name": "Name",
+    "Company": "Company",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Inquiry": "Inquiry",
+    "Submit": "Submit",
+    "Message": {
+      "Name": "Please enter your name",
+      "Company": "Please enter your company",
+      "Email": "Please enter your email",
+      "Phone": "Please enter your phone number",
+      "Inquiry": "Please enter your inquiry"
+    }
   }
 }

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl"
 
 async function getProduct(lang: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/product`,
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/home`,
     {
       cache: "no-cache",
     }

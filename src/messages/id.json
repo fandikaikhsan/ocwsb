@@ -15,5 +15,21 @@
   },
   "Banner": {
     "Read More": "Baca Lebih Lanjut"
+  },
+  "ContactForm": {
+    "Contact Us": "Contact Us",
+    "Name": "Nama",
+    "Company": "Perusahaan",
+    "Email": "Email",
+    "Phone": "Telepon",
+    "Inquiry": "Pesan",
+    "Submit": "Kirim",
+    "Message": {
+      "Name": "Silahkan isi nama Anda",
+      "Company": "Silahkan isi nama perusahaan Anda",
+      "Email": "Silahkan isi email Anda",
+      "Phone": "Silahkan isi nomor telepon Anda",
+      "Inquiry": "Silahkan isi pesan Anda"
+    }
   }
 }
