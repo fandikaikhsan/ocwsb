@@ -1,10 +1,12 @@
+"use client"
 import CertificationPage from "@/components/pages/CertificationPage"
+import { useTranslations } from "next-intl"
 
-async function getCertification() {
+async function getCertification(lang: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/v1/certification`,
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/certification`,
     {
-      next: { revalidate: 5 },
+      cache: "no-cache",
     }
   )
   if (!res.ok) {
@@ -15,13 +17,16 @@ async function getCertification() {
 }
 
 export default async function Certification() {
-  const fetch = await getCertification()
+  const t = useTranslations("data")
+  const lang = t("Locale")
+  const fetch = await getCertification(lang)
 
   return (
     <CertificationPage
       title={fetch.data.title}
       description={fetch.data.description}
       certifications={fetch.data.certifications}
+      locale={lang}
     />
   )
 }

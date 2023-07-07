@@ -6,10 +6,15 @@ import FooterSection from "@/components/containers/FooterSection"
 import { NewsPageType } from "@/types/NewsType"
 import Navbar from "@/components/layouts/Nav"
 
-export default function NewsPage({ title, headlines, recents }: NewsPageType) {
+export default function NewsPage({
+  title,
+  headlines,
+  recents,
+  locale,
+}: NewsPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <PageHeader title={title} />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         <div className="w-[90%] md:w-[80%]">

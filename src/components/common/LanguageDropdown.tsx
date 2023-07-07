@@ -27,6 +27,12 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const handleChangeLanguage = (languageCode: any) => {
+    console.log("handle change")
+
+    console.log("handle pathname", pathname)
+    console.log("handle selectedLanguage", selectedLanguage)
+    console.log("handle languageCode", languageCode)
+
     if (pathname?.includes(selectedLanguage)) {
       setDropdownOpen(false)
     }
@@ -39,6 +45,10 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
     setSelectedLanguage(languageCode)
     setDropdownOpen(false)
   }
+
+  console.log("pathname", pathname)
+  console.log("selectedLanguage", selectedLanguage)
+  console.log("locale", locale)
 
   return (
     <div className="relative">

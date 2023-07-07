@@ -1,9 +1,15 @@
-import ProductsPage from "@/components/pages/ProductsPage"
+"use client"
 
-async function getProduct() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/product`, {
-    cache: "no-cache",
-  })
+import ProductsPage from "@/components/pages/ProductsPage"
+import { useTranslations } from "next-intl"
+
+async function getProduct(lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/product`,
+    {
+      cache: "no-cache",
+    }
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Product data.")
   }
@@ -11,7 +17,9 @@ async function getProduct() {
 }
 
 export default async function Products() {
-  const fetch = await getProduct()
+  const t = useTranslations("data")
+  const lang = t("Locale")
+  const fetch = await getProduct(lang)
   return (
     <>
       <ProductsPage
@@ -20,6 +28,7 @@ export default async function Products() {
         description={fetch.data.description}
         products={fetch.data.products}
         video={fetch.data.video}
+        locale={lang}
       />
     </>
   )

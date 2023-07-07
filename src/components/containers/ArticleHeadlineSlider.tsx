@@ -22,14 +22,16 @@ const ArticleHeadlineSlider: FC<ArticleHeadlineSliderType> = ({
         modules={[Navigation, A11y]}
         spaceBetween={16}
         navigation
-        // slidesPerView="auto"
         centeredSlides
         style={{ zIndex: 0 }}
         loop
         className="swiper-custom-navigation"
       >
         {headlines.map((headline: ArticleCardHeadlineType) => (
-          <SwiperSlide style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}>
+          <SwiperSlide
+            key={headline.id}
+            style={{ width: "calc(2/3 * 100vw)", zIndex: 0 }}
+          >
             <ArticleCardHeadline
               title={headline.title}
               date={headline.date}

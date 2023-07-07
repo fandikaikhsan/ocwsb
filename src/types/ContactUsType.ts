@@ -3,6 +3,7 @@ export interface ContactUsPageType {
   description: string
   body: ContactUsBodySectionType
   cta_banner: ContactUsCTABannerType
+  locale?: string
 }
 
 export interface ContactUsBodySectionType {

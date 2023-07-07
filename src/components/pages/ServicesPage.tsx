@@ -13,10 +13,11 @@ export default function ServicesPage({
   description,
   services,
   video,
+  locale,
 }: ServicesPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <PageHeader title={title} />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         {short_desc?.length > 0 && (

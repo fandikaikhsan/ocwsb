@@ -4,4 +4,5 @@ export interface PartnersPageType {
   title: string
   description: string
   partners: ListGaleryValueType[]
+  locale?: string
 }

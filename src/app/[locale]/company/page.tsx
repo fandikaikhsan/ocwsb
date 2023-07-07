@@ -1,9 +1,15 @@
-import CompanyPage from "@/components/pages/CompanyPage"
+"use client"
 
-async function getCompany() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/company`, {
-    cache: "no-cache",
-  })
+import CompanyPage from "@/components/pages/CompanyPage"
+import { useTranslations } from "next-intl"
+
+async function getCompany(lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/company`,
+    {
+      cache: "no-cache",
+    }
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Company data.")
   }
@@ -11,13 +17,17 @@ async function getCompany() {
 }
 
 export default async function Company() {
-  const fetch = await getCompany()
+  const t = useTranslations("data")
+  const lang = t("Locale")
+
+  const fetch = await getCompany(lang)
   return (
     <CompanyPage
       title={fetch.data.title}
       description={fetch.data.description}
       video={fetch.data.video}
       portofolios={fetch.data.portofolios}
+      locale={lang}
     />
   )
 }

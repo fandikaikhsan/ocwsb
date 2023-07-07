@@ -14,10 +14,11 @@ export default function ContactUsPage({
   description,
   body,
   cta_banner,
+  locale,
 }: ContactUsPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="bg-black">
         <div className="flex flex-col justify-center items-center gap-10 bg-black">
           <PageHeader title={title} />

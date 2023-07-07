@@ -1,7 +1,12 @@
-import ContactUsPage from "@/components/pages/ContactUsPage"
+"use client"
 
-async function getContactUs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/contact`)
+import ContactUsPage from "@/components/pages/ContactUsPage"
+import { useTranslations } from "next-intl"
+
+async function getContactUs(lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/contact`
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Contact Us data.")
   }
@@ -9,7 +14,10 @@ async function getContactUs() {
 }
 
 export default async function ContactUs() {
-  const fetch = await getContactUs()
+  const t = useTranslations("data")
+  const lang = t("Locale")
+
+  const fetch = await getContactUs(lang)
   return (
     <>
       <ContactUsPage
@@ -17,6 +25,7 @@ export default async function ContactUs() {
         description={fetch.data.description}
         body={fetch.data.body}
         cta_banner={fetch.data.cta_banner}
+        locale={lang}
       />
     </>
   )

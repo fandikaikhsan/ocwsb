@@ -12,6 +12,7 @@ export default function CompanyPage({
   description,
   video,
   portofolios,
+  locale,
 }: CompanyPageType) {
   return (
     <>

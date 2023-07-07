@@ -10,6 +10,7 @@ export interface ServicesPageType {
     title: string
     url: string
   }
+  locale?: string
 }
 
 export interface ServiceDetailPageType {

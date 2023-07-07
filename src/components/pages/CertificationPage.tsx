@@ -9,10 +9,11 @@ export default function CertificationPage({
   title,
   description,
   certifications,
+  locale,
 }: CertificationPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={description} />
         <div className="content flex-1 flex flex-col items-center justify-center">

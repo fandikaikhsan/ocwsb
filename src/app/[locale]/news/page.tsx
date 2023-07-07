@@ -1,10 +1,15 @@
-import React from "react"
-import NewsPage from "@/components/pages/NewsPage"
+"use client"
 
-async function getNews() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/news`, {
-    cache: "no-cache",
-  })
+import NewsPage from "@/components/pages/NewsPage"
+import { useTranslations } from "next-intl"
+
+async function getNews(lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/news`,
+    {
+      cache: "no-cache",
+    }
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch News data.")
   }
@@ -12,7 +17,9 @@ async function getNews() {
 }
 
 export default async function News() {
-  const fetch = await getNews()
+  const t = useTranslations("data")
+  const lang = t("Locale")
+  const fetch = await getNews(lang)
 
   return (
     <>
@@ -20,6 +27,7 @@ export default async function News() {
         title={fetch.data.title}
         headlines={fetch.data.headlines}
         recents={fetch.data.recents}
+        locale={lang}
       />
     </>
   )

@@ -9,10 +9,11 @@ export default function PartnersPage({
   title,
   description,
   partners,
+  locale,
 }: PartnersPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <PageHeader title={title} />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         <div className="flex flex-col gap-4 justify-center items-center py-5">

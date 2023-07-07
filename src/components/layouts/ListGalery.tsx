@@ -18,7 +18,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
       <div className="grid grid-cols-2 w-fit m-auto">
         {values.map((value, index) =>
           index % 2 === 0 ? (
-            <>
+            <div key={value.id}>
               <div
                 className={`${
                   clickable ? "cursor-pointer" : ""
@@ -59,9 +59,9 @@ const ListGalery: FC<ListGaleryComponentType> = ({
               >
                 {value.name}
               </div>
-            </>
+            </div>
           ) : (
-            <>
+            <div key={value.id}>
               <div
                 className={`${paddingx ? "px-" + paddingx : "px-8"} ${
                   paddingy ? "py-" + paddingy : "py-8"
@@ -98,7 +98,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                   </>
                 )}
               </div>
-            </>
+            </div>
           )
         )}
       </div>

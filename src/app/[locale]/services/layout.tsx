@@ -13,11 +13,11 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "OCWSB Pratama",
-  description: "Welcome to OCWSB Pratama Website",
+  title: "Services",
+  description: "Services Page",
 }
 
-export default async function LocaleLayout({
+export default async function NewsLayout({
   children,
   params: { locale },
 }: any) {

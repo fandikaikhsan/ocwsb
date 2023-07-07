@@ -9,10 +9,11 @@ export default function OurValuePage({
   title,
   description,
   values,
+  locale,
 }: OurValuePageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} />
         <div className="content flex-1 flex flex-col py-10 items-center justify-center">

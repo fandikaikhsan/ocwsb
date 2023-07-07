@@ -4,6 +4,7 @@ export interface NewsPageType {
   title: string
   headlines: ArticleCardHeadlineType[]
   recents: ArticleCardListType[]
+  locale?: string
 }
 
 export interface ArticleCardHeadlineType {
