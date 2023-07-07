@@ -1,4 +1,5 @@
-import React from "react"
+import React, { FC } from "react"
+import { HomePageType } from "@/types/HomeType"
 import Navbar from "@/components/layouts/Nav"
 import ProductSlider from "@/components/containers/ProductCardSlider"
 import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
@@ -10,7 +11,12 @@ import DesktopFormSection from "@/components/containers/DesktopFormSection"
 import ProductAccordionSection from "@/components/containers/ProductAccordionSection"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
 
-export default function HomePage() {
+const HomePage: FC<HomePageType> = ({
+  banners,
+  services,
+  products,
+  locale,
+}) => {
   return (
     <>
       <Navbar />
@@ -63,3 +69,5 @@ export default function HomePage() {
     </>
   )
 }
+
+export default HomePage

@@ -6,6 +6,7 @@ import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductsPageType } from "@/types/ProductsType"
 import ProductDescriptionSection from "../containers/ProductDescriptionSection"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
 
 export default function ProductsPage({
   title,
@@ -29,21 +30,32 @@ export default function ProductsPage({
         )}
 
         <div>
-          <ListGalery
-            values={products}
-            page="products"
-            clickable={true}
-            textposition="center"
-            textdesktopsize="lg"
-          />
+          <AnimatedComponent>
+            <ListGalery
+              values={products}
+              page="products"
+              clickable={true}
+              textposition="center"
+              textdesktopsize="lg"
+            />
+          </AnimatedComponent>
         </div>
 
         <div className="flex flex-col gap-8 justify-center items-center py-5">
-          <div className="text-[2rem] font-maqin text-white">{video.title}</div>
-          <VideoComponent source={video.url} />
+          <div className="text-[2rem] font-maqin text-white">
+            <AnimatedComponent>{video.title}</AnimatedComponent>
+          </div>
+          <AnimatedComponent>
+            <VideoComponent source={video.url} />
+          </AnimatedComponent>
         </div>
         {description?.length > 0 && (
-          <ProductDescriptionSection description={description} color="white" />
+          <AnimatedComponent>
+            <ProductDescriptionSection
+              description={description}
+              color="white"
+            />
+          </AnimatedComponent>
         )}
       </div>
       <FooterSection type={"red"} />

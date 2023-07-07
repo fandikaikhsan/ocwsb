@@ -5,6 +5,7 @@ import ArticleCardSlider from "@/components/containers/ArticleCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import { NewsPageType } from "@/types/NewsType"
 import Navbar from "@/components/layouts/Nav"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
 
 export default function NewsPage({
   title,
@@ -18,12 +19,16 @@ export default function NewsPage({
       <PageHeader title={title} />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         <div className="w-[90%] md:w-[80%]">
-          <ArticleHeadlineSlider headlines={headlines} />
+          <AnimatedComponent>
+            <ArticleHeadlineSlider headlines={headlines} />
+          </AnimatedComponent>
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
           <div className=" font-maqin text-4xl text-white">Recent News</div>
           <div className="w-[95%] md:w-[80%]">
-            <ArticleCardSlider articles={recents} />
+            <AnimatedComponent>
+              <ArticleCardSlider articles={recents} />
+            </AnimatedComponent>
           </div>
         </div>
       </div>

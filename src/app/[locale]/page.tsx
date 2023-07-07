@@ -1,6 +1,6 @@
 "use client"
 
-import ProductsPage from "@/components/pages/ProductsPage"
+import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
 
 async function getProduct(lang: string) {
@@ -22,16 +22,12 @@ export default async function Home() {
 
   const fetch = await getProduct(lang)
 
-  // @TODO: useTranslations always has "data" argument
-  // then passing the data to the component
   return (
     <>
-      <ProductsPage
-        title={fetch.data.title}
-        short_desc={fetch.data.short_desc}
-        description={fetch.data.description}
+      <HomePage
+        banners={fetch.data.banners}
         products={fetch.data.products}
-        video={fetch.data.video}
+        services={fetch.data.services}
         locale={lang}
       />
     </>

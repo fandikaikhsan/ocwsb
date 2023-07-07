@@ -5,6 +5,7 @@ import NewsContentSection from "@/components/containers/NewsContentSection"
 import FooterSection from "@/components/containers/FooterSection"
 import { NewsDetailPageType } from "@/types/NewsType"
 import Navbar from "../layouts/Nav"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
 
 const NewsDetailPage: FC<NewsDetailPageType> = ({
   title,
@@ -23,14 +24,18 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
           {image.length > 1 && (
             <div className="w-[95%] md:w-[70%]">
-              <ImageCardSlider images={image} />
+              <AnimatedComponent>
+                <ImageCardSlider images={image} />
+              </AnimatedComponent>
             </div>
           )}
-          <NewsContentSection
-            description={content}
-            background="black"
-            color="white"
-          />
+          <AnimatedComponent>
+            <NewsContentSection
+              description={content}
+              background="black"
+              color="white"
+            />
+          </AnimatedComponent>
         </div>
         <FooterSection type={"red"} />
       </div>

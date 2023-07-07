@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Welcome to OCWSB Pratama Website",
 }
 
-export default async function LocaleLayout({
+export default async function HomeLayout({
   children,
   params: { locale },
 }: any) {

@@ -23,12 +23,14 @@ export default function ContactUsPage({
         <div className="flex flex-col justify-center items-center gap-10 bg-black">
           <PageHeader title={title} />
           <div className="w-[90%] md:w-[80%]">
-            <ContactUsBodySection
-              office_address={body.office_address}
-              workshop_address={body.workshop_address}
-              phone={body.phone}
-              email={body.email}
-            />
+            <AnimatedComponent>
+              <ContactUsBodySection
+                office_address={body.office_address}
+                workshop_address={body.workshop_address}
+                phone={body.phone}
+                email={body.email}
+              />
+            </AnimatedComponent>
           </div>
         </div>
         <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
