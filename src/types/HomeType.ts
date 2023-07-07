@@ -1,4 +1,9 @@
 export interface HomePageType {
+  homepage: {
+    title_product: string
+    title_service: string
+    title_form: string
+  }
   banners: HomeBannerType[]
   services: HomeServiceType[]
   products: HomeProductType[]

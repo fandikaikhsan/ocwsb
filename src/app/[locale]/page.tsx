@@ -25,6 +25,7 @@ export default async function Home() {
   return (
     <>
       <HomePage
+        homepage={fetch.data.homepage}
         banners={fetch.data.banners}
         products={fetch.data.products}
         services={fetch.data.services}
