@@ -17,7 +17,7 @@ async function getCompany(lang: string) {
 }
 
 export default async function Company() {
-  const t = useTranslations("data")
+  const t = useTranslations("data") || ""
   const lang = t("Locale")
 
   const fetch = await getCompany(lang)

@@ -1,7 +1,9 @@
 "use client"
 
+import React, { useEffect, useState } from "react"
 import ServicesPage from "@/components/pages/ServicesPage"
 import { useTranslations } from "next-intl"
+import LoadingPage from "@/components/pages/LoadingPage"
 
 async function getService(lang: string) {
   const res = await fetch(
@@ -19,7 +21,17 @@ async function getService(lang: string) {
 export default async function Services() {
   const t = useTranslations("data")
   const lang = t("Locale")
+  const [fetchData, setFetchData] = useState(null)
+
+  useEffect(() => {
+    getService(lang)
+      .then((data) => setFetchData(data))
+      .catch((err) => console.error(err))
+  }, [lang])
+
   const fetch = await getService(lang)
+
+  if (!fetchData) return <LoadingPage />
 
   return (
     <>
