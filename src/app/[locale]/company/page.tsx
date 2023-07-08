@@ -21,6 +21,7 @@ export default async function Company() {
   const lang = t("Locale")
 
   const fetch = await getCompany(lang)
+
   return (
     <CompanyPage
       title={fetch.data.title}
