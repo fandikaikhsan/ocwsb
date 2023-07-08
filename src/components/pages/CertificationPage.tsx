@@ -26,7 +26,7 @@ export default function CertificationPage({
             </div>
           </div>
         </div>
-        <FooterSection type={"red"} />
+        <FooterSection type={"red"} locale={locale} />
       </div>
     </>
   )

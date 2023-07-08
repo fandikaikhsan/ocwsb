@@ -27,7 +27,7 @@ export default function OurValuePage({
             />
           </AnimatedComponent>
         </div>
-        <FooterSection type={"red"} />
+        <FooterSection type={"red"} locale={locale} />
       </div>
     </>
   )

@@ -15,6 +15,9 @@ interface Locale {
     ContactInfo: {
       [key: string]: string
     }
+    Footer: {
+      [key: string]: string
+    }
   }
 }
 

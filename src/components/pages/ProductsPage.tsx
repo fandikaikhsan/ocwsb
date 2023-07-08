@@ -58,7 +58,7 @@ export default function ProductsPage({
           </AnimatedComponent>
         )}
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }

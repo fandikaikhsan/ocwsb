@@ -38,7 +38,7 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
             />
           </AnimatedComponent>
         </div>
-        <FooterSection type={"red"} />
+        <FooterSection type={"red"} locale={locale} />
       </div>
     </>
   )

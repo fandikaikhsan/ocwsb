@@ -66,7 +66,7 @@ const HomePage: FC<HomePageType> = ({
           </div> */}
         </div>
       </div>
-      <FooterSection />
+      <FooterSection locale={locale} />
     </>
   )
 }

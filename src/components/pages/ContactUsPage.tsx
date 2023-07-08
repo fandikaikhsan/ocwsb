@@ -53,7 +53,7 @@ export default function ContactUsPage({
           button_text={cta_banner.button_text}
           path={cta_banner.path}
         /> */}
-        <FooterSection type={"red"} />
+        <FooterSection type={"red"} locale={locale} />
       </div>
     </>
   )

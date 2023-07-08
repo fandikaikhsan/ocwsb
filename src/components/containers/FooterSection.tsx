@@ -1,8 +1,9 @@
 import React, { FC } from "react"
 import Image from "next/image"
+import locales from "@/messages/locale"
 
 const FooterSection: FC<any> = (props) => {
-  const { type = "red" } = props
+  const { type = "red", locale = "en" } = props
 
   return (
     <footer
@@ -51,7 +52,9 @@ const FooterSection: FC<any> = (props) => {
         <div className="md:flex gap-4">
           <div className="flex justify-start md:w-2/4">
             <div>
-              <h3 className="text-lg font-medium text-white">Office</h3>
+              <h3 className="text-lg font-medium text-white">
+                {locales[locale]["Footer"]["Office"]}
+              </h3>
               <p className="md:mt-2 text-sm text-gray-300">
                 Rukan Puri Kencana Blok L6 No: 88P Jl. Kencana Utama II, Kel.
                 Kembangan Selatan Kec. Kembangan,
@@ -62,7 +65,9 @@ const FooterSection: FC<any> = (props) => {
           </div>
           <div className="flex justify-start items-start md:w-1/4 mt-4 md:mt-0">
             <div>
-              <h3 className="text-lg font-medium text-white">Workshop</h3>
+              <h3 className="text-lg font-medium text-white">
+                {locales[locale]["Footer"]["Workshop"]}
+              </h3>
               <p className="md:mt-2 text-sm text-gray-300">
                 Jalan Selayar VI Blok K21 Kawasan Industri MM2100 Desa Telajung
                 Kecamatan Cikarang Barat
@@ -73,11 +78,15 @@ const FooterSection: FC<any> = (props) => {
           </div>
           <div className="flex flex-col justify-start gap-2 mt-4 md:mt-0 md:w-1/4">
             <div className="w-1/2 pr-4 md:pr-0">
-              <h3 className="text-lg font-medium text-white">Phone</h3>
+              <h3 className="text-lg font-medium text-white">
+                {locales[locale]["Footer"]["Phone"]}
+              </h3>
               <p className="md:mt-2 text-sm text-gray-300">(021) – 58303738</p>
             </div>
             <div className="w-1/2 mt-3 md:mt-0">
-              <h3 className="text-lg font-medium text-white">Email</h3>
+              <h3 className="text-lg font-medium text-white">
+                {locales[locale]["Footer"]["Email"]}
+              </h3>
               <p className="md:mt-2 text-sm text-gray-300">
                 ocwsb.pratama.indonesia@gmail.com
               </p>

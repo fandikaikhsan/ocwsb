@@ -39,5 +39,14 @@
     "Workshop": "Bengkel",
     "Phone": "Telepon",
     "Email": "Email"
+  },
+  "News": {
+    "Recent News": "Berita Baru"
+  },
+  "Footer": {
+    "Office": "Kantor",
+    "Workshop": "Bengkel",
+    "Phone": "Telepon",
+    "Email": "Email"
   }
 }

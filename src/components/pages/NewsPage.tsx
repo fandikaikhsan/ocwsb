@@ -32,7 +32,7 @@ export default function NewsPage({
           </div>
         </div>
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }

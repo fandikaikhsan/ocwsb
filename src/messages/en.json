@@ -39,5 +39,14 @@
     "Workshop": "Workshop",
     "Phone": "Phone",
     "Email": "Email"
+  },
+  "News": {
+    "Recent News": "Recent News"
+  },
+  "Footer": {
+    "Office": "Office",
+    "Workshop": "Workshop",
+    "Phone": "Phone",
+    "Email": "Email"
   }
 }

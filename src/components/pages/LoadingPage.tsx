@@ -9,8 +9,8 @@ const spin = keyframes`
 `
 
 const Loader = styled.div`
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
+  border: 16px solid #242323;
+  border-top: 16px solid #8c1822;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -20,7 +20,7 @@ const Loader = styled.div`
 const LoadingPage: React.FC = () => (
   <div className="flex flex-col items-center justify-center h-screen space-y-3">
     <Loader />
-    <p className="text-lg text-gray-500">Loading, please wait...</p>
+    <p className="text-lg text-gray-500">Loading...</p>
   </div>
 )
 

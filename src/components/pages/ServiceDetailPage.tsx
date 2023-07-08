@@ -45,9 +45,9 @@ export default function ServiceDetailPage({
           )}
         </div>
         {specification?.length > 0 ? (
-          <FooterSection type={"black"} />
+          <FooterSection type={"black"} locale={locale} />
         ) : (
-          <FooterSection type={"red"} />
+          <FooterSection type={"red"} locale={locale} />
         )}
       </div>
     </>

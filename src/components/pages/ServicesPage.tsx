@@ -60,7 +60,7 @@ export default function ServicesPage({
           </AnimatedComponent>
         )}
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }

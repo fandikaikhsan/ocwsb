@@ -33,7 +33,7 @@ export default function PartnersPage({
           </AnimatedComponent>
         </div>
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }
