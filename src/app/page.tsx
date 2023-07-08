@@ -1,15 +1,15 @@
 "use client"
 
+import React, { useEffect, useState } from "react"
 import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
+import LoadingPage from "@/components/pages/LoadingPage"
 
-async function getHome(locale: string) {
-  const lang = locale || "en"
-
+async function getHome(lang: string) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/home`,
     {
-      next: { revalidate: 60 },
+      cache: "no-cache",
     }
   )
   if (!res.ok) {
@@ -21,8 +21,17 @@ async function getHome(locale: string) {
 export default async function Home() {
   const t = useTranslations("data")
   const lang = t("Locale")
+  const [fetchData, setFetchData] = useState(null)
+
+  useEffect(() => {
+    getHome(lang)
+      .then((data) => setFetchData(data))
+      .catch((err) => console.error(err))
+  }, [lang])
 
   const fetch = await getHome(lang)
+
+  if (!fetchData) return <LoadingPage />
 
   return (
     <>

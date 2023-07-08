@@ -5,7 +5,7 @@ import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
 import LoadingPage from "@/components/pages/LoadingPage"
 
-async function getHome(lang: string) {
+async function getHomeLocale(lang: string) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/home`,
     {
@@ -24,12 +24,12 @@ export default async function Home() {
   const [fetchData, setFetchData] = useState(null)
 
   useEffect(() => {
-    getHome(lang)
+    getHomeLocale(lang)
       .then((data) => setFetchData(data))
       .catch((err) => console.error(err))
   }, [lang])
 
-  const fetch = await getHome(lang)
+  const fetch = await getHomeLocale(lang)
 
   if (!fetchData) return <LoadingPage />
 

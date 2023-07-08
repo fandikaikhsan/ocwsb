@@ -1,45 +1,46 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import HomePage from "@/components/pages/HomePage"
+import ServicesPage from "@/components/pages/ServicesPage"
 import { useTranslations } from "next-intl"
 import LoadingPage from "@/components/pages/LoadingPage"
 
-async function getHomeLocale(lang: string) {
+async function getService(lang: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/home`,
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/service`,
     {
       cache: "no-cache",
     }
   )
   if (!res.ok) {
-    throw new Error("Failed to fetch Product data.")
+    throw new Error("Failed to fetch Service data.")
   }
   return res.json()
 }
 
-export default async function Home() {
+export default async function Services() {
   const t = useTranslations("data")
   const lang = t("Locale")
   const [fetchData, setFetchData] = useState(null)
 
   useEffect(() => {
-    getHomeLocale(lang)
+    getService(lang)
       .then((data) => setFetchData(data))
       .catch((err) => console.error(err))
   }, [lang])
 
-  const fetch = await getHomeLocale(lang)
+  const fetch = await getService(lang)
 
   if (!fetchData) return <LoadingPage />
 
   return (
     <>
-      <HomePage
-        homepage={fetch.data.homepage}
-        banners={fetch.data.banners}
-        products={fetch.data.products}
+      <ServicesPage
+        title={fetch.data.title}
+        short_desc={fetch.data.short_desc}
+        description={fetch.data.description}
         services={fetch.data.services}
+        video={fetch.data.video}
         locale={lang}
       />
     </>
