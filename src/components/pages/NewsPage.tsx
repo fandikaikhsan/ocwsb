@@ -6,6 +6,7 @@ import FooterSection from "@/components/containers/FooterSection"
 import { NewsPageType } from "@/types/NewsType"
 import Navbar from "@/components/layouts/Nav"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
+import locales from "@/messages/locale"
 
 export default function NewsPage({
   title,
@@ -24,7 +25,9 @@ export default function NewsPage({
           </AnimatedComponent>
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
-          <div className=" font-maqin text-4xl text-white">Recent News</div>
+          <div className=" font-maqin text-4xl text-white">
+            {locales[locale]["News"]["Recent News"]}
+          </div>
           <div className="w-[95%] md:w-[80%]">
             <AnimatedComponent>
               <ArticleCardSlider articles={recents} />
