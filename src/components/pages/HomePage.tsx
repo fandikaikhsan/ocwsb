@@ -22,7 +22,7 @@ const HomePage: FC<HomePageType> = ({
     <>
       <Navbar locale={locale} />
       <div className=" bg-black">
-        <div className=" mb-36">
+        <div className=" mb-24">
           <AnimatedComponent>
             <BannerCardSlider banners={banners} />
           </AnimatedComponent>
@@ -37,7 +37,7 @@ const HomePage: FC<HomePageType> = ({
             </AnimatedComponent>
           </div>
         </div>
-        <div className="">
+        <div className="py-10">
           <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_product}</AnimatedComponent>
           </div>
@@ -51,9 +51,9 @@ const HomePage: FC<HomePageType> = ({
               <ProductAccordionSection products={products} />
             </AnimatedComponent>
           </div>
-          <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
+          {/* <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
             <AnimatedComponent>{homepage.title_form}</AnimatedComponent>
-          </div>
+          </div> */}
           {/* <div className="sm:block md:hidden">
             <AnimatedComponent>
               <FormSection locale={locale} />

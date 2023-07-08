@@ -31,12 +31,14 @@ const LanguageDropdown = ({ locale }: { locale: string }) => {
       setDropdownOpen(false)
     }
     if (pathname === "/" && selectedLanguage != "en") {
-      router.push(`/${languageCode}`)
       setSelectedLanguage(languageCode)
+      router.push(`/${languageCode}`)
+      router.refresh()
       setDropdownOpen(false)
     }
-    router.push(`/${languageCode}`)
     setSelectedLanguage(languageCode)
+    router.push(`/${languageCode}`)
+    router.refresh()
     setDropdownOpen(false)
   }
 
