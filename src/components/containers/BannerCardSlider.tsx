@@ -39,8 +39,6 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
       navigation={isMobile ? false : true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       className="swiper-custom-navigation"
     >
       {banners.map((banner: any) => (

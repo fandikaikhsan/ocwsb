@@ -31,7 +31,7 @@ export default async function NewsLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning={true}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

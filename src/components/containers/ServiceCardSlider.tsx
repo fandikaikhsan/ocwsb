@@ -47,8 +47,6 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       loop
       className="swiper-custom-navigation"
       breakpoints={{
