@@ -3,7 +3,9 @@
 import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
 
-async function getProduct(lang: string) {
+async function getHome(locale: string) {
+  const lang = locale || "en"
+
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/home`,
     {
@@ -20,7 +22,7 @@ export default async function Home() {
   const t = useTranslations("data")
   const lang = t("Locale")
 
-  const fetch = await getProduct(lang)
+  const fetch = await getHome(lang)
 
   return (
     <>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Welcome to OCWSB Pratama Website",
 }
 
-export default async function HomeLayout({
+export default async function HomeLayoutLocale({
   children,
   params: { locale },
 }: any) {
@@ -25,6 +25,7 @@ export default async function HomeLayout({
 
   try {
     messages = (await import(`@/messages/${locale}.json`)).default
+    console.log("layout messages", messages)
   } catch (err) {
     throw new Error(`Could not load messages for locale "${locale}"`)
   }
