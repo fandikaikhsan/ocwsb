@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from "next-intl"
 import { Metadata } from "next"
+import "../styles/globals.css"
 
 export function generateStaticParams() {
   return [
@@ -21,12 +22,13 @@ export default async function HomeLayout({
   children,
   params: { locale },
 }: any) {
+  locale = locale || "en"
   let messages
 
   try {
     messages = (await import(`@/messages/${locale}.json`)).default
   } catch (err) {
-    throw new Error(`Could not load messages for locale "${locale}"`)
+    throw new Error(`Could not load messages for locale home "${locale}"`)
   }
 
   return (

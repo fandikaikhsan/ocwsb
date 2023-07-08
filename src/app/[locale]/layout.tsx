@@ -23,11 +23,12 @@ export default async function HomeLayoutLocale({
 }: any) {
   let messages
 
+  locale = locale || "en"
+
   try {
     messages = (await import(`@/messages/${locale}.json`)).default
-    console.log("layout messages", messages)
   } catch (err) {
-    throw new Error(`Could not load messages for locale "${locale}"`)
+    throw new Error(`Could not load messages for locale home "${locale}"`)
   }
 
   return (

@@ -22,11 +22,14 @@ export default async function NewsLayout({
   params: { locale },
 }: any) {
   let messages
+  locale = locale || "en"
 
   try {
     messages = (await import(`@/messages/${locale}.json`)).default
   } catch (err) {
-    throw new Error(`Could not load messages for locale "${locale}"`)
+    throw new Error(
+      `Could not load messages for locale certification "${locale}"`
+    )
   }
 
   return (
