@@ -13,12 +13,13 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
   date,
   content,
   image,
+  locale,
 }) => {
   const headerDesc = `${author} - ${date}`
 
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={headerDesc} type="detail" />
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">

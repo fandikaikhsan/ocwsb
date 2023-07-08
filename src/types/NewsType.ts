@@ -42,4 +42,5 @@ export interface NewsDetailPageType {
   author: string
   date: string
   content: string
+  locale?: string
 }

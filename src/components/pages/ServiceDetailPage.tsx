@@ -13,10 +13,11 @@ export default function ServiceDetailPage({
   description,
   image,
   specification,
+  locale,
 }: ServiceDetailPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">

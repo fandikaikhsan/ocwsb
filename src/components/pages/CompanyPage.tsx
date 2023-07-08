@@ -17,7 +17,7 @@ export default function CompanyPage({
 }: CompanyPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader title={title} />
 

@@ -1,8 +1,11 @@
-import ProductDetailPage from "@/components/pages/ProductDetailPage"
+"use client"
 
-async function getProductDetail(id: string) {
+import ProductDetailPage from "@/components/pages/ProductDetailPage"
+import { useTranslations } from "next-intl"
+
+async function getProductDetail(id: string, lang: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/v1/product/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/product/${id}`,
     {
       cache: "no-cache",
     }
@@ -18,7 +21,9 @@ export default async function ProductDetail({
 }: {
   params: { id: string }
 }) {
-  const fetch = await getProductDetail(params.id)
+  const t = useTranslations("data")
+  const lang = t("Locale")
+  const fetch = await getProductDetail(params.id, lang)
   return (
     <>
       <ProductDetailPage
@@ -27,6 +32,7 @@ export default async function ProductDetail({
         description={fetch.data.description}
         image={fetch.data.image}
         specification={fetch.data.spesification}
+        locale={lang}
       />
     </>
   )

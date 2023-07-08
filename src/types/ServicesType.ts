@@ -19,4 +19,5 @@ export interface ServiceDetailPageType {
   description: string
   image: ImageCardType[]
   specification: string
+  locale?: string
 }

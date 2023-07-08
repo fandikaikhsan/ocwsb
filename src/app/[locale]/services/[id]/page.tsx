@@ -1,7 +1,12 @@
-import ServiceDetailPage from "@/components/pages/ServiceDetailPage"
+"use client"
 
-async function getServiceDetail(id: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/service/${id}`)
+import ServiceDetailPage from "@/components/pages/ServiceDetailPage"
+import { useTranslations } from "next-intl"
+
+async function getServiceDetail(id: string, lang: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/service/${id}`
+  )
   if (!res.ok) {
     throw new Error("Failed to fetch Service data.")
   }
@@ -13,7 +18,9 @@ export default async function ServiceDetail({
 }: {
   params: { id: string }
 }) {
-  const fetch = await getServiceDetail(params.id)
+  const t = useTranslations("data")
+  const lang = t("Locale")
+  const fetch = await getServiceDetail(params.id, lang)
   return (
     <>
       <ServiceDetailPage
@@ -22,6 +29,7 @@ export default async function ServiceDetail({
         description={fetch.data.description}
         image={fetch.data.image}
         specification={fetch.data.spesification}
+        locale={lang}
       />
     </>
   )

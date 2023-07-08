@@ -32,6 +32,9 @@ const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
     setServiceData(service)
     setIsOpen(true)
   }
+
+  console.log(products)
+
   return (
     <>
       <Swiper
