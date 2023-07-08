@@ -8,6 +8,7 @@ interface ProductCardProps {
   image?: string
   path?: string
   onClick?: () => void
+  cta_text?: string
 }
 
 const ProductCard: FC<ProductCardProps> = (props) => {
@@ -17,6 +18,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
     description = "",
     path = "",
     onClick = () => {},
+    cta_text = "Find Out More",
   } = props
   return (
     <>
@@ -39,7 +41,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
           > */}
           <Link href={path ?? "/"}>
             <div className="hover:cursor-pointer text-white text-xl underline">
-              Find Out More
+              {cta_text}
             </div>
           </Link>
           {/* </a> */}

@@ -57,6 +57,7 @@ const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
               image={product.image}
               onClick={() => handleServiceClick(product)}
               path={product.cta?.url}
+              cta_text={product.cta?.text}
             />
           </SwiperSlide>
         ))}
