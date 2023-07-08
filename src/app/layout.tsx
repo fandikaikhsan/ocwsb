@@ -1,23 +1,41 @@
-import "../styles/globals.css"
+import { NextIntlClientProvider } from "next-intl"
 import { Metadata } from "next"
 
-// const inter = Inter({ subsets: ["latin"] })
+export function generateStaticParams() {
+  return [
+    {
+      locale: "en",
+    },
+    {
+      locale: "id",
+    },
+  ]
+}
 
 export const metadata: Metadata = {
   title: "OCWSB Pratama",
   description: "Welcome to OCWSB Pratama Website",
 }
 
-export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
+export default async function HomeLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+  params: { locale },
+}: any) {
+  let messages
+
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default
+  } catch (err) {
+    throw new Error(`Could not load messages for locale "${locale}"`)
+  }
+
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   )
 }
