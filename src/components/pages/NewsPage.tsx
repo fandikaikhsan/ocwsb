@@ -14,6 +14,8 @@ export default function NewsPage({
   recents,
   locale,
 }: NewsPageType) {
+  locale = locale || "en"
+
   return (
     <>
       <Navbar locale={locale} />

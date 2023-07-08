@@ -7,8 +7,10 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
   workshop_address,
   phone,
   email,
-  locale = "en",
+  locale,
 }) => {
+  locale = locale || "en"
+
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-10 md:gap-20 p-5 w-full">

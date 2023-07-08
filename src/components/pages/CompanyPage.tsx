@@ -7,6 +7,7 @@ import { CompanyPageType } from "@/types/CompanyType"
 import CompanyDescriptionSection from "../containers/CompanyDescriptionSection"
 import Navbar from "../layouts/Nav"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
+import locales from "@/messages/locale"
 
 export default function CompanyPage({
   title,
@@ -15,6 +16,8 @@ export default function CompanyPage({
   portofolios,
   locale,
 }: CompanyPageType) {
+  locale = locale || "en"
+
   return (
     <>
       <Navbar locale={locale} />
@@ -32,7 +35,9 @@ export default function CompanyPage({
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white uppercase">
-            <AnimatedComponent>Company Profile</AnimatedComponent>
+            <AnimatedComponent>
+              {locales[locale]["Company"]["Company Profile"]}
+            </AnimatedComponent>
           </div>
           <AnimatedComponent>
             <VideoComponent source={video} />

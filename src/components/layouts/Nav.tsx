@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import locales from "@/messages/locale"
 
-const Navbar = ({ locale = "en" }: { locale?: string }) => {
+const Navbar = ({ locale }: { locale?: string }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -17,6 +17,8 @@ const Navbar = ({ locale = "en" }: { locale?: string }) => {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen)
   }
+
+  locale = locale || "en"
 
   return (
     <>

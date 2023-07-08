@@ -48,5 +48,8 @@
     "Workshop": "Workshop",
     "Phone": "Phone",
     "Email": "Email"
+  },
+  "Company": {
+    "Company Profile": "Company Profile"
   }
 }

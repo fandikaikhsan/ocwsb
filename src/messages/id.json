@@ -48,5 +48,8 @@
     "Workshop": "Bengkel",
     "Phone": "Telepon",
     "Email": "Email"
+  },
+  "Company": {
+    "Company Profile": "Profil Perusahaan"
   }
 }

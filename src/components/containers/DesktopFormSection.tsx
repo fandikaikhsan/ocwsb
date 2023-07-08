@@ -18,7 +18,7 @@ type UserSubmitForm = {
   locale?: string
 }
 
-const DesktopFormSection = ({ locale = "en" }: { locale?: string }) => {
+const DesktopFormSection = ({ locale }: { locale?: string }) => {
   const schema = yup.object().shape({
     name: yup.string().required().min(3),
     company: yup.string(),
@@ -27,6 +27,8 @@ const DesktopFormSection = ({ locale = "en" }: { locale?: string }) => {
     password: yup.string().required().min(6),
     message: yup.string(),
   })
+
+  locale = locale || "en"
 
   const {
     register,

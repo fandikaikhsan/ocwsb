@@ -21,6 +21,9 @@ interface Locale {
     Footer: {
       [key: string]: string
     }
+    Company: {
+      [key: string]: string
+    }
   }
 }
 
