@@ -25,7 +25,10 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ children }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
       },
       {
         root: null,
