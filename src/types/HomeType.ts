@@ -10,6 +10,20 @@ export interface HomePageType {
   locale?: string
 }
 
+export interface HomePageFetchType {
+  data: {
+    homepage: {
+      title_product: string
+      title_service: string
+      title_form: string
+    }
+    banners: HomeBannerType[]
+    services: HomeServiceType[]
+    products: HomeProductType[]
+    locale?: string
+  }
+}
+
 export interface HomeBannerType {
   id: number
   position: number

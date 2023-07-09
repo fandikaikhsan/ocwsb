@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
 import LoadingPage from "@/components/pages/LoadingPage"
+import { HomePageFetchType } from "@/types/HomeType"
 
 async function getHome(lang: string) {
   const res = await fetch(
@@ -18,10 +19,11 @@ async function getHome(lang: string) {
   return res.json()
 }
 
-export default async function Home() {
+export default function Home() {
+  // remove the async keyword here
   const t = useTranslations("data")
   const lang = t("Locale")
-  const [fetchData, setFetchData] = useState(null)
+  const [fetchData, setFetchData] = useState<HomePageFetchType | null>(null)
 
   useEffect(() => {
     getHome(lang)
@@ -29,19 +31,17 @@ export default async function Home() {
       .catch((err) => console.error(err))
   }, [lang])
 
-  const fetch = await getHome(lang)
+  // remove the direct await getHome(lang) call here
 
   if (!fetchData) return <LoadingPage />
 
   return (
-    <>
-      <HomePage
-        homepage={fetch.data.homepage}
-        banners={fetch.data.banners}
-        products={fetch.data.products}
-        services={fetch.data.services}
-        locale={lang}
-      />
-    </>
+    <HomePage
+      homepage={fetchData.data.homepage} // use fetchData here
+      banners={fetchData.data.banners}
+      products={fetchData.data.products}
+      services={fetchData.data.services}
+      locale={lang}
+    />
   )
 }
