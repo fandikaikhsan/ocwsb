@@ -18,7 +18,7 @@ const ProductDescriptionSection: FC<ProductDescriptionSectionProps> = ({
         background ? "bg-" + background : "bg-[#74290E]"
       } flex flex-col justify-center items-center w-full`}
     >
-      <div className="w-full md:w-[70%] p-5 text-center overflow-visible">
+      <div className="w-full sm:w[80%] md:w-[40%] items-center p-5 text-center overflow-visible">
         <MarkdownWrap description={description} color={color} />
       </div>
     </div>
