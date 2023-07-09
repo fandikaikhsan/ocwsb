@@ -23,7 +23,7 @@ const AnimatedComponent = ({
   triggerOnce = true,
   threshold = 0.5,
   delay = 0,
-  duration = 0.3,
+  duration = 0.5,
   easing = "easeInOut",
   initial = "hidden",
   animate = "visible",
@@ -37,7 +37,7 @@ const AnimatedComponent = ({
   })
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 80 },
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
   }
 

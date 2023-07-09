@@ -16,6 +16,8 @@ export default function ProductsPage({
   video,
   locale,
 }: ProductsPageType) {
+  locale = locale || "en"
+
   return (
     <>
       <Navbar locale={locale} />
@@ -24,23 +26,22 @@ export default function ProductsPage({
         {short_desc?.length > 0 && (
           <div className="flex flex-col gap-4 justify-center items-center py-5">
             <div className="text-sm text-white text-center w-[90%] md:w-[60%]">
-              {short_desc}
+              <AnimatedComponent>{short_desc}</AnimatedComponent>
             </div>
           </div>
         )}
 
         <div>
-          <AnimatedComponent>
-            <ListGalery
-              values={products}
-              page="products"
-              clickable={true}
-              textposition="center"
-              textdesktopsize="lg"
-            />
-          </AnimatedComponent>
+          {/* <AnimatedComponent> */}
+          <ListGalery
+            values={products}
+            page="products"
+            clickable={true}
+            textposition="center"
+            textdesktopsize="lg"
+          />
+          {/* </AnimatedComponent> */}
         </div>
-
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white">
             <AnimatedComponent>{video.title}</AnimatedComponent>

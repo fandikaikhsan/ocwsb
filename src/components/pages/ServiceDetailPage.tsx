@@ -21,13 +21,11 @@ export default function ServiceDetailPage({
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
-          <AnimatedComponent>
-            <ServiceDescriptionSection
-              description={description}
-              color="white"
-              background="black"
-            />
-          </AnimatedComponent>
+          <ServiceDescriptionSection
+            description={description}
+            color="white"
+            background="black"
+          />
 
           <div className="w-[95%] md:w-[80%]">
             <AnimatedComponent>
