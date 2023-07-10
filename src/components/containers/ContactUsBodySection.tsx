@@ -33,7 +33,7 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
                   {locales[locale]["ContactInfo"]["Workshop"]}
                 </div>
                 <p className="text-xs md:text-sm text-white">
-                  {office_address}
+                  {workshop_address}
                 </p>
               </div>
             </div>
