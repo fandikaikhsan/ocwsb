@@ -3,9 +3,9 @@
     "Locale": "id"
   },
   "Navbar": {
-    "About Us": "Tentang Kami",
+    "About Us": "Profil Perusahaan",
     "Our Company": "Perusahaan Kami",
-    "Our Value": "Nilai Kami",
+    "Our Value": "Nilai Perusahaan",
     "Certifications": "Sertifikasi",
     "Products": "Produk",
     "Services": "Servis",
@@ -36,7 +36,7 @@
     "Where We Are": "Lokasi Kami",
     "How To Connect": "Narahubung",
     "Office": "Kantor",
-    "Workshop": "Bengkel",
+    "Workshop": "Workshop",
     "Phone": "Telepon",
     "Email": "Email"
   },
