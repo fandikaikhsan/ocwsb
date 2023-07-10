@@ -37,16 +37,16 @@ const HomePage: FC<HomePageType> = ({
             </AnimatedComponent>
           </div>
         </div>
-        <div className="py-10">
+        <div className="py-10 bg-gradient-to-b from-black to-red-800">
           <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_product}</AnimatedComponent>
           </div>
-          <div className="hidden md:block mx-10">
+          <div className="hidden md:block px-20 py-5">
             <AnimatedComponent>
               <ProductSlider products={products} />
             </AnimatedComponent>
           </div>
-          <div className="md:hidden m-4 flex flex-col gap-4">
+          <div className="md:hidden p-6  flex flex-col gap-4">
             <AnimatedComponent>
               <ProductAccordionSection products={products} />
             </AnimatedComponent>

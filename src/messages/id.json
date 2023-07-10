@@ -45,11 +45,11 @@
   },
   "Footer": {
     "Office": "Kantor",
-    "Workshop": "Bengkel",
+    "Workshop": "Workshop",
     "Phone": "Telepon",
     "Email": "Email"
   },
   "Company": {
-    "Company Profile": "Profil Perusahaan"
+    "Company Profile": "Video Profil Perusahaan"
   }
 }
