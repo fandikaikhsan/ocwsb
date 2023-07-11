@@ -49,8 +49,8 @@ const FooterSection: FC<any> = (props) => {
         </div>
       </div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="md:flex gap-4">
-          <div className="flex justify-start md:w-2/4">
+        <div className="md:flex gap-8">
+          <div className="flex justify-start md:w-1/3">
             <div>
               <h3 className="text-lg font-medium text-white">
                 {locales[locale]["Footer"]["Office"]}
@@ -63,7 +63,7 @@ const FooterSection: FC<any> = (props) => {
               </p>
             </div>
           </div>
-          <div className="flex justify-start items-start md:w-1/4 mt-4 md:mt-0">
+          <div className="flex justify-start items-start md:w-1/3 mt-4 md:mt-0">
             <div>
               <h3 className="text-lg font-medium text-white">
                 {locales[locale]["Footer"]["Workshop"]}
@@ -76,7 +76,7 @@ const FooterSection: FC<any> = (props) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col justify-start gap-2 mt-4 md:mt-0 md:w-1/4">
+          <div className="flex flex-col justify-start gap-2 mt-4 md:mt-0 md:w-1/3">
             <div className="w-1/2 pr-4 md:pr-0">
               <h3 className="text-lg font-medium text-white">
                 {locales[locale]["Footer"]["Phone"]}
