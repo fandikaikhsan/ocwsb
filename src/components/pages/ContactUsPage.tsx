@@ -41,7 +41,7 @@ export default function ContactUsPage({
             </div> */}
             <div className="sm:block md:hidden">
               <AnimatedComponent>
-                <FormSection locale={locale} />
+                <FormSection title_form={title_form} locale={locale} />
               </AnimatedComponent>
             </div>
             <div className="hidden md:block">
