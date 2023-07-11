@@ -35,7 +35,7 @@ export default function ContactUsPage({
           </div>
         </div>
         <div className="flex justify-center items-center w-full bg-gradient-to-b from-black to-red-800">
-          <div className="w-full lg:w-[85%] xl:w-[70%]">
+          <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%]">
             <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem]">
               <AnimatedComponent>{title_form}</AnimatedComponent>
             </div>
