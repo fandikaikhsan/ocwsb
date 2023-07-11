@@ -15,7 +15,7 @@ const ServiceDescriptionSection: FC<ServiceDescriptionSectionProps> = ({
   return (
     <div
       className={`${
-        background ? "bg-" + background + "-500" : "bg-[#74290E]"
+        background ? "bg-" + background + "-500" : "bg-red-800"
       } flex flex-col justify-center items-center w-full`}
     >
       <div className="w-full sm:w[80%] md:w-[50%] p-5 text-center overflow-visible">

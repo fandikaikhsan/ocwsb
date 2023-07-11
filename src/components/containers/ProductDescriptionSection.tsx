@@ -15,7 +15,7 @@ const ProductDescriptionSection: FC<ProductDescriptionSectionProps> = ({
   return (
     <div
       className={`${
-        background ? "bg-" + background : "bg-[#74290E]"
+        background ? "bg-" + background : "bg-red-800"
       } flex flex-col justify-center items-center w-full`}
     >
       <div className="w-full sm:w[80%] md:w-[50%] items-center p-5 text-center overflow-visible">
