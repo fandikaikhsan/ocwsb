@@ -34,18 +34,22 @@ export default function ContactUsPage({
             </AnimatedComponent>
           </div>
         </div>
-        <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
-          <AnimatedComponent>{title_form}</AnimatedComponent>
-        </div>
-        <div className="sm:block md:hidden">
-          <AnimatedComponent>
-            <FormSection locale={locale} />
-          </AnimatedComponent>
-        </div>
-        <div className="hidden md:block">
-          <AnimatedComponent>
-            <DesktopFormSection locale={locale} />
-          </AnimatedComponent>
+        <div className="flex justify-center items-center w-full bg-gradient-to-b from-black to-red-800">
+          <div className="w-full lg:w-[85%] xl:w-[70%]">
+            <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem]">
+              <AnimatedComponent>{title_form}</AnimatedComponent>
+            </div>
+            <div className="sm:block md:hidden">
+              <AnimatedComponent>
+                <FormSection locale={locale} />
+              </AnimatedComponent>
+            </div>
+            <div className="hidden md:block">
+              <AnimatedComponent>
+                <DesktopFormSection locale={locale} />
+              </AnimatedComponent>
+            </div>
+          </div>
         </div>
         {/* <ContactUsCTABanner
           title={cta_banner.title}

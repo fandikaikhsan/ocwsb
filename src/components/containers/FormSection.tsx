@@ -63,7 +63,7 @@ const FormSection = ({ locale }: { locale?: string }) => {
 
   return (
     <>
-      <div className=" p-8 bg-gradient-to-b from-black to-red-800">
+      <div className="p-8">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-5">
             <label
