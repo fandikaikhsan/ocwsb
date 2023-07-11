@@ -27,7 +27,7 @@ export default function ServiceDetailPage({
             background="black"
           />
 
-          <div className="w-[95%] md:w-[80%]">
+          <div className="w-[95%] md:w-[75%] lg:w-[70%] xl:w-[65%] 2xl:w-[55%]">
             <AnimatedComponent>
               <ImageCardSlider images={image} />
             </AnimatedComponent>

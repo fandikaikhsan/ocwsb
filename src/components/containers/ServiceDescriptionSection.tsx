@@ -18,7 +18,7 @@ const ServiceDescriptionSection: FC<ServiceDescriptionSectionProps> = ({
         background ? "bg-" + background + "-500" : "bg-[#74290E]"
       } flex flex-col justify-center items-center w-full`}
     >
-      <div className="w-full md:w-[70%] p-5 text-center overflow-visible">
+      <div className="w-full sm:w[80%] md:w-[50%] p-5 text-center overflow-visible">
         <MarkdownWrap description={description} color={color} />
       </div>
     </div>
