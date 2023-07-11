@@ -36,9 +36,9 @@ export default function ContactUsPage({
         </div>
         <div className="flex justify-center items-center w-full bg-gradient-to-b from-black to-red-800">
           <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%]">
-            <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem]">
+            {/* <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem]">
               <AnimatedComponent>{title_form}</AnimatedComponent>
-            </div>
+            </div> */}
             <div className="sm:block md:hidden">
               <AnimatedComponent>
                 <FormSection locale={locale} />
@@ -46,7 +46,7 @@ export default function ContactUsPage({
             </div>
             <div className="hidden md:block">
               <AnimatedComponent>
-                <DesktopFormSection locale={locale} />
+                <DesktopFormSection title_form={title_form} locale={locale} />
               </AnimatedComponent>
             </div>
           </div>
