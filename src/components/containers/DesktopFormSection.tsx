@@ -18,7 +18,13 @@ type UserSubmitForm = {
   locale?: string
 }
 
-const DesktopFormSection = ({ locale }: { locale?: string }) => {
+const DesktopFormSection = ({
+  locale,
+  title_form,
+}: {
+  locale?: string
+  title_form: string
+}) => {
   const schema = yup.object().shape({
     name: yup.string().required().min(3),
     company: yup.string(),
@@ -63,8 +69,11 @@ const DesktopFormSection = ({ locale }: { locale?: string }) => {
 
   return (
     <>
-      <div className=" p-8 bg-gradient-to-b w-full from-black to-red-800">
-        <div className="md:w-4/6 lg:w-[40rem] ml-auto mr-24">
+      <div className="p-8">
+        <div className="md:w-4/6 lg:w-[40rem] mr-auto ml-24 gap-8">
+          <div className="text-[2rem] md:text-[3rem] pb-5 text-white font-maqin">
+            {title_form}
+          </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-5 flex flex-row justify-between content-between">
               <label

@@ -3,9 +3,9 @@
     "Locale": "id"
   },
   "Navbar": {
-    "About Us": "Tentang Kami",
-    "Our Company": "Perusahaan Kami",
-    "Our Value": "Nilai Kami",
+    "About Us": "Tentang Perusahaan",
+    "Our Company": "Profil Perusahaan",
+    "Our Value": "Nilai Perusahaan",
     "Certifications": "Sertifikasi",
     "Products": "Produk",
     "Services": "Servis",
@@ -36,7 +36,7 @@
     "Where We Are": "Lokasi Kami",
     "How To Connect": "Narahubung",
     "Office": "Kantor",
-    "Workshop": "Bengkel",
+    "Workshop": "Workshop",
     "Phone": "Telepon",
     "Email": "Email"
   },
@@ -45,11 +45,11 @@
   },
   "Footer": {
     "Office": "Kantor",
-    "Workshop": "Bengkel",
+    "Workshop": "Workshop",
     "Phone": "Telepon",
     "Email": "Email"
   },
   "Company": {
-    "Company Profile": "Profil Perusahaan"
+    "Company Profile": "Video Profil Perusahaan"
   }
 }
