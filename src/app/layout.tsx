@@ -1,6 +1,8 @@
 import { NextIntlClientProvider } from "next-intl"
 import { Metadata } from "next"
 import "../styles/globals.css"
+import { Suspense } from "react"
+import Analytics from "@/components/common/Analytics"
 
 export function generateStaticParams() {
   return [
@@ -33,6 +35,9 @@ export default async function HomeLayout({
 
   return (
     <html lang={locale}>
+      <Suspense>
+        <Analytics />
+      </Suspense>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
