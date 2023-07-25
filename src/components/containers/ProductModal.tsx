@@ -6,7 +6,6 @@ interface ModalProps {
     id?: number
     position?: number
     title: string
-    desc_title?: string
     desc_short?: string
     desc?: string
     image?: string
@@ -25,7 +24,6 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
   const {
     title = "",
     image = "",
-    desc_title = "",
     desc = "",
     isOpen = true,
     onClose = () => {},
@@ -49,7 +47,7 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <h2 className="text-5xl text-center font-maqin font-bold text-white">
-                {props.desc_title}
+                {props.title}
               </h2>
             </div>
           </div>

@@ -26,7 +26,7 @@ export interface HomePageFetchType {
 
 export interface HomeBannerType {
   id: number
-  position: number
+  position?: number
   title: string
   subtitle: string
   image: string
@@ -39,7 +39,7 @@ export interface HomeBannerType {
 
 export interface HomeServiceType {
   id: number
-  position: number
+  position?: number
   title: string
   desc_short: string
   desc: string
@@ -53,9 +53,8 @@ export interface HomeServiceType {
 
 export interface HomeProductType {
   id: number
-  position: number
+  position?: number
   title: string
-  desc_title: string
   desc_short: string
   desc: string
   image: string
