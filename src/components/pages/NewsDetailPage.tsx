@@ -17,8 +17,6 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
 }) => {
   const headerDesc = `${author} - ${date}`
 
-  console.log(image.length)
-
   return (
     <>
       <Navbar locale={locale} />

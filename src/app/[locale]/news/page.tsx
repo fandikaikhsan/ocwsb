@@ -7,7 +7,9 @@ async function getNews(lang: string) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/news`,
     {
-      cache: "no-cache",
+      next: {
+        revalidate: 60,
+      },
     }
   )
   if (!res.ok) {
