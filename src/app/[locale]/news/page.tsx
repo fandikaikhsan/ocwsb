@@ -8,7 +8,7 @@ async function getNews(lang: string) {
     `${process.env.NEXT_PUBLIC_API_URL}/v1/${lang}/news`,
     {
       next: {
-        revalidate: 60,
+        revalidate: 10,
       },
     }
   )
