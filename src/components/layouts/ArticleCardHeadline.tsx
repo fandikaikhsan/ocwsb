@@ -12,8 +12,8 @@ const ArticleCardHeadline: FC<ArticleCardHeadlineType> = ({
 }) => {
   return (
     <>
-      <div className="relative flex flex-col h-[20rem] md:h-[20rem] rounded-[1rem] overflow-hidden">
-        <div className="absolute top-[5rem] md:top-20 z-20 flex flex-col justify-center flex-1 w-full">
+      <div className="relative flex flex-col h-[25rem] rounded-[1rem] overflow-hidden">
+        <div className="absolute top-[5rem] md:top-32 z-20 flex flex-col justify-center flex-1 w-full">
           <div className="flex flex-col gap-2 justify-center items-center text-center">
             <div className="text-2xl font-maqin text-white font-bold w-[90%] md:w-[60%] ">
               <p className="line-clamp-2">{title}</p>

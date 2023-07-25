@@ -6,41 +6,54 @@ import PortfolioCardSlider from "@/components/containers/PortofolioCardSlider"
 import { CompanyPageType } from "@/types/CompanyType"
 import CompanyDescriptionSection from "../containers/CompanyDescriptionSection"
 import Navbar from "../layouts/Nav"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
+import locales from "@/messages/locale"
 
 export default function CompanyPage({
   title,
   description,
   video,
   portofolios,
+  locale,
 }: CompanyPageType) {
+  locale = locale || "en"
+
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader title={title} />
 
         <div className="flex flex-col gap-4 justify-center items-center">
-          <CompanyDescriptionSection
-            description={description}
-            color="white"
-            background="black"
-          />
+          <AnimatedComponent>
+            <CompanyDescriptionSection
+              description={description}
+              color="white"
+              background="black"
+            />
+          </AnimatedComponent>
         </div>
         <div className="flex flex-col gap-8 justify-center items-center py-5">
           <div className="text-[2rem] font-maqin text-white uppercase">
-            Company Profile
+            <AnimatedComponent>
+              {locales[locale]["Company"]["Company Profile"]}
+            </AnimatedComponent>
           </div>
-          <VideoComponent source={video} />
+          <AnimatedComponent>
+            <VideoComponent source={video} />
+          </AnimatedComponent>
         </div>
         <div className="text-[2rem] font-maqin text-white uppercase">
-          Portofolio
+          <AnimatedComponent>Portofolio</AnimatedComponent>
         </div>
         <div className="w-[90%]">
-          <PortfolioCardSlider portofolios={portofolios} />
+          <AnimatedComponent>
+            <PortfolioCardSlider portofolios={portofolios} />
+          </AnimatedComponent>
         </div>
         <div></div>
       </div>
-      <FooterSection type={"red"} />
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }

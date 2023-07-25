@@ -5,6 +5,7 @@ import FooterSection from "@/components/containers/FooterSection"
 import { ServiceDetailPageType } from "@/types/ServicesType"
 import ServiceDescriptionSection from "../containers/ServiceDescriptionSection"
 import Navbar from "@/components/layouts/Nav"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
 
 export default function ServiceDetailPage({
   title,
@@ -12,10 +13,11 @@ export default function ServiceDetailPage({
   description,
   image,
   specification,
+  locale,
 }: ServiceDetailPageType) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={short_desc} type="detail" />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
@@ -25,21 +27,25 @@ export default function ServiceDetailPage({
             background="black"
           />
 
-          <div className="w-[95%] md:w-[80%]">
-            <ImageCardSlider images={image} />
+          <div className="w-[95%] md:w-[75%] lg:w-[70%] xl:w-[65%] 2xl:w-[55%]">
+            <AnimatedComponent>
+              <ImageCardSlider images={image} />
+            </AnimatedComponent>
           </div>
 
           {specification?.length > 0 && (
-            <ServiceDescriptionSection
-              description={specification}
-              color="white"
-            />
+            <AnimatedComponent>
+              <ServiceDescriptionSection
+                description={specification}
+                color="white"
+              />
+            </AnimatedComponent>
           )}
         </div>
         {specification?.length > 0 ? (
-          <FooterSection type={"black"} />
+          <FooterSection type={"black"} locale={locale} />
         ) : (
-          <FooterSection type={"red"} />
+          <FooterSection type={"red"} locale={locale} />
         )}
       </div>
     </>

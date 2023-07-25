@@ -46,35 +46,79 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                   </>
                 )}
               </div>
-              <div
-                className={`${paddingx ? "px-" + paddingx : "px-8"} ${
-                  paddingy ? "py-" + paddingy : "py-8"
-                } ${
-                  textposition
-                    ? "text-" + textposition + " justify-" + textposition
-                    : ""
-                } ${
-                  textdesktopsize ? "md:text-" + textdesktopsize : "md:text-sm"
-                } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
-              >
-                {value.name}
-              </div>
+              {clickable ? (
+                <Link href={`/${page}/${value.id}`}>
+                  <div
+                    className={`${paddingx ? "px-" + paddingx : "px-8"} ${
+                      paddingy ? "py-" + paddingy : "py-8"
+                    } ${
+                      textposition
+                        ? "text-" + textposition + " justify-" + textposition
+                        : ""
+                    } ${
+                      textdesktopsize
+                        ? "md:text-" + textdesktopsize
+                        : "md:text-sm"
+                    } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                  >
+                    {value.name}
+                  </div>
+                </Link>
+              ) : (
+                <div
+                  className={`${paddingx ? "px-" + paddingx : "px-8"} ${
+                    paddingy ? "py-" + paddingy : "py-8"
+                  } ${
+                    textposition
+                      ? "text-" + textposition + " justify-" + textposition
+                      : ""
+                  } ${
+                    textdesktopsize
+                      ? "md:text-" + textdesktopsize
+                      : "md:text-sm"
+                  } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                >
+                  {value.name}
+                </div>
+              )}
             </>
           ) : (
             <>
-              <div
-                className={`${paddingx ? "px-" + paddingx : "px-8"} ${
-                  paddingy ? "py-" + paddingy : "py-8"
-                } ${
-                  textposition
-                    ? "text-" + textposition + " justify-" + textposition
-                    : ""
-                } ${
-                  textdesktopsize ? "md:text-" + textdesktopsize : "md:text-sm"
-                } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
-              >
-                {value.name}
-              </div>
+              {clickable ? (
+                <Link href={`/${page}/${value.id}`}>
+                  <div
+                    className={`${paddingx ? "px-" + paddingx : "px-8"} ${
+                      paddingy ? "py-" + paddingy : "py-8"
+                    } ${
+                      textposition
+                        ? "text-" + textposition + " justify-" + textposition
+                        : ""
+                    } ${
+                      textdesktopsize
+                        ? "md:text-" + textdesktopsize
+                        : "md:text-sm"
+                    } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                  >
+                    {value.name}
+                  </div>
+                </Link>
+              ) : (
+                <div
+                  className={`${paddingx ? "px-" + paddingx : "px-8"} ${
+                    paddingy ? "py-" + paddingy : "py-8"
+                  } ${
+                    textposition
+                      ? "text-" + textposition + " justify-" + textposition
+                      : ""
+                  } ${
+                    textdesktopsize
+                      ? "md:text-" + textdesktopsize
+                      : "md:text-sm"
+                  } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                >
+                  {value.name}
+                </div>
+              )}
               <div className={`relative h-44 w-44 md:h-64 md:w-64`}>
                 {clickable ? (
                   <Link href={`/${page}/${value.id}`}>

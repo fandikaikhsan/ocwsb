@@ -4,6 +4,7 @@ import OurHistoryDescriptionSection from "../containers/OurHistoryDescriptionSec
 import FooterSection from "../containers/FooterSection"
 import OurHistoryPageType from "@/types/OurHistoryType"
 import Navbar from "@/components/layouts/Nav"
+import AnimatedComponent from "@/components/common/AnimatedComponent"
 
 export default function OurHistoryPage({ title, history }: OurHistoryPageType) {
   return (
@@ -11,11 +12,13 @@ export default function OurHistoryPage({ title, history }: OurHistoryPageType) {
       <Navbar />
       <PageHeader title={title} />
       <div className="flex flex-col justify-center items-center py-10 bg-black">
-        <OurHistoryDescriptionSection
-          description={history}
-          background="black"
-          color="white"
-        />
+        <AnimatedComponent>
+          <OurHistoryDescriptionSection
+            description={history}
+            background="black"
+            color="white"
+          />
+        </AnimatedComponent>
       </div>
       <FooterSection type={"red"} />
     </>

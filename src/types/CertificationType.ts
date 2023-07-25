@@ -2,6 +2,7 @@ export interface CertificationPageType {
   title: string
   description: string
   certifications: CertificationType[]
+  locale?: string
 }
 
 export interface CertificationCardSliderType {

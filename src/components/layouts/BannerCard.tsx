@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import SolidButton from "../common/SolidButton"
 import Link from "next/link"
+import Image from "next/image"
 
 interface BannerCardProps {
   title: string
@@ -9,6 +10,7 @@ interface BannerCardProps {
   image_mobile?: string
   cta?: string
   url?: string
+  cta_text?: string
 }
 
 const BannerCard: FC<BannerCardProps> = (props) => {
@@ -19,6 +21,7 @@ const BannerCard: FC<BannerCardProps> = (props) => {
     image_mobile = "",
     url = "",
     cta = "",
+    cta_text = "Read More",
   } = props
   const backgroundImage = "https://via.placeholder.com/1920x1080"
   return (
@@ -42,7 +45,7 @@ const BannerCard: FC<BannerCardProps> = (props) => {
             {description}
           </h2> */}
           <Link href={url ?? "/"}>
-            <SolidButton text="Read more" />
+            <SolidButton text={cta_text} />
           </Link>
         </div>
       </div>

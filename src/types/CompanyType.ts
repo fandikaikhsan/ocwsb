@@ -3,6 +3,7 @@ export interface CompanyPageType {
   description: string
   video: string
   portofolios: PortofolioCardType[]
+  locale?: string
 }
 
 export interface PortofolioCardSliderType {

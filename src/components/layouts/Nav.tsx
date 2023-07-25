@@ -4,8 +4,9 @@ import React, { useState } from "react"
 import LanguageDropdown from "../common/LanguageDropdown"
 import Link from "next/link"
 import Image from "next/image"
+import locales from "@/messages/locale"
 
-const Navbar = () => {
+const Navbar = ({ locale }: { locale?: string }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -16,6 +17,8 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen)
   }
+
+  locale = locale || "en"
 
   return (
     <>
@@ -61,7 +64,7 @@ const Navbar = () => {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                About Us
+                {locales[locale]["Navbar"]["About Us"]}
               </span>
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
@@ -73,19 +76,19 @@ const Navbar = () => {
                   href="/company"
                   className="block px-4 py-2 text-sm text-white hover:bg-red-800"
                 >
-                  Our Company
+                  {locales[locale]["Navbar"]["Our Company"]}
                 </Link>
                 <Link
                   href="/our-value"
                   className="block px-4 py-2 text-sm text-white hover:bg-red-800"
                 >
-                  Our Value
+                  {locales[locale]["Navbar"]["Our Value"]}
                 </Link>
                 <Link
                   href="/certification"
                   className="block px-4 py-2 text-sm text-white hover:bg-red-800"
                 >
-                  Certifications
+                  {locales[locale]["Navbar"]["Certifications"]}
                 </Link>
               </div>
             </div>
@@ -93,34 +96,34 @@ const Navbar = () => {
               href="/products"
               className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
-              Product
+              {locales[locale]["Navbar"]["Products"]}
             </Link>
             <Link
               href="/services"
               className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
-              Service
+              {locales[locale]["Navbar"]["Services"]}
             </Link>
             <Link
               href="/news"
               className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
-              News
+              {locales[locale]["Navbar"]["News"]}
             </Link>
             <Link
               href="/partners"
               className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
             >
-              Our Partners
+              {locales[locale]["Navbar"]["Our Partners"]}
             </Link>
             <Link
               href="/contact-us"
               className="block mt-4 md:inline-block lg:mt-0 text-white hover:text-red-800"
             >
-              Contact Us
+              {locales[locale]["Navbar"]["Contact Us"]}
             </Link>
             <div className="mt-6 lg:mt-0">
-              <LanguageDropdown />
+              <LanguageDropdown locale={locale} />
             </div>
           </div>
         </div>

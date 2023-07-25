@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ProductCardProps {
   title: string
@@ -7,6 +8,7 @@ interface ProductCardProps {
   image?: string
   path?: string
   onClick?: () => void
+  cta_text?: string
 }
 
 const ProductCard: FC<ProductCardProps> = (props) => {
@@ -16,10 +18,11 @@ const ProductCard: FC<ProductCardProps> = (props) => {
     description = "",
     path = "",
     onClick = () => {},
+    cta_text = "Find Out More",
   } = props
   return (
     <>
-      <div className="relative w-full h-[30rem] rounded-md shadow-md overflow-hidden">
+      <div className="relative w-full h-[30rem] rounded-lg shadow-md overflow-hidden">
         <img
           src={image}
           alt="Card background"
@@ -38,7 +41,7 @@ const ProductCard: FC<ProductCardProps> = (props) => {
           > */}
           <Link href={path ?? "/"}>
             <div className="hover:cursor-pointer text-white text-xl underline">
-              Find Out More
+              {cta_text}
             </div>
           </Link>
           {/* </a> */}

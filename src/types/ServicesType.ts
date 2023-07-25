@@ -10,6 +10,7 @@ export interface ServicesPageType {
     title: string
     url: string
   }
+  locale?: string
 }
 
 export interface ServiceDetailPageType {
@@ -18,4 +19,5 @@ export interface ServiceDetailPageType {
   description: string
   image: ImageCardType[]
   specification: string
+  locale?: string
 }

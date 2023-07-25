@@ -6,6 +6,7 @@ import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import axios from "axios"
 import ReCAPTCHA from "react-google-recaptcha"
+import locales from "@/messages/locale"
 
 type UserSubmitForm = {
   name: string
@@ -14,9 +15,16 @@ type UserSubmitForm = {
   phone: string
   password: string
   message: string
+  locale?: string
 }
 
-const FormSection = () => {
+const FormSection = ({
+  locale,
+  title_form,
+}: {
+  locale?: string
+  title_form: string
+}) => {
   const schema = yup.object().shape({
     name: yup.string().required().min(3),
     company: yup.string(),
@@ -25,6 +33,8 @@ const FormSection = () => {
     password: yup.string().required().min(6),
     message: yup.string(),
   })
+
+  locale = locale || "en"
 
   const {
     register,
@@ -59,7 +69,10 @@ const FormSection = () => {
 
   return (
     <>
-      <div className=" p-8 bg-gradient-to-b from-black to-red-800">
+      <div className="p-8">
+        <div className="text-[2rem] md:text-[3rem] pb-5 text-white text-center font-maqin">
+          {title_form}
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-5">
             <label
@@ -68,14 +81,14 @@ const FormSection = () => {
                 errors.name ? "text-red-400" : "text-white"
               }`}
             >
-              Name:
+              {locales[locale]["ContactForm"]["Name"]}
             </label>
             <input
               {...register("name")}
               type="text"
               name="name"
               id="name"
-              placeholder="Please enter your name"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Name"]}
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.name
                   ? "text-red-300 border-red-400"
@@ -97,14 +110,14 @@ const FormSection = () => {
                 errors.company ? "text-red-400" : "text-white"
               }`}
             >
-              Company:
+              {locales[locale]["ContactForm"]["Company"]}
             </label>
             <input
               {...register("company")}
               type="text"
               name="company"
               id="company"
-              placeholder="Please enter your company"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Company"]}
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.company
                   ? "text-red-300 border-red-400"
@@ -126,14 +139,14 @@ const FormSection = () => {
                 errors.email ? "text-red-400" : "text-white"
               }`}
             >
-              Email:
+              {locales[locale]["ContactForm"]["Email"]}
             </label>
             <input
               {...register("email")}
               type="text"
               name="email"
               id="email"
-              placeholder="Please enter your email"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Email"]}
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.email
                   ? "text-red-300 border-red-400"
@@ -155,14 +168,14 @@ const FormSection = () => {
                 errors.email ? "text-red-400" : "text-white"
               }`}
             >
-              Phone:
+              {locales[locale]["ContactForm"]["Phone"]}
             </label>
             <input
               {...register("phone")}
               type="text"
               name="phone"
               id="phone"
-              placeholder="Please enter your phone"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Phone"]}
               className={`block w-full  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
                 errors.phone
                   ? "text-red-300 border-red-400"
@@ -184,14 +197,14 @@ const FormSection = () => {
                 errors.message ? "text-red-400" : "text-white"
               }`}
             >
-              Inquiry:
+              {locales[locale]["ContactForm"]["Inquiry"]}
             </label>
             <input
               {...register("message")}
               type="text"
               name="message"
               id="message"
-              placeholder="Please enter your inquiry"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Inquiry"]}
               className={`block w-full resize-y bg-white rounded-lg border-2 py-2 h-48 px-4 text-black placeholder-gray-400 ${
                 errors.message ? "border-red-400" : "text-black"
               }`}
@@ -218,7 +231,7 @@ const FormSection = () => {
                   : "hover:bg-orange-700"
               }  border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm`}
             >
-              Submit
+              {locales[locale]["ContactForm"]["Submit"]}
             </button>
           </div>
         </form>

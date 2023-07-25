@@ -42,6 +42,13 @@ const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
     font-size: 1.5rem;
   }
 
+  h3 {
+    color: ${(props) => props.color};
+    padding: 0.5rem 0rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
   a {
     text-decoration: underline;
   }
@@ -64,9 +71,10 @@ const StyledMarkdownWrap = styled.div<StyledMarkdownWrapProps>`
 
   ol,
   ul {
+    position: relative;
+    left: 0.5rem;
     color: ${(props) => props.color};
     text-color: ${(props) => props.color};
-    margin-left: 30px;
     list-style-type: circle;
     text-align: left;
   }
