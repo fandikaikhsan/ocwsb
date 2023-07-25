@@ -17,13 +17,15 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
 }) => {
   const headerDesc = `${author} - ${date}`
 
+  console.log(image.length)
+
   return (
     <>
       <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
         <PageHeader title={title} description={headerDesc} type="detail" />
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
-          {image.length > 1 && (
+          {image.length > 0 && (
             <div className="w-[95%] md:w-[70%]">
               <AnimatedComponent>
                 <ImageCardSlider images={image} />
