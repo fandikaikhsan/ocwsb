@@ -15,28 +15,20 @@ const PageHeader: FC<PageHeaderProps> = ({
 }) => {
   type = type || "title"
 
-  const headerClass = `relative ${
-    type === "tall" ? "pt-60 pb-48" : "pt-32 pb-16"
-  } flex flex-col gap-4 justify-center items-center text-center w-full ${
-    backgroundImage
-      ? "bg-cover bg-center bg-no-repeat bg-opacity-100 bg-blend-multiply"
-      : "bg-red-800"
-  }`
-
-  const darkOverlayClass = `absolute inset-0 ${
-    backgroundImage ? "bg-black opacity-30" : "bg-transparent"
-  }`
-
   return (
     <>
       <div
-        className={headerClass}
+        className={`${
+          type === "tall" ? "pt-60 pb-48" : "pt-32 pb-16"
+        } flex flex-col gap-4 justify-center items-center text-center w-full `}
         style={{
           backgroundImage: backgroundImage ? `url(${backgroundImage})` : "",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: backgroundImage ? "transparent" : "#9b2c2c",
         }}
       >
-        {backgroundImage && <div className={darkOverlayClass}></div>}
-        <div className="text-[2rem] w-[90%] text-white font-maqin uppercase z-10">
+        <div className="text-[2rem] w-[90%] text-white font-maqin uppercase">
           {title}
         </div>
         {type === "detail" ? (
