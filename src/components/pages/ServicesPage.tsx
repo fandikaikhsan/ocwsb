@@ -19,7 +19,13 @@ export default function ServicesPage({
   return (
     <>
       <Navbar locale={locale} />
-      <PageHeader title={title} />
+      <PageHeader
+        title={title}
+        backgroundImage={
+          "https://upload.ocwsb.com/image/banners/service-header-1.jpg"
+        }
+        type="tall"
+      />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         {short_desc?.length > 0 && (
           <div className="flex flex-col gap-4 justify-center items-center py-5">

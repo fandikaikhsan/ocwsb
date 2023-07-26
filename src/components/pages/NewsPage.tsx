@@ -19,7 +19,13 @@ export default function NewsPage({
   return (
     <>
       <Navbar locale={locale} />
-      <PageHeader title={title} />
+      <PageHeader
+        title={title}
+        backgroundImage={
+          "https://upload.ocwsb.com/image/banners/news-header-1.jpg"
+        }
+        type="tall"
+      />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
         <div className="w-[90%] md:w-[80%]">
           <AnimatedComponent>
