@@ -22,7 +22,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
               <div
                 className={`${
                   clickable ? "cursor-pointer" : ""
-                } relative h-44 w-44 md:h-64 md:w-64`}
+                } relative h-44 w-44 md:h-96 md:w-96`}
               >
                 {clickable ? (
                   <Link href={`/${page}/${value.id}`}>
@@ -59,7 +59,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                       textdesktopsize
                         ? "md:text-" + textdesktopsize
                         : "md:text-sm"
-                    } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                    } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
                   >
                     {value.name}
                   </div>
@@ -76,7 +76,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                     textdesktopsize
                       ? "md:text-" + textdesktopsize
                       : "md:text-sm"
-                  } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                  } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
                 >
                   {value.name}
                 </div>
@@ -97,7 +97,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                       textdesktopsize
                         ? "md:text-" + textdesktopsize
                         : "md:text-sm"
-                    } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                    } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
                   >
                     {value.name}
                   </div>
@@ -114,12 +114,12 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                     textdesktopsize
                       ? "md:text-" + textdesktopsize
                       : "md:text-sm"
-                  } flex h-44 w-44 md:h-64 md:w-64 text-white text-xs items-center`}
+                  } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
                 >
                   {value.name}
                 </div>
               )}
-              <div className={`relative h-44 w-44 md:h-64 md:w-64`}>
+              <div className={`relative h-44 w-44 md:h-96 md:w-96`}>
                 {clickable ? (
                   <Link href={`/${page}/${value.id}`}>
                     <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
