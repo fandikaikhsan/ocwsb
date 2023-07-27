@@ -34,15 +34,13 @@ export default async function HomeLayout({
   }
 
   return (
-    <html lang={locale}>
+    <>
       <Suspense>
         <Analytics />
       </Suspense>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </>
   )
 }
