@@ -19,7 +19,7 @@ const PageHeader: FC<PageHeaderProps> = ({
     <>
       <div
         className={`${
-          type === "tall" ? "pt-60 pb-48" : "pt-32 pb-16"
+          type === "tall" ? "pt-60 pb-48 md:pt-[20rem] md:pb-64" : "pt-32 pb-16"
         } flex flex-col gap-4 justify-center items-center text-center w-full `}
         style={{
           backgroundImage: backgroundImage ? `url(${backgroundImage})` : "",
