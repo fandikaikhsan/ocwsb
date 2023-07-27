@@ -32,12 +32,8 @@ export default async function HomeLayoutLocale({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning={true}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
   )
 }
