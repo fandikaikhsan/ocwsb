@@ -18,7 +18,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
       <div className="grid grid-cols-2 w-fit m-auto">
         {values.map((value, index) =>
           index % 2 === 0 ? (
-            <>
+            <React.Fragment key={value.name}>
               <div
                 className={`${
                   clickable ? "cursor-pointer" : ""
@@ -81,9 +81,9 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                   {value.name}
                 </div>
               )}
-            </>
+            </React.Fragment>
           ) : (
-            <>
+            <React.Fragment key={value.name}>
               {clickable ? (
                 <Link href={`/${page}/${value.id}`}>
                   <div
@@ -142,7 +142,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                   </>
                 )}
               </div>
-            </>
+            </React.Fragment>
           )
         )}
       </div>
