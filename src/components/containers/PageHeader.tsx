@@ -28,7 +28,11 @@ const PageHeader: FC<PageHeaderProps> = ({
           backgroundColor: backgroundImage ? "transparent" : "#9b2c2c",
         }}
       >
-        <div className="text-[2rem] w-[90%] text-white font-maqin uppercase">
+        <div
+          className={`${
+            type === "tall" ? "text-[5rem]" : "text-[2rem]"
+          }  w-[90%] text-white font-maqin uppercase`}
+        >
           {title}
         </div>
         {type === "detail" ? (
