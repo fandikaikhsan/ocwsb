@@ -21,7 +21,14 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
     <>
       <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
-        <PageHeader title={title} description={headerDesc} type="detail" />
+        <PageHeader
+          title={title}
+          description={headerDesc}
+          type="tall"
+          backgroundImage={
+            "https://upload.ocwsb.com/image/banners/news-header-1.jpg"
+          }
+        />
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
           {image.length > 0 && (
             <div className="w-[95%] md:w-[70%]">

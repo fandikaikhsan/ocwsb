@@ -19,7 +19,14 @@ export default function ServiceDetailPage({
     <>
       <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
-        <PageHeader title={title} description={short_desc} type="detail" />
+        <PageHeader
+          title={title}
+          description={short_desc}
+          type="tall"
+          backgroundImage={
+            "https://upload.ocwsb.com/image/banners/service-header-1.jpg"
+          }
+        />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
           <ServiceDescriptionSection
             description={description}
