@@ -18,9 +18,11 @@ const CertificationCardSlider: FC<CertificationCardSliderType> = ({
               alt={certification.name}
               fill={true}
               style={{
-                objectFit: "cover",
+                objectFit: "contain",
                 borderRadius: "0.5rem",
                 aspectRatio: "1/1",
+                overflow: "hidden",
+                backgroundColor: "white",
               }}
             />
           </div>
