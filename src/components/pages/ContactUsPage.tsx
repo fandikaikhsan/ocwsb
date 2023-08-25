@@ -21,7 +21,13 @@ export default function ContactUsPage({
       <Navbar locale={locale} />
       <div className="bg-black">
         <div className="flex flex-col justify-center items-center gap-10 bg-black">
-          <PageHeader title={title} />
+          <PageHeader
+            title={title}
+            backgroundImage={
+              "https://upload.ocwsb.com/image/banners/contact-header-1.jpg"
+            }
+            type="tall"
+          />
           <div className="w-[90%] md:w-[80%]">
             <AnimatedComponent>
               <ContactUsBodySection
