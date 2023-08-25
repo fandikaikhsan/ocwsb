@@ -15,14 +15,15 @@ const ListGalery: FC<ListGaleryComponentType> = ({
 }) => {
   return (
     <>
-      <div className="grid grid-cols-2 w-fit m-auto">
+      <div className="grid grid-cols-2 w-fit m-auto ">
         {values.map((value, index) =>
           index % 2 === 0 ? (
             <React.Fragment key={value.name}>
               <div
+                // here
                 className={`${
                   clickable ? "cursor-pointer" : ""
-                } relative h-44 w-44 md:h-96 md:w-96`}
+                } relative h-44 w-44 md:h-64 md:w-96 mb-8 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686]`}
               >
                 {clickable ? (
                   <Link href={`/${page}/${value.id}`}>
@@ -59,7 +60,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                       textdesktopsize
                         ? "md:text-" + textdesktopsize
                         : "md:text-sm"
-                    } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
+                    } flex h-44 w-44 md:h-64 md:w-96 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686] bg-[#0A0A0A] mb-8 text-white text-xs items-center`}
                   >
                     {value.name}
                   </div>
@@ -76,7 +77,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                     textdesktopsize
                       ? "md:text-" + textdesktopsize
                       : "md:text-sm"
-                  } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
+                  } flex h-44 w-44 md:h-64 md:w-96 mb-8 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686] bg-[#0A0A0A] text-white text-xs items-center`}
                 >
                   {value.name}
                 </div>
@@ -97,7 +98,7 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                       textdesktopsize
                         ? "md:text-" + textdesktopsize
                         : "md:text-sm"
-                    } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
+                    } flex h-44 w-44 md:h-64 md:w-96 mb-8 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686] bg-[#0A0A0A]  text-white text-xs items-center`}
                   >
                     {value.name}
                   </div>
@@ -114,12 +115,14 @@ const ListGalery: FC<ListGaleryComponentType> = ({
                     textdesktopsize
                       ? "md:text-" + textdesktopsize
                       : "md:text-sm"
-                  } flex h-44 w-44 md:h-96 md:w-96 text-white text-xs items-center`}
+                  } flex h-44 w-44 md:h-64 md:w-96 mb-8 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686] bg-[#0A0A0A] text-white text-xs items-center`}
                 >
                   {value.name}
                 </div>
               )}
-              <div className={`relative h-44 w-44 md:h-96 md:w-96`}>
+              <div
+                className={`relative h-44 w-44 md:h-64 md:w-96 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_1px] shadow-[#868686] bg-[#0A0A0A] mb-8`}
+              >
                 {clickable ? (
                   <Link href={`/${page}/${value.id}`}>
                     <div className="absolute opacity-20 z-10 bg-black hover:bg-red-700 w-full h-full"></div>
