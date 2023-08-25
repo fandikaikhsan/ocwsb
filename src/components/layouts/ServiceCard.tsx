@@ -29,7 +29,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     <>
       <Link href={cta.url ?? "/"}>
         <div
-          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
+          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem]  m-5 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_15px_3px] shadow-[#868686] overflow-hidden`}
         >
           <img
             src={image}
