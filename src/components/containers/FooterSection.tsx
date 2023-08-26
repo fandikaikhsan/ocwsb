@@ -9,7 +9,7 @@ const FooterSection: FC<any> = (props) => {
     <footer
       className={`${
         type == "red"
-          ? "md:flex md:flex-row bg-footer-pattern bg-cover"
+          ? "md:flex md:flex-row justify-around bg-footer-pattern bg-cover"
           : "bg-black"
       } bg-cover py-8`}
     >
