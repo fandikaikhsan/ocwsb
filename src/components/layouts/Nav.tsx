@@ -1,14 +1,29 @@
 "use client"
 
 import React, { useState } from "react"
+import { useSpring, animated } from "@react-spring/web"
 import LanguageDropdown from "../common/LanguageDropdown"
 import Link from "next/link"
 import Image from "next/image"
 import locales from "@/messages/locale"
 
 const Navbar = ({ locale }: { locale?: string }) => {
+  const [scrolled, setScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  })
+
+  const backgroundAnimation = useSpring({
+    backgroundColor: scrolled ? "transparent" : "red-800",
+    height: scrolled ? 0 : 100,
+  })
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen)
@@ -22,10 +37,10 @@ const Navbar = ({ locale }: { locale?: string }) => {
 
   return (
     <>
-      <nav
+      <div
         className={`flex items-center justify-between flex-wrap fixed top-0 w-full z-10 ${
-          isOpen ? "bg-opacity-70 bg-black" : " bg-opacity-70 bg-black"
-        }`}
+          scrolled ? "bg-opacity-70 bg-black" : `bg-opacity-70 bg-red-800}`
+        } ${isOpen && "bg-opacity-70 bg-black"}`}
       >
         <div className="flex items-center py-1 md:py-2 px-6 flex-shrink-0 text-white">
           <Link href="/">
@@ -127,7 +142,7 @@ const Navbar = ({ locale }: { locale?: string }) => {
             </div>
           </div>
         </div>
-      </nav>
+      </div>
     </>
   )
 }
