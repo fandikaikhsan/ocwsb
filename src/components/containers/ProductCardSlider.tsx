@@ -43,7 +43,7 @@ const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
         centeredSlides
         style={{ zIndex: 0 }}
         loop
-        className="swiper-custom-navigation border-8 border-[#74290E]"
+        className="swiper-custom-navigation"
       >
         {products.map((product, index) => (
           <SwiperSlide
