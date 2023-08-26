@@ -12,8 +12,8 @@ const ArticleCardList: FC<ArticleCardListType> = ({
 }) => {
   return (
     <>
-      <div className="flex gap-4 w-full md:px-4 h-36 md:h-52 text-white p-2 rounded-lg hover:bg-red-800">
-        <div className="relative w- h-full aspect-1">
+      <div className="flex gap-4 w-full md:px-4 h-36 md:h-52 text-white p-2 rounded-lg hover:bg-red-800 hover:shadow-[rgba(0,_0,_0,_0.1)_0px_0px_15px_3px] hover:shadow-[#868686]">
+        <div className="relative h-full aspect-2">
           <Image
             src={image}
             alt="Product 1"
@@ -21,7 +21,7 @@ const ArticleCardList: FC<ArticleCardListType> = ({
             style={{
               objectFit: "cover",
               borderRadius: "1rem",
-              aspectRatio: "1/1",
+              aspectRatio: "1/3",
             }}
           />
         </div>
