@@ -13,7 +13,7 @@ const FooterSection: FC<any> = (props) => {
           : "bg-black"
       } bg-cover py-8`}
     >
-      <div className=" mx-auto mr-8 md:mb-4 px-12 text-white">
+      <div className="mr-8 md:mb-4 px-12 text-white">
         <div className="hidden md:flex flex-col gap-6 items-start flex-shrink-0 text-white md:mr-2">
           <Image
             src="/ocwsb-logo.png"
