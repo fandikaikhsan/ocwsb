@@ -13,7 +13,9 @@ const FooterSection: FC<any> = (props) => {
           : "bg-black"
       } bg-cover py-8`}
     >
-      <div className="mr-8 md:mb-4 px-12 text-white">
+      {/* DESKTOP IMAGE */}
+
+      <div className="flex flex-col mr-8 md:mb-4 px-12 text-white">
         <div className="hidden md:flex flex-col gap-6 items-start flex-shrink-0 text-white md:mr-2">
           <Image
             src="/ocwsb-logo.png"
@@ -39,10 +41,13 @@ const FooterSection: FC<any> = (props) => {
             />
           </div>
         </div>
+        <div className="hidden text-xs md:block mt-auto mb-0">
+          Copyright ® 2023. PT OCWSB Pratama Indonesia
+        </div>
       </div>
 
-      <div className="md:flex md:flex-row">
-        <div className="flex md:hidden flex-row gap-3 items-center flex-shrink-0 text-white md:mr-2">
+      <div className="md:flex md:flex-row ">
+        <div className="flex md:hidden flex-row gap-3 items-center flex-shrink-0 text-white md:mr-2 px-2 sm:px-4">
           <Image
             src="/ocwsb-logo.png"
             alt="OCWSB"
@@ -115,6 +120,10 @@ const FooterSection: FC<any> = (props) => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="md:hidden text-xs text-white px-4 sm:px-6 mt-10">
+          Copyright ® 2023. PT OCWSB Pratama Indonesia
         </div>
       </div>
     </footer>
