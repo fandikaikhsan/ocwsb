@@ -12,13 +12,15 @@ const Navbar = ({ locale }: { locale?: string }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  })
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    })
+  }
 
   const backgroundAnimation = useSpring({
     backgroundColor: scrolled ? "transparent" : "red-800",
