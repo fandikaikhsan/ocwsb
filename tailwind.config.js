@@ -9,9 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["acumin", "sans-serif"],
+    },
     extend: {
       fontFamily: {
         maqin: ["maqin-italic"],
+        acumin: ["acumin"],
       },
       backgroundImage: {
         "footer-pattern": "url('/ocwsb-pattern.png')",
