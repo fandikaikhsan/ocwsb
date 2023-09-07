@@ -13,7 +13,7 @@ const ArticleCardList: FC<ArticleCardListType> = ({
   return (
     <>
       <div className="flex gap-4 w-full md:px-4 h-36 md:h-52 text-white p-2 rounded-lg hover:bg-red-800 hover:shadow-[rgba(0,_0,_0,_0.1)_0px_0px_15px_3px] hover:shadow-[#868686]">
-        <div className="relative h-full aspect-2">
+        <div className="relative h-full aspect-1 md:aspect-2">
           <Image
             src={image}
             alt="Product 1"
