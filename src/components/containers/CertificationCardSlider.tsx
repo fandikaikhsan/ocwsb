@@ -11,7 +11,7 @@ const CertificationCardSlider: FC<CertificationCardSliderType> = ({
         {certifications.map((certification) => (
           <div
             key={certification.id}
-            className="relative w-80 h-44 md:w-[30rem] md:h-[30rem] overflow-hidden"
+            className="relative w-52 h-64 md:w-[25rem] md:h-[30rem] overflow-hidden"
           >
             <Image
               src={certification.image}
@@ -21,7 +21,6 @@ const CertificationCardSlider: FC<CertificationCardSliderType> = ({
                 objectFit: "contain",
                 borderRadius: "0.5rem",
                 border: "5px solid #74290E",
-                aspectRatio: "1/1",
                 overflow: "hidden",
                 backgroundColor: "white",
               }}
