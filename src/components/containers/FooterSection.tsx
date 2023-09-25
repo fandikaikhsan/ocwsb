@@ -24,13 +24,6 @@ const FooterSection: FC<any> = (props) => {
           />
           <div className="flex flex-row gap-2">
             <Image
-              src="/iso-9001.png"
-              alt="ISO"
-              width={60}
-              height={100}
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
-            <Image
               src="/iso-9001-transparent.png"
               alt="ISO"
               width={60}
@@ -54,13 +47,6 @@ const FooterSection: FC<any> = (props) => {
             className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
           />
           <div className="flex flex-row">
-            <Image
-              src="/iso-9001.png"
-              alt="ISO"
-              width={60}
-              height={100}
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
-            />
             <Image
               src="/iso-9001-transparent.png"
               alt="ISO"
