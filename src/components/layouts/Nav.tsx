@@ -44,14 +44,14 @@ const Navbar = ({ locale }: { locale?: string }) => {
           scrolled ? "bg-opacity-70 bg-black" : `bg-opacity-70 bg-red-800}`
         } ${isOpen && "bg-opacity-70 bg-black"}`}
       >
-        <div className="flex items-center py-1 md:py-2 px-6 flex-shrink-0 text-white">
+        <div className="flex items-center py-1 md:py-2 pl-6 pr-2 flex-shrink-0 text-white">
           <Link href="/">
             <Image
-              src="/ocwsb-logo-6.png"
-              width={123}
-              height={48}
+              src="/ocwsb-logo-7.png"
+              width={170}
+              height={24}
               alt="OCWSB"
-              className="h-14 md:h-16"
+              className="h-14 md:h-15"
             />
           </Link>
         </div>
@@ -71,12 +71,12 @@ const Navbar = ({ locale }: { locale?: string }) => {
           </button>
         </div>
         <div
-          className={`w-full flex-grow lg:flex px-8 py-4 md:items-center lg:w-auto ${
+          className={`w-full flex-grow lg:flex pl-4 md:pl-0 pr-4 py-4 md:items-center lg:w-auto ${
             isOpen ? "block" : "hidden"
           }`}
         >
           <div className="lg:flex lg:gap-8 text-sm lg:text-[1rem] md:ml-auto md:justify-end">
-            <div className="relative block mt-4 md:inline-block lg:mt-0 mr-4 text-white hover:text-red-800 cursor-pointer">
+            <div className="relative block mt-4 md:inline-block lg:mt-0 text-white hover:text-red-800 cursor-pointer">
               <span
                 onMouseEnter={() => setDropdownOpen(true)}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -111,25 +111,25 @@ const Navbar = ({ locale }: { locale?: string }) => {
             </div>
             <Link
               href="/products"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-800"
             >
               {locales[locale]["Navbar"]["Products"]}
             </Link>
             <Link
               href="/services"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-800"
             >
               {locales[locale]["Navbar"]["Services"]}
             </Link>
             <Link
               href="/news"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-800"
             >
               {locales[locale]["Navbar"]["News"]}
             </Link>
             <Link
               href="/partners"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4 text-white hover:text-red-800"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-800"
             >
               {locales[locale]["Navbar"]["Our Partners"]}
             </Link>
