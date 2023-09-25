@@ -13,20 +13,25 @@ const FooterSection: FC<any> = (props) => {
           : "bg-black"
       } bg-cover py-8`}
     >
-      {/* DESKTOP IMAGE */}
-
       <div className="flex flex-col mr-8 md:mb-4 px-12 text-white">
         <div className="hidden md:flex flex-col gap-6 items-start flex-shrink-0 text-white md:mr-2">
           <Image
-            src="/ocwsb-logo.png"
+            src="/ocwsb-logo-7.png"
             alt="OCWSB"
-            width={60}
-            height={150}
+            width={250}
+            height={30}
             className="ml-4 md:ml-0 mb-4 md:mb-0 h-24 md:h-16"
           />
           <div className="flex flex-row gap-2">
             <Image
               src="/iso-9001.png"
+              alt="ISO"
+              width={60}
+              height={100}
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            />
+            <Image
+              src="/iso-9001-transparent.png"
               alt="ISO"
               width={60}
               height={100}
@@ -40,17 +45,24 @@ const FooterSection: FC<any> = (props) => {
       </div>
 
       <div className="md:flex md:flex-row ">
-        <div className="flex md:hidden flex-row gap-3 items-center flex-shrink-0 text-white md:mr-2 px-2 sm:px-4">
+        <div className="flex md:hidden flex-col gap-3 items-start flex-shrink-0 text-white md:mr-2 px-2 sm:px-4">
           <Image
-            src="/ocwsb-logo.png"
+            src="/ocwsb-logo-7.png"
             alt="OCWSB"
-            width={60}
+            width={250}
             height={100}
             className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
           />
           <div className="flex flex-row">
             <Image
               src="/iso-9001.png"
+              alt="ISO"
+              width={60}
+              height={100}
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            />
+            <Image
+              src="/iso-9001-transparent.png"
               alt="ISO"
               width={60}
               height={100}
