@@ -3,7 +3,6 @@ import { HomePageType } from "@/types/HomeType"
 import Navbar from "@/components/layouts/Nav"
 import ProductSlider from "@/components/containers/ProductCardSlider"
 import ServiceCardSlider from "@/components/containers/ServiceCardSlider"
-import { products, services, banners } from "@/pages/api/data"
 import BannerCardSlider from "@/components/containers/BannerCardSlider"
 import FooterSection from "@/components/containers/FooterSection"
 import FormSection from "@/components/containers/FormSection"
@@ -41,7 +40,7 @@ const HomePage: FC<HomePageType> = ({
           <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_product}</AnimatedComponent>
           </div>
-          <div className="hidden md:block px-20 py-5">
+          <div className="hidden md:block py-5">
             <AnimatedComponent>
               <ProductSlider products={products} />
             </AnimatedComponent>

@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.0.16",
     "@hookform/resolvers": "^2.9.11",
+    "@react-spring/web": "^9.7.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",

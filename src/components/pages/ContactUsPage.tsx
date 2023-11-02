@@ -19,10 +19,16 @@ export default function ContactUsPage({
   return (
     <>
       <Navbar locale={locale} />
-      <div className="bg-black">
-        <div className="flex flex-col justify-center items-center gap-10 bg-black">
-          <PageHeader title={title} />
-          <div className="w-[90%] md:w-[80%]">
+      <PageHeader
+        title={title}
+        backgroundImage={
+          "https://upload.ocwsb.com/image/banners/contact-header-1.jpg"
+        }
+        type="tall"
+      />
+      <div className="md:py-10 bg-gradient-to-b from-black to-red-800">
+        <div className="flex flex-col md:flex-row md:w-[90%] lg:w-[70%] md:mx-auto justify-center items-start gap-10 bg-black md:bg-transparent">
+          <div className="w-[90%] p-5 md:p-0 md:w-full">
             <AnimatedComponent>
               <ContactUsBodySection
                 office_address={body.office_address}
@@ -33,21 +39,18 @@ export default function ContactUsPage({
               />
             </AnimatedComponent>
           </div>
-        </div>
-        <div className="flex justify-center items-center w-full bg-gradient-to-b from-black to-red-800">
-          <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%]">
-            {/* <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem]">
-              <AnimatedComponent>{title_form}</AnimatedComponent>
-            </div> */}
-            <div className="sm:block md:hidden">
-              <AnimatedComponent>
-                <FormSection title_form={title_form} locale={locale} />
-              </AnimatedComponent>
-            </div>
-            <div className="hidden md:block">
-              <AnimatedComponent>
-                <DesktopFormSection title_form={title_form} locale={locale} />
-              </AnimatedComponent>
+          <div className="flex justify-center items-start w-full bg-gradient-to-b from-black to-red-800 md:bg-none">
+            <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%]">
+              <div className="sm:block md:hidden">
+                <AnimatedComponent>
+                  <FormSection title_form={title_form} locale={locale} />
+                </AnimatedComponent>
+              </div>
+              <div className="hidden md:block py-5">
+                <AnimatedComponent>
+                  <DesktopFormSection title_form={title_form} locale={locale} />
+                </AnimatedComponent>
+              </div>
             </div>
           </div>
         </div>
@@ -57,8 +60,8 @@ export default function ContactUsPage({
           button_text={cta_banner.button_text}
           path={cta_banner.path}
         /> */}
-        <FooterSection type={"red"} locale={locale} />
       </div>
+      <FooterSection type={"red"} locale={locale} />
     </>
   )
 }

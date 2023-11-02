@@ -22,7 +22,13 @@ export default function CompanyPage({
     <>
       <Navbar locale={locale} />
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
-        <PageHeader title={title} />
+        <PageHeader
+          title={title}
+          backgroundImage={
+            "https://upload.ocwsb.com/image/banners/about-header-1.jpg"
+          }
+          type="tall"
+        />
 
         <div className="flex flex-col gap-4 justify-center items-center">
           <AnimatedComponent>

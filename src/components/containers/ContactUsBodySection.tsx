@@ -14,28 +14,24 @@ const ContactUsBodySection: FC<ContactUsBodySectionType> = ({
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-10 md:gap-20 p-5 w-full">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
-          <div className="flex flex-col gap-4 w-[80%] md:w-[50%]">
-            <div className="text-[2rem] md:text-[3rem] text-white font-maqin">
-              {locales[locale]["ContactInfo"]["Where We Are"]}
+        <div className="flex flex-col gap-8 md:gap-5 items-start">
+          <div className="text-[2rem] md:text-[3rem] md:w-full text-white font-maqin">
+            {locales[locale]["ContactInfo"]["Where We Are"]}
+          </div>
+          <div className="flex flex-col gap-4">
+            <div>
+              <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
+                {locales[locale]["ContactInfo"]["Office"]}
+              </div>
+              <p className="text-xs md:text-sm text-white">{office_address}</p>
             </div>
-            <div className="flex flex-col gap-4">
-              <div>
-                <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  {locales[locale]["ContactInfo"]["Office"]}
-                </div>
-                <p className="text-xs md:text-sm text-white">
-                  {office_address}
-                </p>
+            <div>
+              <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
+                {locales[locale]["ContactInfo"]["Workshop"]}
               </div>
-              <div>
-                <div className="text-[1.5rem] md:text-[2rem] text-white font-maqin">
-                  {locales[locale]["ContactInfo"]["Workshop"]}
-                </div>
-                <p className="text-xs md:text-sm text-white">
-                  {workshop_address}
-                </p>
-              </div>
+              <p className="text-xs md:text-sm text-white">
+                {workshop_address}
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-4 w-[80%] md:w-[50%]">
