@@ -47,8 +47,8 @@ const Navbar = ({ locale }: { locale?: string }) => {
         <div className="flex items-center py-1 md:py-2 pl-6 pr-2 flex-shrink-0 text-white">
           <Link href="/">
             <Image
-              src="/ocwsb-logo-7.png"
-              width={170}
+              src="/ocwsb-logo-8.png"
+              width={270}
               height={24}
               alt="OCWSB"
               className="h-14 md:h-15"
