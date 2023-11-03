@@ -16,10 +16,10 @@ const FooterSection: FC<any> = (props) => {
       <div className="flex flex-col mr-8 md:mb-4 px-12 text-white">
         <div className="hidden md:flex flex-col gap-6 items-start flex-shrink-0 text-white md:mr-2">
           <Image
-            src="/ocwsb-logo-7.png"
+            src="/ocwsb-logo-8.png"
             alt="OCWSB"
-            width={250}
-            height={30}
+            width={350}
+            height={20}
             className="ml-4 md:ml-0 mb-4 md:mb-0 h-24 md:h-16"
           />
           <div className="flex flex-row gap-2">
@@ -40,11 +40,11 @@ const FooterSection: FC<any> = (props) => {
       <div className="md:flex md:flex-row ">
         <div className="flex md:hidden flex-col gap-3 items-start flex-shrink-0 text-white md:mr-2 px-2 sm:px-4">
           <Image
-            src="/ocwsb-logo-7.png"
+            src="/ocwsb-logo-8.png"
             alt="OCWSB"
-            width={250}
-            height={100}
-            className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+            width={200}
+            height={20}
+            className="ml-4 md:ml-0 mb-4 md:mb-0 h-10 md:h-16"
           />
           <div className="flex flex-row">
             <Image

@@ -48,10 +48,10 @@ const Navbar = ({ locale }: { locale?: string }) => {
           <Link href="/">
             <Image
               src="/ocwsb-logo-8.png"
-              width={240}
+              width={180}
               height={18}
               alt="OCWSB"
-              className="h-14 md:h-15"
+              className="h-8 md:h-10"
             />
           </Link>
         </div>
