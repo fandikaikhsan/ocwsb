@@ -15,6 +15,7 @@ export interface ListGaleryComponentType {
 export interface ListGaleryValueType {
   id?: number
   name: string
+  short_desc?: string
   image: string
   path?: string
 }

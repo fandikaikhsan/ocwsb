@@ -7,6 +7,7 @@ import { ServicesPageType } from "@/types/ServicesType"
 import ServiceDescriptionSection from "../containers/ServiceDescriptionSection"
 import Navbar from "@/components/layouts/Nav"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
+import ListGaleryDetail from "../layouts/ListGaleryDetail"
 
 export default function ServicesPage({
   title,
@@ -16,6 +17,8 @@ export default function ServicesPage({
   video,
   locale,
 }: ServicesPageType) {
+  console.log(services)
+
   return (
     <>
       <Navbar locale={locale} />
@@ -37,11 +40,11 @@ export default function ServicesPage({
 
         <div>
           <AnimatedComponent>
-            <ListGalery
+            <ListGaleryDetail
               values={services}
               page="services"
               clickable={true}
-              textposition="center"
+              textposition="left"
               textdesktopsize="lg"
             />
           </AnimatedComponent>
