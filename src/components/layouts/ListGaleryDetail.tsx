@@ -52,6 +52,9 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                       <div className="font-thin lg:text-base xl:text-lg">
                         {value.short_desc}
                       </div>
+                      <div className="underline text-red-800 lg:text-base xl:text-lg">
+                        Learn More
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -62,6 +65,9 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                   </div>
                   <div className="font-thin lg:text-base xl:text-lg">
                     {value.short_desc}
+                  </div>
+                  <div className="underline text-red-800 lg:text-base xl:text-lg">
+                    Learn More
                   </div>
                 </div>
               )}
@@ -77,6 +83,9 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                     <div className="font-thin lg:text-base xl:text-lg">
                       {value.short_desc}
                     </div>
+                    <div className="underline text-red-800 lg:text-base xl:text-lg">
+                      Learn More
+                    </div>
                   </div>
                 </Link>
               ) : (
@@ -86,6 +95,9 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                   </div>
                   <div className="font-thin lg:text-base xl:text-lg">
                     {value.short_desc}
+                  </div>
+                  <div className="underline text-red-800 lg:text-base xl:text-lg">
+                    Learn More
                   </div>
                 </div>
               )}
