@@ -17,10 +17,7 @@ export default function PartnersPage({
       <Navbar locale={locale} />
       <PageHeader
         title={title}
-        backgroundImage={
-          // "https://upload.ocwsb.com/image/banners/partner-header-1.jpg"
-          "https://picsum.photos/200/300"
-        }
+        backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/partner-header-1.jpg`}
         type="tall"
       />
       <div className="flex flex-col justify-center items-center gap-10 py-10 lg:py-[8rem] bg-black">

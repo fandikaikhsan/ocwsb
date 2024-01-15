@@ -25,9 +25,7 @@ const NewsDetailPage: FC<NewsDetailPageType> = ({
           title={title}
           description={headerDesc}
           type="tall"
-          backgroundImage={
-            "https://upload.ocwsb.com/image/banners/news-header-1.jpg"
-          }
+          backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/news-header-1.jpg`}
         />
         <div className="content flex-1 flex flex-col gap-5 items-center py-10 justify-center">
           {image.length > 0 && (

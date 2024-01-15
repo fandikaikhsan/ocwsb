@@ -24,9 +24,7 @@ export default function CompanyPage({
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader
           title={title}
-          backgroundImage={
-            "https://upload.ocwsb.com/image/banners/about-header-1.jpg"
-          }
+          backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/about-header-1.jpg`}
           type="tall"
         />
 
