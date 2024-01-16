@@ -21,7 +21,7 @@ export default function ContactUsPage({
       <Navbar locale={locale} />
       <PageHeader
         title={title}
-        backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/contact-header-1.jpg`}
+        backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/contact-header-1.jpg`}
         type="tall"
       />
       <div className="md:py-10 bg-gradient-to-b from-black to-red-800">

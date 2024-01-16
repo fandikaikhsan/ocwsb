@@ -22,7 +22,7 @@ export default function ProductDetailPage({
         <PageHeader
           title={title}
           description={short_desc}
-          backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/product-header-1.jpg`}
+          backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/product-header-1.jpg`}
           type="tall"
         />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">

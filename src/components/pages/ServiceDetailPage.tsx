@@ -23,7 +23,7 @@ export default function ServiceDetailPage({
           title={title}
           description={short_desc}
           type="tall"
-          backgroundImage={`https://${process.env.NEXT_PUBLIC_IMAGE}/image/banners/service-header-1.jpg`}
+          backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/service-header-1.jpg`}
         />
         <div className="content flex-1 flex flex-col py-10 gap-8 items-center justify-center">
           <ServiceDescriptionSection

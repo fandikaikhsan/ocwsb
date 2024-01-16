@@ -24,9 +24,7 @@ export default function ServicesPage({
       <Navbar locale={locale} />
       <PageHeader
         title={title}
-        backgroundImage={
-          "https://upload.ocwsb.com/image/banners/service-header-1.jpg"
-        }
+        backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/service-header-1.jpg`}
         type="tall"
       />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
@@ -44,8 +42,6 @@ export default function ServicesPage({
               values={services}
               page="services"
               clickable={true}
-              textposition="left"
-              textdesktopsize="lg"
             />
           </AnimatedComponent>
         </div>
