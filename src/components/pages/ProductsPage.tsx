@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from "@/components/layouts/Nav"
 import PageHeader from "@/components/containers/PageHeader"
-import ListGalery from "@/components/layouts/ListGalery"
+import ListGaleryDetail from "@/components/layouts/ListGaleryDetail"
 import VideoComponent from "@/components/common/VideoComponent"
 import FooterSection from "@/components/containers/FooterSection"
 import { ProductsPageType } from "@/types/ProductsType"
@@ -36,24 +36,24 @@ export default function ProductsPage({
         )}
 
         <div>
-          {/* <AnimatedComponent> */}
-          <ListGalery
-            values={products}
-            page="products"
-            clickable={true}
-            textposition="center"
-            textdesktopsize="lg"
-          />
-          {/* </AnimatedComponent> */}
-        </div>
-        <div className="flex flex-col gap-8 justify-center items-center py-5">
-          <div className="text-[2rem] font-maqin text-white">
-            <AnimatedComponent>{video.title}</AnimatedComponent>
-          </div>
           <AnimatedComponent>
-            <VideoComponent source={video.url} />
+            <ListGaleryDetail
+              values={products}
+              page="products"
+              clickable={true}
+            />
           </AnimatedComponent>
         </div>
+        {video?.url?.length > 0 && (
+          <div className="flex flex-col gap-8 justify-center items-center py-5">
+            <div className="text-[2rem] font-maqin text-white">
+              <AnimatedComponent>{video.title}</AnimatedComponent>
+            </div>
+            <AnimatedComponent>
+              <VideoComponent source={video.url} />
+            </AnimatedComponent>
+          </div>
+        )}
         {description?.length > 0 && (
           <AnimatedComponent>
             <ProductDescriptionSection
