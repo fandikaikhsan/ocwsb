@@ -49,7 +49,7 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                       <div className="font-bold lg:text-lg xl:text-2xl">
                         {value.name}
                       </div>
-                      <div className="font-thin lg:text-base xl:text-lg">
+                      <div className="font-base lg:text-base xl:text-lg">
                         {value.short_desc}
                       </div>
                       <div className="underline text-red-800 lg:text-base xl:text-lg">
@@ -63,7 +63,7 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                   <div className="font-bold lg:text-lg xl:text-2xl">
                     {value.name}
                   </div>
-                  <div className="font-thin lg:text-base xl:text-lg">
+                  <div className="font-base lg:text-base xl:text-lg">
                     {value.short_desc}
                   </div>
                   <div className="underline text-red-800 lg:text-base xl:text-lg">
@@ -80,7 +80,7 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                     <div className="font-bold lg:text-lg xl:text-2xl">
                       {value.name}
                     </div>
-                    <div className="font-thin lg:text-base xl:text-lg">
+                    <div className="font-base lg:text-base xl:text-lg">
                       {value.short_desc}
                     </div>
                     <div className="underline text-red-800 lg:text-base xl:text-lg">
@@ -93,7 +93,7 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({
                   <div className="font-bold lg:text-lg xl:text-2xl">
                     {value.name}
                   </div>
-                  <div className="font-thin lg:text-base xl:text-lg">
+                  <div className="font-base lg:text-base xl:text-lg">
                     {value.short_desc}
                   </div>
                   <div className="underline text-red-800 lg:text-base xl:text-lg">
