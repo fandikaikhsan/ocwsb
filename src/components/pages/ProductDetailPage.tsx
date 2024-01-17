@@ -47,7 +47,11 @@ export default function ProductDetailPage({
             </AnimatedComponent>
           )}
         </div>
-        <FooterSection type={"black"} locale={locale} />
+        {specification?.length > 0 ? (
+          <FooterSection type={"black"} locale={locale} />
+        ) : (
+          <FooterSection type={"red"} locale={locale} />
+        )}
       </div>
     </>
   )

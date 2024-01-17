@@ -10,7 +10,7 @@ const FooterSection: FC<any> = (props) => {
       className={`${
         type == "red"
           ? "md:flex md:flex-row justify-around bg-footer-pattern bg-cover"
-          : "bg-black"
+          : "md:flex md:flex-row justify-around bg-black"
       } bg-cover py-8`}
     >
       <div className="flex flex-col mr-8 md:mb-4 px-12 text-white">
@@ -52,7 +52,7 @@ const FooterSection: FC<any> = (props) => {
               alt="ISO"
               width={60}
               height={100}
-              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16"
+              className="ml-4 md:ml-0 mb-4 md:mb-0 h-20 md:h-16 bg-white"
             />
           </div>
         </div>
