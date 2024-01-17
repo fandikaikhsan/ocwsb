@@ -31,7 +31,7 @@ const PageHeader: FC<PageHeaderProps> = ({
         <div
           className={`${
             type === "tall" ? "md:text-[4rem] text-[2rem]" : "text-[2rem]"
-          }  w-[90%] text-white font-maqin uppercase`}
+          }  w-[90%] text-white font-acumin uppercase`}
         >
           {title}
         </div>
