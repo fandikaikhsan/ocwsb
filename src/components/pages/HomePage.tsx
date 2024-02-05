@@ -27,7 +27,7 @@ const HomePage: FC<HomePageType> = ({
           </AnimatedComponent>
         </div>
         <div className="mb-20 md:mb-32">
-          <div className=" font-maqin text-4xl md:text-6xl mb-10 text-white text-center">
+          <div className=" font-acumin text-4xl md:text-6xl mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_service}</AnimatedComponent>
           </div>
           <div className="ml-6 md:ml-10">
@@ -37,7 +37,7 @@ const HomePage: FC<HomePageType> = ({
           </div>
         </div>
         <div className="py-10 bg-gradient-to-b from-black to-red-800">
-          <div className="font-maqin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
+          <div className=" font-acumin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_product}</AnimatedComponent>
           </div>
           <div className="hidden md:block py-5">
