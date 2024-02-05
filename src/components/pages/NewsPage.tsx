@@ -21,7 +21,7 @@ export default function NewsPage({
       <Navbar locale={locale} />
       <PageHeader
         title={title}
-        backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/banner-1.jpg`}
+        backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/news-header-1.jpg`}
         type="tall"
       />
       <div className="flex flex-col justify-center items-center gap-10 py-10 bg-black">
