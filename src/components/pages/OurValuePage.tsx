@@ -21,15 +21,8 @@ export default function OurValuePage({
           backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/partner-header-1.jpg`}
           type="tall"
         />
-        <div className="content flex-1 flex flex-col py-10 items-center justify-center">
-          <AnimatedComponent>
-            <ListGalery
-              values={values}
-              page="our-value"
-              paddingy={2}
-              paddingx={4}
-            />
-          </AnimatedComponent>
+        <div className="text-[1rem] py-10 md:py-20 px-10 text-center font-acumin text-white md:w-[60%] mx-auto">
+          <AnimatedComponent>{description}</AnimatedComponent>
         </div>
         <FooterSection type={"red"} locale={locale} />
       </div>
