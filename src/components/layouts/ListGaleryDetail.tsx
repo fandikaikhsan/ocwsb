@@ -12,8 +12,8 @@ const ListGaleryDetail: FC<ListGaleryComponentType> = ({ values, page }) => {
             <div
               className={
                 index % 2 === 0
-                  ? `flex flex-row-reverse shadow-[rgba(5,_0,_0,_5)_10px_10px_15px_0.5px] shadow-[#9c9c9c] h-[16rem] md:h-[22rem]`
-                  : `flex flex-row shadow-[rgba(0,_0,_0,_0.1)_10px_10px_15px_0.5px] shadow-[#9c9c9c] h-[16rem] md:h-[22rem]`
+                  ? `flex flex-col-reverse md:flex-row-reverse shadow-[rgba(5,_0,_0,_5)_10px_10px_15px_0.5px] shadow-[#9c9c9c] h-[30rem] md:h-[22rem]`
+                  : `flex flex-col-reverse md:flex-row shadow-[rgba(0,_0,_0,_0.1)_10px_10px_15px_0.5px] shadow-[#9c9c9c] h-[30rem] md:h-[22rem]`
               }
             >
               <div className="flex flex-col items-start justify-center gap-2 bg-[#0A0A0A]  flex-1">
