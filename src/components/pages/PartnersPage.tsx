@@ -35,22 +35,22 @@ export default function PartnersPage({
               textdesktopsize="lg"
             /> */}
             <div>
-              <div className="flex flex-col lg:flex-row justify-center gap-5 items-center">
+              <div className="flex flex-col lg:flex-row justify-start gap-5 text-center items-start">
                 {partners.map((partner, index) => (
                   <div
                     key={index}
-                    className="flex flex-col justify-center gap-5 items-center"
+                    className="flex flex-col w-[10rem] md:w-[15rem] xl:w-[20rem] justify-center gap-5 items-center"
                   >
-                    <div className=" overflow-hidden aspect-1 rounded-xl">
+                    <div className="overflow-hidden aspect-1 rounded-xl">
                       <img
                         src={partner.image}
                         alt={partner.name}
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <div>
-                      <h1 className="text-white">{partner.name}</h1>
-                    </div>
+                    <h1 className="text-white w-full overflow-ellipsis">
+                      {partner.name}
+                    </h1>
                   </div>
                 ))}
               </div>
