@@ -24,7 +24,7 @@ export default function CompanyPage({
       <div className="flex flex-col justify-center items-center gap-8 bg-black">
         <PageHeader
           title={title}
-          backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/about-header-1.jpg`}
+          backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/partner-header-1.jpg`}
           type="tall"
         />
 

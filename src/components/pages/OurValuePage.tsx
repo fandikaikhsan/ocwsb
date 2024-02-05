@@ -16,7 +16,11 @@ export default function OurValuePage({
     <>
       <Navbar locale={locale} />
       <div className="flex flex-col bg-black min-h-screen">
-        <PageHeader title={title} />
+        <PageHeader
+          title={title}
+          backgroundImage={`${process.env.NEXT_PUBLIC_IMAGE}/image/banners/partner-header-1.jpg`}
+          type="tall"
+        />
         <div className="content flex-1 flex flex-col py-10 items-center justify-center">
           <AnimatedComponent>
             <ListGalery
