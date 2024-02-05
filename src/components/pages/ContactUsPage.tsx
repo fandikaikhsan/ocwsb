@@ -38,7 +38,7 @@ export default function ContactUsPage({
             </AnimatedComponent>
           </div>
           <div className="flex justify-center items-start w-full bg-gradient-to-b from-black to-red-800 md:bg-none">
-            <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%]">
+            <div className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[90%]">
               <div className="sm:block md:hidden">
                 <AnimatedComponent>
                   <FormSection title_form={title_form} locale={locale} />
