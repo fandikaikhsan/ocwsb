@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react"
 import HomePage from "@/components/pages/HomePage"
 import { useTranslations } from "next-intl"
 import LoadingPage from "@/components/pages/LoadingPage"
-import { useRouter } from "next/navigation"
 
 async function getHomeLocale(lang: string) {
   const res = await fetch(
@@ -19,34 +18,32 @@ async function getHomeLocale(lang: string) {
   return res.json()
 }
 
-export default function Home() {
-  const router = useRouter()
+export default async function Home() {
   const t = useTranslations("data")
   const lang = t("Locale")
   const [fetchData, setFetchData] = useState(null)
 
   useEffect(() => {
-    // Redirect to /products on the client side
-    router.replace("/products")
-
-    // Fetch data after the redirect
     getHomeLocale(lang)
       .then((data) => setFetchData(data))
       .catch((err) => console.error(err))
-  }, [lang, router])
+  }, [lang])
+
+  const fetch = await getHomeLocale(lang)
 
   if (!fetchData) return <LoadingPage />
 
+  console.log("fetch data", fetch.data)
+
   return (
     <>
-      {/* Your actual component rendering logic */}
-      {/* <HomePage
+      <HomePage
         homepage={fetch.data.homepage}
         banners={fetch.data.banners}
         products={fetch.data.products}
         services={fetch.data.services}
         locale={lang}
-      /> */}
+      />
     </>
   )
 }
