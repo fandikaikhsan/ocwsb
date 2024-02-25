@@ -47,7 +47,7 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      loop
+      loop={true}
       className="swiper-custom-navigation"
       breakpoints={{
         0: {

@@ -40,7 +40,7 @@ const Navbar = ({ locale }: { locale?: string }) => {
   return (
     <>
       <div
-        className={`flex items-center justify-between flex-wrap fixed top-0 w-full z-10 ${
+        className={`flex items-center justify-between flex-wrap fixed top-0 py-1 w-full z-10 ${
           scrolled ? "bg-opacity-70 bg-black" : `bg-opacity-70 bg-red-800}`
         } ${isOpen && "bg-opacity-70 bg-black"}`}
       >
@@ -51,7 +51,7 @@ const Navbar = ({ locale }: { locale?: string }) => {
               width={180}
               height={8}
               alt="OCWSB"
-              className="h-10 md:h-10"
+              className="h-9 md:h-8"
             />
           </Link>
         </div>
