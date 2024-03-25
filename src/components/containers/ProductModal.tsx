@@ -1,11 +1,11 @@
 import React from "react"
+import Image from "next/image"
 
 interface ModalProps {
   props: {
     id?: number
     position?: number
     title: string
-    desc_title?: string
     desc_short?: string
     desc?: string
     image?: string
@@ -24,7 +24,6 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
   const {
     title = "",
     image = "",
-    desc_title = "",
     desc = "",
     isOpen = true,
     onClose = () => {},
@@ -43,11 +42,12 @@ const ProductModal: React.FC<any> = ({ props, setIsOpen }) => {
           <div className="relative">
             <img
               src={props.image}
+              alt={props.title}
               className="w-full h-48 object-cover opacity-40 rounded-t-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <h2 className="text-5xl text-center font-maqin font-bold text-white">
-                {props.desc_title}
+                {props.title}
               </h2>
             </div>
           </div>

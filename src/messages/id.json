@@ -1,0 +1,55 @@
+{
+  "data": {
+    "Locale": "id"
+  },
+  "Navbar": {
+    "About Us": "Tentang Perusahaan",
+    "Our Company": "Profil Perusahaan",
+    "Our Value": "Nilai Perusahaan",
+    "Certifications": "Sertifikasi",
+    "Products": "Produk",
+    "Services": "Servis",
+    "News": "Berita",
+    "Our Partners": "Partner Kami",
+    "Contact Us": "Hubungi Kami"
+  },
+  "Banner": {
+    "Read More": "Baca Lebih Lanjut"
+  },
+  "ContactForm": {
+    "Contact Us": "Contact Us",
+    "Name": "Nama",
+    "Company": "Perusahaan",
+    "Email": "Email",
+    "Phone": "Telepon",
+    "Inquiry": "Pesan",
+    "Submit": "Kirim",
+    "Message": {
+      "Name": "Silahkan isi nama Anda",
+      "Company": "Silahkan isi nama perusahaan Anda",
+      "Email": "Silahkan isi email Anda",
+      "Phone": "Silahkan isi nomor telepon Anda",
+      "Inquiry": "Silahkan isi pesan Anda"
+    }
+  },
+  "ContactInfo": {
+    "Where We Are": "Lokasi Kami",
+    "How To Connect": "Narahubung",
+    "Office": "Kantor",
+    "Workshop": "Workshop",
+    "Phone": "Telepon",
+    "Email": "Email"
+  },
+  "News": {
+    "Recent News": "Berita Baru"
+  },
+  "Footer": {
+    "Office": "Kantor",
+    "Workshop": "Workshop",
+    "Phone": "Telepon",
+    "Email": "Email"
+  },
+  "Company": {
+    "Company Profile": "Video Profil Perusahaan"
+  }
+}

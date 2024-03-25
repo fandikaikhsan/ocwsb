@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import ProductCard from "../layouts/ProductCard"
@@ -30,6 +32,7 @@ const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
     setServiceData(service)
     setIsOpen(true)
   }
+
   return (
     <>
       <Swiper
@@ -53,6 +56,8 @@ const ProductCardSlider: FC<ProductCardSliderProps> = ({ products }) => {
               description={product.desc_short}
               image={product.image}
               onClick={() => handleServiceClick(product)}
+              path={product.cta?.url}
+              cta_text={product.cta?.text}
             />
           </SwiperSlide>
         ))}

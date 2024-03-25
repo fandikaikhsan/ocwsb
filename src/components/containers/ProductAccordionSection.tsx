@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC } from "react"
 import ProductAccordion from "../layouts/ProductAccordion"
 
@@ -26,6 +28,7 @@ const ProductAccordionSection: FC<ProductAccordionSectionProps> = ({
             title={product.title}
             desc={product.desc}
             image={product.image}
+            path={product.cta?.url}
           />
         </div>
       ))}

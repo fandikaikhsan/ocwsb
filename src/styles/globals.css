@@ -6,6 +6,10 @@
   font-family: maqin-italic;
   src: url("./fonts/maqin-italic.ttf");
 }
+@font-face {
+  font-family: acumin;
+  src: url("./fonts/acumin.otf");
+}
 
 .swiper-button-next {
   color: red;

@@ -1,27 +1,45 @@
 import { useState } from "react"
+import { useRouter, usePathname } from "next/navigation"
+import Image from "next/image"
 
 const languages = [
   {
     code: "en",
     name: "English",
     flag: "/flags/en.png",
+    path: "/en",
   },
-  // {
-  //   code: "id",
-  //   name: "Indonesia",
-  //   flag: "/flags/id.png",
-  // },
-  // Add more countries here
+  {
+    code: "id",
+    name: "Indonesia",
+    flag: "/flags/id.png",
+    path: "/id",
+  },
 ]
 
-const LanguageDropdown = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0].code) // default language is the first language in the array
-  const [dropdownOpen, setDropdownOpen] = useState(false) // state for toggling the language dropdown
+const LanguageDropdown = ({ locale }: { locale: string }) => {
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    languages.find((lang) => lang.code === locale)?.code || "en"
+  )
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const handleChangeLanguage = (languageCode: any) => {
+    if (pathname?.includes(selectedLanguage)) {
+      setDropdownOpen(false)
+    }
+    if (pathname === "/" && selectedLanguage != "en") {
+      setSelectedLanguage(languageCode)
+      router.push(`/${languageCode}`)
+      router.refresh()
+      setDropdownOpen(false)
+    }
     setSelectedLanguage(languageCode)
+    router.push(`/${languageCode}`)
+    router.refresh()
     setDropdownOpen(false)
-    // TODO: update the language of the app here
   }
 
   return (
@@ -33,10 +51,15 @@ const LanguageDropdown = () => {
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         {/* Language flag icon */}
-        <img
-          src={languages?.find((lang) => lang?.code === selectedLanguage)?.flag}
+        <Image
+          src={
+            languages?.find((lang) => lang?.code === selectedLanguage)?.flag ||
+            "/flags/en.png"
+          }
           alt={`${selectedLanguage} flag`}
           className="w-4 h-4 rounded-full border"
+          width={16}
+          height={16}
         />
 
         {/* Language label */}
@@ -68,14 +91,16 @@ const LanguageDropdown = () => {
                   selectedLanguage === language.code
                     ? "bg-orange-700 text-white"
                     : "text-white"
-                } block w-full text-left px-4 py-2 text-sm`}
+                } flex w-full text-left px-4 py-2 text-sm`}
                 onClick={() => handleChangeLanguage(language.code)}
                 role="menuitem"
               >
-                <img
+                <Image
                   src={language.flag}
                   alt={`${language.code} flag`}
                   className="w-4 h-4 border rounded-full mr-2"
+                  width={16}
+                  height={16}
                 />
                 {language.name}
               </button>
