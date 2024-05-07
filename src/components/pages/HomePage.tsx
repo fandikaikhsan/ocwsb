@@ -9,6 +9,8 @@ import FormSection from "@/components/containers/FormSection"
 import DesktopFormSection from "@/components/containers/DesktopFormSection"
 import ProductAccordionSection from "@/components/containers/ProductAccordionSection"
 import AnimatedComponent from "@/components/common/AnimatedComponent"
+import ProductCardSlider from "@/components/containers/Home/ProductCardSlider"
+import ServiceCardSliderProportion from "@/components/containers/Home/ServiceCardSlider"
 
 const HomePage: FC<HomePageType> = ({
   homepage,
@@ -35,6 +37,11 @@ const HomePage: FC<HomePageType> = ({
               <ServiceCardSlider services={services} />
             </AnimatedComponent>
           </div>
+          <div className="p-6 flex flex-col gap-4">
+            <AnimatedComponent>
+              <ServiceCardSliderProportion />
+            </AnimatedComponent>
+          </div>
         </div>
         <div className="py-10 bg-gradient-to-b from-black to-red-800">
           <div className=" font-acumin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
@@ -48,6 +55,11 @@ const HomePage: FC<HomePageType> = ({
           <div className="md:hidden p-6  flex flex-col gap-4">
             <AnimatedComponent>
               <ProductAccordionSection products={products} />
+            </AnimatedComponent>
+          </div>
+          <div className="p-6  flex flex-col gap-4">
+            <AnimatedComponent>
+              <ProductCardSlider />
             </AnimatedComponent>
           </div>
           {/* <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">
