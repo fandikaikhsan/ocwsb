@@ -47,19 +47,19 @@ const HomePage: FC<HomePageType> = ({
           <div className=" font-acumin text-4xl md:text-6xl mb-6 md:mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_product}</AnimatedComponent>
           </div>
-          <div className="hidden md:block py-5">
+          {/* <div className="hidden md:block py-5">
             <AnimatedComponent>
               <ProductSlider products={products} />
+            </AnimatedComponent>
+          </div> */}
+          <div className="hidden md:flex p-6 flex-col gap-4">
+            <AnimatedComponent>
+              <ProductCardSlider products={products} />
             </AnimatedComponent>
           </div>
           <div className="md:hidden p-6  flex flex-col gap-4">
             <AnimatedComponent>
               <ProductAccordionSection products={products} />
-            </AnimatedComponent>
-          </div>
-          <div className="p-6  flex flex-col gap-4">
-            <AnimatedComponent>
-              <ProductCardSlider />
             </AnimatedComponent>
           </div>
           {/* <div className="font-maqin text-4xl md:text-6xl mt-16 md:mb-10 text-white w-full text-center md:w-4/6 lg:w-[40rem] ml-auto mr-24">

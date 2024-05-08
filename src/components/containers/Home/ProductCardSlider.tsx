@@ -5,10 +5,23 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
-export default function ProductCardSlider() {
-  //   const { data, error } = useQuery("products", () => fetchProducts())
-  //   if (error) return <div>Error loading products</div>
-  //   if (!data) return <div>Loading products</div>
+interface ProductCardSliderProps {
+  products: {
+    id: number
+    title: string
+    desc?: string
+    image?: string
+    desc_short: string
+    cta: {
+      text: string
+      url?: string
+    }
+  }[]
+}
+
+export default function ProductCardSlider({
+  products,
+}: ProductCardSliderProps) {
   return (
     <>
       <div>
@@ -19,63 +32,34 @@ export default function ProductCardSlider() {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="w-full h-full swiper-custom-navigation"
+          className="w-full h-full swiper-custom-navigation shadow-[rgba(0,_0,_0,_0.1)_0px_0px_30px_3px] shadow-[#868686] rounded-xl"
         >
-          <SwiperSlide className=" text-center h-[10rem] p-[13rem] rounded-xl bg-blue-400">
-            Slide 1
-          </SwiperSlide>
-          <SwiperSlide className=" text-center h-[10rem] p-[13rem] rounded-xl bg-blue-400">
-            Slide 2
-          </SwiperSlide>
-          <SwiperSlide className=" text-center h-[10rem] p-[13rem] rounded-xl bg-blue-400">
-            Slide 3
-          </SwiperSlide>
-          <SwiperSlide className=" text-center h-[10rem] p-[13rem] rounded-xl bg-blue-400">
-            Slide 4
-          </SwiperSlide>
+          {products.map((product, index) => (
+            <SwiperSlide
+              className=" text-center h-[10rem] p-[5rem] py-[8rem] bg-blue-400"
+              style={{
+                backgroundImage: `linear-gradient(rgba(55,50,55,0.3), rgba(55,55,55,0.3)), url(${product.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="text-left">
+                <h3 className=" text-white font-maqin font-semibold text-4xl mb-2">
+                  {product.title}
+                </h3>
+                <p className="text-white font-maqin text-2xl mb-4">
+                  {product.desc_short}
+                </p>
+                <a href={product.cta.url ?? "/"}>
+                  <div className="hover:cursor-pointer text-white text-xl underline">
+                    {product.cta.text}
+                  </div>
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>
   )
 }
-
-// #app {
-//   height: 100%;
-// }
-// html,
-// body {
-//   position: relative;
-//   height: 100%;
-// }
-
-// body {
-//   background: #eee;
-//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-//   font-size: 14px;
-//   color: #000;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   background: #fff;
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
