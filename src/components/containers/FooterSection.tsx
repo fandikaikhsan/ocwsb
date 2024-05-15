@@ -16,7 +16,7 @@ const FooterSection: FC<any> = (props) => {
       <div className="flex flex-col mr-8 md:mb-4 px-12 text-white">
         <div className="hidden md:flex flex-col gap-6 items-start flex-shrink-0 text-white md:mr-2">
           <Image
-            src="/ocwsb-logo-8.png"
+            src="/ocwsb-logo-9.png"
             alt="OCWSB"
             width={350}
             height={20}
@@ -40,7 +40,7 @@ const FooterSection: FC<any> = (props) => {
       <div className="md:flex md:flex-row ">
         <div className="flex md:hidden flex-col gap-3 items-start flex-shrink-0 text-white md:mr-2 px-2 sm:px-4">
           <Image
-            src="/ocwsb-logo-8.png"
+            src="/ocwsb-logo-9.png"
             alt="OCWSB"
             width={200}
             height={20}
