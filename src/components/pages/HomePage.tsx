@@ -39,7 +39,7 @@ const HomePage: FC<HomePageType> = ({
           </div>
           <div className="p-6 flex flex-col gap-4">
             <AnimatedComponent>
-              <ServiceCardSliderProportion />
+              <ServiceCardSliderProportion services={services} />
             </AnimatedComponent>
           </div>
         </div>

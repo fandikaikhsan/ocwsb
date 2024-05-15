@@ -10,7 +10,23 @@ import "swiper/css/navigation"
 
 // import required modules
 
-export default function ServiceCardSliderProportion() {
+interface ServiceCardSliderProps {
+  services: {
+    id: number
+    title: string
+    desc?: string
+    desc_short: string
+    image?: string
+    cta?: {
+      text: string
+      url?: string
+    }
+  }[]
+}
+
+export default function ServiceCardSliderProportion({
+  services,
+}: ServiceCardSliderProps) {
   return (
     <>
       <Swiper
@@ -41,60 +57,29 @@ export default function ServiceCardSliderProportion() {
         modules={[Navigation, Pagination]}
         className="h-full w-full swiper-custom-navigation"
       >
-        <SwiperSlide className=" text-center flex justify-center items-center rounded-xl py-[18rem] px-[10rem] bg-green-300">
-          Slide 1
-        </SwiperSlide>
-        <SwiperSlide className=" text-center flex justify-center items-center rounded-xl py-[18rem] px-[10rem] bg-green-300">
-          Slide 2
-        </SwiperSlide>
-        <SwiperSlide className=" text-center flex justify-center items-center rounded-xl py-[18rem] px-[10rem] bg-green-300">
-          Slide 3
-        </SwiperSlide>
-        <SwiperSlide className=" text-center flex justify-center items-center rounded-xl py-[18rem] px-[10rem] bg-green-300">
-          Slide 4
-        </SwiperSlide>
+        {services.map((service) => (
+          <SwiperSlide
+            key={service.id}
+            className=" text-center flex justify-center items-center rounded-xl py-[18rem] px-[10rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_15px_3px] shadow-[#868686] my-2"
+            style={{
+              backgroundImage: `linear-gradient(rgba(55,50,55,0.3), rgba(55,55,55,0.3)), url(${service.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 flex flex-col justify-between items-start p-4 space-y-4">
+              <div className="flex flex-col items-start justify-start pt-[18rem] md:pt-[24rem] flex-grow">
+                <div className="text-3xl font-maqin text-white md:text-4xl">
+                  {service.title}
+                </div>
+                <div className="text-md font-maqin text-left text-white md:text-lg">
+                  {service.desc_short}
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   )
 }
-
-// #app {
-//   height: 100%;
-// }
-// html,
-// body {
-//   position: relative;
-//   height: 100%;
-// }
-
-// body {
-//   background: #eee;
-//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-//   font-size: 14px;
-//   color: #000;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   background: #fff;
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
