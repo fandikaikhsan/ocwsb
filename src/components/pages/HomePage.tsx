@@ -32,11 +32,11 @@ const HomePage: FC<HomePageType> = ({
           <div className=" font-acumin text-4xl md:text-6xl mb-10 text-white text-center">
             <AnimatedComponent>{homepage.title_service}</AnimatedComponent>
           </div>
-          <div className="ml-6 md:ml-10">
+          {/* <div className="ml-6 md:ml-10">
             <AnimatedComponent>
               <ServiceCardSlider services={services} />
             </AnimatedComponent>
-          </div>
+          </div> */}
           <div className="p-6 flex flex-col gap-4">
             <AnimatedComponent>
               <ServiceCardSliderProportion services={services} />

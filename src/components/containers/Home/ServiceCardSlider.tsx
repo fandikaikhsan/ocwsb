@@ -68,8 +68,8 @@ export default function ServiceCardSliderProportion({
             }}
           >
             <div className="absolute inset-0 flex flex-col justify-between items-start p-4 space-y-4">
-              <div className="flex flex-col items-start justify-start pt-[18rem] md:pt-[24rem] flex-grow">
-                <div className="text-3xl font-maqin text-white md:text-4xl">
+              <div className="flex flex-col items-left justify-start pt-[18rem] md:pt-[24rem] flex-grow">
+                <div className="text-3xl font-maqin text-left text-white md:text-4xl">
                   {service.title}
                 </div>
                 <div className="text-md font-maqin text-left text-white md:text-lg">
