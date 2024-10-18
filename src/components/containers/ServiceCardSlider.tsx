@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, FC, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import ServiceCard from "../layouts/ServiceCard"
@@ -45,9 +47,7 @@ const ServiceCardSlider: FC<ServiceCardSliderProps> = ({ services }) => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-      loop
+      loop={true}
       className="swiper-custom-navigation"
       breakpoints={{
         0: {

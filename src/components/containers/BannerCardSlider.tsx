@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, useState, useEffect } from "react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import BannerCard from "../layouts/BannerCard"
@@ -37,8 +39,6 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
       navigation={isMobile ? false : true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       className="swiper-custom-navigation"
     >
       {banners.map((banner: any) => (
@@ -48,6 +48,8 @@ const BannerCardSlider: FC<BannerCardSliderProps> = ({ banners }) => {
             description={banner.subtitle}
             image={banner.image}
             image_mobile={banner.image_mobile}
+            url={banner.cta?.url}
+            cta_text={banner.cta?.text}
           />
         </SwiperSlide>
       ))}

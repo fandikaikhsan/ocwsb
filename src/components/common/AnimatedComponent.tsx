@@ -1,63 +1,60 @@
-import React from "react"
-import { useInView } from "react-intersection-observer"
-import { motion, useAnimation } from "framer-motion"
+"use client"
+
+import React, { useEffect, useRef, useState, ReactNode } from "react"
+import { motion, Variants } from "framer-motion"
 
 interface AnimatedComponentProps {
-  children: React.ReactNode
-  className?: string
-  triggerOnce?: boolean
-  threshold?: number
-  delay?: number
-  duration?: number
-  easing?: string
-  initial?: string
-  animate?: string
-  exit?: string
+  children: ReactNode
 }
 
-const AnimatedComponent = ({
-  children,
-  className,
-  triggerOnce = true,
-  threshold = 0.5,
-  delay = 0,
-  duration = 0.5,
-  easing = "easeInOut",
-  initial = "hidden",
-  animate = "visible",
-  exit = "hidden",
-  ...props
-}: AnimatedComponentProps) => {
-  const controls = useAnimation()
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    triggerOnce,
-  })
+const variants: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 80 },
-    visible: { opacity: 1, y: 0 },
-  }
+const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ children }) => {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start(animate)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
     }
-    if (!inView) {
-      controls.start(exit)
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
     }
-  }, [controls, inView, animate, exit])
+  }, [])
 
   return (
     <motion.div
       ref={ref}
-      className={className}
-      initial={initial}
-      animate={controls}
-      exit={exit}
-      variants={fadeInUp}
-      transition={{ delay, duration, ease: easing }}
-      {...props}
+      variants={variants}
+      initial="hidden"
+      animate={isVisible ? "show" : "hidden"}
+      className="w-full"
     >
       {children}
     </motion.div>

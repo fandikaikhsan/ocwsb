@@ -1,5 +1,7 @@
 import React, { FC } from "react"
 import GradientBorderButton from "../common/GradientBorderButton"
+import Link from "next/link"
+import Image from "next/image"
 
 interface ServiceCardProps {
   id: number
@@ -25,9 +27,9 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
   return (
     <>
-      <a onClick={onClick} className=" hover:cursor-pointer">
+      <Link href={cta.url ?? "/"}>
         <div
-          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem] overflow-hidden`}
+          className={`relative items-center h-[30em] md:h-[38em] hover:bg-orange-900 transition-opacity duration-200 w-[18em] md:w-[26em] rounded-[1rem]  m-5 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_15px_3px] shadow-[#868686] overflow-hidden`}
         >
           <img
             src={image}
@@ -43,15 +45,9 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                 {desc}
               </div>
             </div>
-            {/* <div className="px-4 py-2 hover:cursor-pointer md mt-auto rounded-md self-end">
-              <GradientBorderButton onClick={onClick} text="Find Out More" />
-            </div> */}
-            {/* <button className="bg-transparent border-2 border-white text-white px-4 py-2 rounded-md self-end">
-            Click me
-          </button> */}
           </div>
         </div>
-      </a>
+      </Link>
     </>
   )
 }

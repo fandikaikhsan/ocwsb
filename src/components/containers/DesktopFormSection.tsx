@@ -1,9 +1,12 @@
+"use client"
+
 import React, { FC, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import yupResolver from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import axios from "axios"
 import ReCAPTCHA from "react-google-recaptcha"
+import locales from "@/messages/locale"
 
 type UserSubmitForm = {
   name: string
@@ -12,9 +15,16 @@ type UserSubmitForm = {
   phone: string
   password: string
   message: string
+  locale?: string
 }
 
-const DesktopFormSection = () => {
+const DesktopFormSection = ({
+  locale,
+  title_form,
+}: {
+  locale?: string
+  title_form: string
+}) => {
   const schema = yup.object().shape({
     name: yup.string().required().min(3),
     company: yup.string(),
@@ -23,6 +33,8 @@ const DesktopFormSection = () => {
     password: yup.string().required().min(6),
     message: yup.string(),
   })
+
+  locale = locale || "en"
 
   const {
     register,
@@ -48,8 +60,7 @@ const DesktopFormSection = () => {
       return
     }
     try {
-      console.log("data: ", data)
-      await axios.post(process.env.NEXT_PUBLIC_API_URL, data)
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/v1/inquiry`, data)
       alert("Inquiry submitted successfully")
     } catch (error) {
       alert("Error submitting inquiry")
@@ -58,171 +69,172 @@ const DesktopFormSection = () => {
 
   return (
     <>
-      <div className=" p-8 bg-gradient-to-b w-full from-black to-red-800">
-        <div className="md:w-4/6 lg:w-[40rem] ml-auto mr-24">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-5 flex flex-row justify-between content-between">
-              <label
-                htmlFor="name"
-                className={`block text-2xl font-maqin mb-2 ${
-                  errors.name ? "text-red-400" : "text-white"
-                }`}
-              >
-                Name
-              </label>
-              <input
-                {...register("name")}
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Please enter your name"
-                className={` w-2/3  bg-white rounded-lg border-2 py-2 px-5  placeholder-gray-400  ${
-                  errors.name
-                    ? "text-red-300 border-red-400"
-                    : "text-black border-gray-400"
-                }`}
-                // ref={register}
-              />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-2">
-                  A valid name is required.
-                </p>
-              )}
-            </div>
-
-            <div className="mb-5 flex flex-row justify-between content-between">
-              <label
-                htmlFor="company"
-                className={`block text-2xl font-maqin mb-2 ${
-                  errors.company ? "text-red-400" : "text-white"
-                }`}
-              >
-                Company
-              </label>
-              <input
-                {...register("company")}
-                type="text"
-                name="company"
-                id="company"
-                placeholder="Please enter your company"
-                className={`w-2/3 block  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
-                  errors.company
-                    ? "text-red-300 border-red-400"
-                    : "text-black border-gray-400"
-                }`}
-                // ref={register}
-              />
-              {errors.company && (
-                <p className="text-red-500 text-sm mt-2">
-                  A valid company is required.
-                </p>
-              )}
-            </div>
-
-            <div className="mb-5 flex flex-row justify-between content-between">
-              <label
-                htmlFor="email"
-                className={`block text-2xl font-maqin mb-2 ${
-                  errors.email ? "text-red-400" : "text-white"
-                }`}
-              >
-                Email
-              </label>
-              <input
-                {...register("email")}
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Please enter your email"
-                className={`block w-2/3  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
-                  errors.email
-                    ? "text-red-300 border-red-400"
-                    : "text-black border-gray-400"
-                }`}
-                // ref={register}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-2">
-                  A valid email is required.
-                </p>
-              )}
-            </div>
-
-            <div className="mb-5 flex flex-row justify-between content-between">
-              <label
-                htmlFor="phone"
-                className={`block text-2xl font-maqin mb-2 ${
-                  errors.email ? "text-red-400" : "text-white"
-                }`}
-              >
-                Phone
-              </label>
-              <input
-                {...register("phone")}
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="Please enter your phone"
-                className={`block w-2/3  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
-                  errors.phone
-                    ? "text-red-300 border-red-400"
-                    : "text-black border-gray-400"
-                }`}
-                // ref={register}
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-sm mt-2">
-                  A valid phone is required.
-                </p>
-              )}
-            </div>
-
-            <div className="mb-8 flex flex-row justify-between content-between">
-              <label
-                htmlFor="message"
-                className={`block text-2xl font-maqin mb-2 ${
-                  errors.message ? "text-red-400" : "text-white"
-                }`}
-              >
-                Inquiry
-              </label>
-              <input
-                {...register("message")}
-                type="text"
-                name="message"
-                id="message"
-                placeholder="Please enter your inquiry"
-                className={`block w-2/3 resize-y bg-white rounded-lg border-2 py-2 h-36 px-4 text-black placeholder-gray-400 ${
-                  errors.message ? "border-red-400" : "text-black"
-                }`}
-                // ref={register()}
-              />
-              {errors.message && (
-                <p className="text-red-500 text-sm mt-2">
-                  Your message is required.
-                </p>
-              )}
-            </div>
-            {/* Add the reCAPTCHA component */}
-            <div className="flex justify-end mt-4 mb-4">
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
-                onChange={onCaptchaChange}
-              />
-            </div>
-            <div className="flex justify-end mt-4 mb-4">
-              <button
-                className={`bg-transparent ${
-                  !captchaValue
-                    ? "disabled hover:bg-gray-600"
-                    : "hover:bg-orange-700"
-                }  border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm`}
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+      <div className="md:w-full lg:w-[40rem] mr-auto gap-8">
+        <div className="text-[2rem] md:text-[3rem] pb-5 text-white font-maqin">
+          {title_form}
         </div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-5 flex flex-row justify-between content-between">
+            <label
+              htmlFor="name"
+              className={`block text-xl font-maqin mb-2 ${
+                errors.name ? "text-red-400" : "text-white"
+              }`}
+            >
+              {locales[locale]["ContactForm"]["Name"]}
+            </label>
+            <input
+              {...register("name")}
+              type="text"
+              name="name"
+              id="name"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Name"]}
+              className={` w-2/3  bg-white rounded-lg border-2 py-2 px-5  placeholder-gray-400  ${
+                errors.name
+                  ? "text-red-300 border-red-400"
+                  : "text-black border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid name is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-5 flex flex-row justify-between content-between">
+            <label
+              htmlFor="company"
+              className={`block text-xl font-maqin mb-2 ${
+                errors.company ? "text-red-400" : "text-white"
+              }`}
+            >
+              {locales[locale]["ContactForm"]["Company"]}
+            </label>
+            <input
+              {...register("company")}
+              type="text"
+              name="company"
+              id="company"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Company"]}
+              className={`w-2/3 block  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.company
+                  ? "text-red-300 border-red-400"
+                  : "text-black border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.company && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid company is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-5 flex flex-row justify-between content-between">
+            <label
+              htmlFor="email"
+              className={`block text-xl font-maqin mb-2 ${
+                errors.email ? "text-red-400" : "text-white"
+              }`}
+            >
+              {locales[locale]["ContactForm"]["Email"]}
+            </label>
+            <input
+              {...register("email")}
+              type="text"
+              name="email"
+              id="email"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Email"]}
+              className={`block w-2/3  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.email
+                  ? "text-red-300 border-red-400"
+                  : "text-black border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid email is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-5 flex flex-row justify-between content-between">
+            <label
+              htmlFor="phone"
+              className={`block text-xl font-maqin mb-2 ${
+                errors.email ? "text-red-400" : "text-white"
+              }`}
+            >
+              {locales[locale]["ContactForm"]["Phone"]}
+            </label>
+            <input
+              {...register("phone")}
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Phone"]}
+              className={`block w-2/3  bg-white rounded-lg border-2 py-2 px-4  placeholder-gray-400  ${
+                errors.phone
+                  ? "text-red-300 border-red-400"
+                  : "text-black border-gray-400"
+              }`}
+              // ref={register}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-2">
+                A valid phone is required.
+              </p>
+            )}
+          </div>
+
+          <div className="mb-8 flex flex-row justify-between content-between">
+            <label
+              htmlFor="message"
+              className={`block text-xl font-maqin mb-2 ${
+                errors.message ? "text-red-400" : "text-white"
+              }`}
+            >
+              {locales[locale]["ContactForm"]["Inquiry"]}
+            </label>
+            <input
+              {...register("message")}
+              type="text"
+              name="message"
+              id="message"
+              placeholder={locales[locale]["ContactForm"]["Message"]["Inquiry"]}
+              className={`block w-2/3 resize-y bg-white rounded-lg border-2 py-2 h-36 px-4 text-black placeholder-gray-400 ${
+                errors.message ? "border-red-400" : "text-black"
+              }`}
+              // ref={register()}
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-2">
+                Your message is required.
+              </p>
+            )}
+          </div>
+          {/* Add the reCAPTCHA component */}
+          <div className="flex justify-end mt-4 mb-4">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
+              onChange={onCaptchaChange}
+            />
+          </div>
+          <div className="flex justify-end mt-4 mb-4">
+            <button
+              className={`bg-transparent ${
+                !captchaValue
+                  ? "disabled hover:bg-gray-600"
+                  : "hover:bg-orange-700"
+              }  border-white border-2 text-white rounded-lg items-end shadow py-2 px-10 text-sm`}
+            >
+              {locales[locale]["ContactForm"]["Submit"]}
+            </button>
+          </div>
+        </form>
       </div>
     </>
   )
